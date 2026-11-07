@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#0284c7" />
-  <meta name="description" content="Game Edukasi Berhitung Kelas 1 SD: Petualangan Angka 1-20 Full Landscape Proporsional Satu Layar." />
+  <meta name="description" content="Game Edukasi Berhitung Kelas 1 SD: Petualangan Angka 1-20 Full Landscape Responsif Tanpa Scroll." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>🎮 PETUALANGAN ANGKA 1–20 | Belajar Berhitung Sambil Bermain!</title>
 
-  <!-- Google Fonts: Fredoka (Bulat & Tegas untuk Judul/Angka) & Nunito (Sangat Jelas untuk Anak SD) -->
+  <!-- Google Fonts: Fredoka (Bulat & Ceria untuk Angka) & Nunito (Jelas untuk Teks Anak SD) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
       user-select: none;
     }
 
-    /* KUNCI UTAMA: FULL LANDSCAPE 1 LAYAR PENUH TANPA SCROLL */
+    /* KUNCI UTAMA: 100vw x 100dvh TANPA SCROLL SAMA SEKALI */
     html, body {
       margin: 0;
       padding: 0;
@@ -39,7 +39,7 @@
       max-height: 100dvh;
       overflow: hidden;
       font-family: var(--font-body);
-      background: linear-gradient(180deg, #38bdf8 0%, #bae6fd 66%, #86efac 100%);
+      background: linear-gradient(180deg, #38bdf8 0%, #bae6fd 60%, #86efac 100%);
       color: #0f172a;
     }
 
@@ -48,266 +48,227 @@
       letter-spacing: 0.02em;
     }
 
-    /* ================= SISTEM UKURAN IKON & TEKS PROPORSIONAL (NO TINY ICONS!) ================= */
-    .header-logo-icon {
-      width: clamp(44px, 6.8vmin, 66px);
-      height: clamp(44px, 6.8vmin, 66px);
-      font-size: clamp(1.6rem, 3.8vmin, 2.6rem);
+    /* ================= ARSITEKTUR ZERO-OVERFLOW KHUSUS HP LANSKAP (TINGGI 320px - 450px) ================= */
+    .app-header {
+      height: clamp(38px, 8.5vh, 60px);
     }
-    .header-btn {
-      height: clamp(42px, 6.6dvh, 62px);
-      padding-left: clamp(10px, 1.2vw, 20px);
-      padding-right: clamp(10px, 1.2vw, 20px);
-      font-size: clamp(0.88rem, 1.5vmin, 1.25rem);
+    .app-header-btn {
+      height: clamp(32px, 7vh, 48px);
+      padding: 0 clamp(8px, 1.2vw, 16px);
+      font-size: clamp(0.75rem, 1.8vh, 1.05rem);
     }
-    .header-btn-icon {
-      font-size: clamp(1.35rem, 2.9vmin, 2.15rem);
+    .app-header-icon {
+      font-size: clamp(1.15rem, 2.6vh, 1.8rem);
       line-height: 1;
     }
 
-    /* Ikon & Judul Kartu Menu Utama (7 Mode Permainan) - Besar & Mengisi Kartu */
-    .menu-card-icon-wrap {
-      width: clamp(64px, 11.5vmin, 116px);
-      height: clamp(64px, 11.5vmin, 116px);
-      border-radius: clamp(18px, 2.8vmin, 30px);
+    /* Kartu Menu Utama 7 Mode Permainan */
+    .menu-card {
+      padding: clamp(6px, 1.2vh, 12px) clamp(8px, 1vw, 14px);
     }
-    .menu-card-emoji {
-      font-size: clamp(2.6rem, 6.6vmin, 4.9rem);
+    .menu-emoji-badge {
+      width: clamp(38px, 7.5vh, 68px);
+      height: clamp(38px, 7.5vh, 68px);
+      border-radius: clamp(10px, 2vh, 18px);
+    }
+    .menu-emoji {
+      font-size: clamp(1.6rem, 4.4vh, 3.2rem);
       line-height: 1;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.16));
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
     }
-    .menu-card-title {
-      font-size: clamp(1.05rem, 2.15vmin, 1.7rem);
+    .menu-title {
+      font-size: clamp(0.78rem, 1.8vh, 1.25rem);
       line-height: 1.15;
     }
-    .menu-card-sub {
-      font-size: clamp(0.75rem, 1.35vmin, 1.05rem);
-      line-height: 1.2;
-    }
-
-    /* Tipografi Panggung Kuis */
-    .quiz-prompt-text {
-      font-size: clamp(1.15rem, 2.45vmin, 2.15rem);
-      line-height: 1.2;
-    }
-    .equation-pill-text {
-      font-size: clamp(1.65rem, 3.8vmin, 3.3rem);
-      line-height: 1;
-    }
-    .answer-btn-giant {
-      height: clamp(56px, 10.8dvh, 96px);
-      font-size: clamp(1.7rem, 4.2vmin, 3.4rem);
-      line-height: 1;
-    }
-    .answer-btn-compare {
-      height: clamp(56px, 10.8dvh, 96px);
-      font-size: clamp(1.35rem, 3.2vmin, 2.6rem);
+    .menu-sub {
+      font-size: clamp(0.62rem, 1.35vh, 0.92rem);
       line-height: 1.1;
     }
 
-    /* ================= TOMBOL 3D ANAK SD YANG TEBAL & RESPONSIF ================= */
+    /* Tombol 3D Anak SD yang Nyaman Disentuh dan Anti Meleset */
     .btn-3d {
       position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: clamp(14px, 2vmin, 24px);
+      border-radius: clamp(12px, 2vh, 20px);
       font-family: var(--font-display);
       font-weight: 700;
       cursor: pointer;
-      transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease, filter 0.15s ease;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.12s ease;
       touch-action: manipulation;
     }
-    .btn-3d:hover:not(:disabled) {
-      filter: brightness(1.04);
-    }
-    .btn-3d:active:not(:disabled) {
-      transform: translateY(5px) scale(0.98);
-    }
+    .btn-3d:hover:not(:disabled) { filter: brightness(1.04); }
+    .btn-3d:active:not(:disabled) { transform: translateY(4px) scale(0.98); }
     .btn-3d:disabled {
-      opacity: 0.48;
+      opacity: 0.45;
       cursor: not-allowed;
-      transform: translateY(4px);
+      transform: translateY(3px);
     }
 
     .btn-yellow {
       background: linear-gradient(180deg, #fde047 0%, #facc15 100%);
       color: #713f12;
-      border: 3px solid #fef9c3;
-      box-shadow: 0 6px 0 #ca8a04, 0 10px 18px rgba(0,0,0,0.14);
+      border: 2px solid #fef9c3;
+      box-shadow: 0 4px 0 #ca8a04, 0 6px 12px rgba(0,0,0,0.12);
     }
-    .btn-yellow:active:not(:disabled) { box-shadow: 0 2px 0 #ca8a04; }
+    .btn-yellow:active:not(:disabled) { box-shadow: 0 1px 0 #ca8a04; }
 
     .btn-green {
       background: linear-gradient(180deg, #4ade80 0%, #16a34a 100%);
       color: #ffffff;
-      border: 3px solid #dcfce7;
-      box-shadow: 0 6px 0 #15803d, 0 10px 18px rgba(0,0,0,0.14);
-      text-shadow: 0 2px 0 rgba(0,0,0,0.22);
+      border: 2px solid #dcfce7;
+      box-shadow: 0 4px 0 #15803d, 0 6px 12px rgba(0,0,0,0.12);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     }
-    .btn-green:active:not(:disabled) { box-shadow: 0 2px 0 #15803d; }
+    .btn-green:active:not(:disabled) { box-shadow: 0 1px 0 #15803d; }
 
     .btn-blue {
       background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
       color: #ffffff;
-      border: 3px solid #e0f2fe;
-      box-shadow: 0 6px 0 #0369a1, 0 10px 18px rgba(0,0,0,0.14);
-      text-shadow: 0 2px 0 rgba(0,0,0,0.22);
+      border: 2px solid #e0f2fe;
+      box-shadow: 0 4px 0 #0369a1, 0 6px 12px rgba(0,0,0,0.12);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     }
-    .btn-blue:active:not(:disabled) { box-shadow: 0 2px 0 #0369a1; }
+    .btn-blue:active:not(:disabled) { box-shadow: 0 1px 0 #0369a1; }
 
     .btn-orange {
       background: linear-gradient(180deg, #fb923c 0%, #ea580c 100%);
       color: #ffffff;
-      border: 3px solid #ffedd5;
-      box-shadow: 0 6px 0 #9a3412, 0 10px 18px rgba(0,0,0,0.14);
-      text-shadow: 0 2px 0 rgba(0,0,0,0.22);
+      border: 2px solid #ffedd5;
+      box-shadow: 0 4px 0 #9a3412, 0 6px 12px rgba(0,0,0,0.12);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     }
-    .btn-orange:active:not(:disabled) { box-shadow: 0 2px 0 #9a3412; }
+    .btn-orange:active:not(:disabled) { box-shadow: 0 1px 0 #9a3412; }
 
     .btn-purple {
       background: linear-gradient(180deg, #c084fc 0%, #9333ea 100%);
       color: #ffffff;
-      border: 3px solid #f3e8ff;
-      box-shadow: 0 6px 0 #6b21a8, 0 10px 18px rgba(0,0,0,0.14);
-      text-shadow: 0 2px 0 rgba(0,0,0,0.22);
+      border: 2px solid #f3e8ff;
+      box-shadow: 0 4px 0 #6b21a8, 0 6px 12px rgba(0,0,0,0.12);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     }
-    .btn-purple:active:not(:disabled) { box-shadow: 0 2px 0 #6b21a8; }
+    .btn-purple:active:not(:disabled) { box-shadow: 0 1px 0 #6b21a8; }
 
     .btn-pink {
       background: linear-gradient(180deg, #f472b6 0%, #db2777 100%);
       color: #ffffff;
-      border: 3px solid #fce7f3;
-      box-shadow: 0 6px 0 #9d174d, 0 10px 18px rgba(0,0,0,0.14);
-      text-shadow: 0 2px 0 rgba(0,0,0,0.22);
+      border: 2px solid #fce7f3;
+      box-shadow: 0 4px 0 #9d174d, 0 6px 12px rgba(0,0,0,0.12);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     }
-    .btn-pink:active:not(:disabled) { box-shadow: 0 2px 0 #9d174d; }
+    .btn-pink:active:not(:disabled) { box-shadow: 0 1px 0 #9d174d; }
 
     .btn-white {
       background: #ffffff;
       color: #1e293b;
-      border: 3px solid #e2e8f0;
-      box-shadow: 0 6px 0 #94a3b8, 0 8px 14px rgba(0,0,0,0.1);
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 4px 0 #94a3b8, 0 6px 10px rgba(0,0,0,0.08);
     }
-    .btn-white:active:not(:disabled) { box-shadow: 0 2px 0 #94a3b8; }
+    .btn-white:active:not(:disabled) { box-shadow: 0 1px 0 #94a3b8; }
 
-    /* Kartu Panel Utama */
+    /* Kartu Kontainer Utama */
     .game-card {
-      background: rgba(255, 255, 255, 0.95);
-      border: clamp(3px, 0.5vmin, 5px) solid #ffffff;
-      border-radius: clamp(18px, 2.5vmin, 30px);
-      box-shadow: 0 10px 24px rgba(14, 116, 144, 0.16), 0 5px 0 #cbd5e1;
+      background: rgba(255, 255, 255, 0.96);
+      border: clamp(2px, 0.4vh, 4px) solid #ffffff;
+      border-radius: clamp(14px, 2.4vh, 24px);
+      box-shadow: 0 8px 20px rgba(14, 116, 144, 0.15), 0 4px 0 #cbd5e1;
     }
 
-    /* ================= DYNAMIC SCALING UNTUK BENDA HITUNG (XL, LG, MD) ================= */
-    .countable-item {
-      display: inline-flex;
+    /* ================= BINGKAI SEPULUH (TEN-FRAME) RESMI KELAS 1 SD ================= */
+    /* Standar pembelajaran: 2 baris x 5 kolom (10 kotak). Tidak pernah lebih dari 2 baris! */
+    .ten-frame-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: clamp(4px, 0.9vmin, 10px);
+      background: rgba(255, 255, 255, 0.9);
+      border: clamp(2px, 0.5vmin, 3px) dashed #94a3b8;
+      border-radius: clamp(12px, 2vmin, 20px);
+      padding: clamp(4px, 0.8vmin, 10px);
+      align-items: center;
+      justify-items: center;
+      max-width: 100%;
+    }
+
+    .ten-frame-cell {
+      width: clamp(36px, 7.8vh, 76px);
+      height: clamp(36px, 7.8vh, 76px);
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      border-radius: clamp(8px, 1.6vh, 16px);
       background: #ffffff;
-      border: 3px solid #cbd5e1;
-      box-shadow: 0 5px 0 #94a3b8;
+      border: 2px solid #cbd5e1;
+      box-shadow: 0 3px 0 #94a3b8;
       cursor: pointer;
-      transition: transform 0.14s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.18s, border-color 0.18s;
       position: relative;
-      flex-shrink: 0;
+      transition: transform 0.12s ease, background-color 0.15s, border-color 0.15s;
     }
-    .countable-item:hover {
-      border-color: #38bdf8;
-    }
-    .countable-item:active {
-      transform: scale(1.14);
-    }
-    .countable-item.counted-active {
+    .ten-frame-cell:active { transform: scale(1.12); }
+    .ten-frame-cell.counted-active {
       background: #fef08a;
       border-color: #eab308;
-      box-shadow: 0 5px 0 #ca8a04;
-      transform: translateY(-4px) scale(1.06);
+      box-shadow: 0 3px 0 #ca8a04;
+      transform: translateY(-2px) scale(1.05);
+    }
+    .ten-frame-cell.empty-slot {
+      background: rgba(241, 245, 249, 0.65);
+      border: 2px dashed #cbd5e1;
+      box-shadow: none;
+      cursor: default;
     }
 
-    /* TIER XL: Untuk 1 s/d 6 benda (UKURAN RAKSASA & SANGAT JELAS) */
-    .countable-item.size-xl {
-      width: clamp(68px, 12.2vmin, 132px);
-      height: clamp(68px, 12.2vmin, 132px);
-      border-radius: clamp(16px, 2.4vmin, 26px);
-      padding: 6px;
-    }
-    .countable-item.size-xl .item-emoji {
-      font-size: clamp(2.6rem, 6.8vmin, 5.2rem);
+    .ten-frame-cell .item-emoji {
+      font-size: clamp(1.4rem, 4.5vh, 3.4rem);
       line-height: 1;
     }
-    .countable-item.size-xl .item-badge {
-      font-size: clamp(0.8rem, 1.55vmin, 1.2rem);
-      padding: 1px 10px;
-      margin-top: 4px;
+    .ten-frame-cell .item-badge {
+      font-size: clamp(0.55rem, 1.3vh, 0.88rem);
+      padding: 0 clamp(4px, 0.8vw, 8px);
+      line-height: 1.1;
+      margin-top: 1px;
     }
 
-    /* TIER LG: Untuk 7 s/d 10 benda (UKURAN BESAR PROPORSIONAL) */
-    .countable-item.size-lg {
-      width: clamp(56px, 10vmin, 106px);
-      height: clamp(56px, 10vmin, 106px);
-      border-radius: clamp(14px, 2vmin, 22px);
-      padding: 4px;
-    }
-    .countable-item.size-lg .item-emoji {
-      font-size: clamp(2.1rem, 5.3vmin, 4.1rem);
-      line-height: 1;
-    }
-    .countable-item.size-lg .item-badge {
-      font-size: clamp(0.75rem, 1.35vmin, 1.05rem);
-      padding: 1px 8px;
-      margin-top: 3px;
-    }
-
-    /* TIER MD: Untuk 11 s/d 20 benda / Ten-Frame (TETAP BESAR & RAPI 10 KOLOM) */
-    .countable-item.size-md {
-      width: clamp(46px, 8.2vmin, 88px);
-      height: clamp(46px, 8.2vmin, 88px);
-      border-radius: clamp(12px, 1.8vmin, 20px);
-      padding: 3px;
-    }
-    .countable-item.size-md .item-emoji {
-      font-size: clamp(1.75rem, 4.3vmin, 3.25rem);
-      line-height: 1;
-    }
-    .countable-item.size-md .item-badge {
-      font-size: clamp(0.68rem, 1.2vmin, 0.95rem);
-      padding: 0px 6px;
-      margin-top: 2px;
-    }
-
-    /* Animasi Pengurangan (Benda Dicoret Silang Merah Besar) */
-    @keyframes itemSubtractOut {
-      0% { transform: scale(1) rotate(0deg); opacity: 1; }
-      40% { transform: scale(1.12) rotate(-8deg); opacity: 0.92; }
-      100% { transform: scale(0.9) rotate(4deg); opacity: 0.42; filter: grayscale(55%); }
-    }
-    .subtracted-item {
-      animation: itemSubtractOut 0.65s ease forwards;
+    /* Animasi Silang Pengurangan */
+    .subtracted-cell {
+      animation: itemSubtractOut 0.6s ease forwards;
       position: relative;
     }
-    .subtracted-item::after {
+    .subtracted-cell::after {
       content: "✕";
       position: absolute;
       inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: clamp(2rem, 5vmin, 4rem);
+      font-size: clamp(1.6rem, 5vh, 3.8rem);
       font-weight: 900;
       color: #dc2626;
-      text-shadow: 0 2px 6px #ffffff, 0 -2px 6px #ffffff;
+      text-shadow: 0 1px 4px #ffffff, 0 -1px 4px #ffffff;
     }
 
-    /* Animasi Dekorasi & Respons */
+    /* Tombol Pilihan Jawaban Besar */
+    .answer-btn {
+      height: clamp(38px, 9.5vh, 64px);
+      font-size: clamp(1.25rem, 3.6vh, 2.4rem);
+      line-height: 1;
+    }
+    .answer-btn-compare {
+      height: clamp(38px, 9.5vh, 64px);
+      font-size: clamp(0.95rem, 2.6vh, 1.8rem);
+      line-height: 1.1;
+    }
+
+    /* Animasi Maskot & Awan */
     @keyframes floatCloudSlow {
-      0%, 100% { transform: translateX(-6vw); }
-      50% { transform: translateX(6vw); }
+      0%, 100% { transform: translateX(-4vw); }
+      50% { transform: translateX(4vw); }
     }
     @keyframes floatBounce {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-7px); }
+      50% { transform: translateY(-5px); }
     }
     @keyframes waveHand {
       0%, 100% { transform: rotate(0deg); }
@@ -315,35 +276,38 @@
       75% { transform: rotate(-10deg); }
     }
     @keyframes popIn {
-      0% { transform: scale(0.6); opacity: 0; }
-      70% { transform: scale(1.05); opacity: 1; }
+      0% { transform: scale(0.65); opacity: 0; }
+      70% { transform: scale(1.04); opacity: 1; }
       100% { transform: scale(1); opacity: 1; }
     }
     @keyframes shakeGentle {
       0%, 100% { transform: translateX(0); }
-      20% { transform: translateX(-8px); }
-      40% { transform: translateX(8px); }
-      60% { transform: translateX(-5px); }
-      80% { transform: translateX(5px); }
+      20% { transform: translateX(-7px); }
+      40% { transform: translateX(7px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
     }
     @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); box-shadow: 0 6px 0 #15803d, 0 0 0 0 rgba(74, 222, 128, 0.65); }
-      50% { transform: scale(1.02); box-shadow: 0 6px 0 #15803d, 0 0 0 12px rgba(74, 222, 128, 0); }
+      0%, 100% { transform: scale(1); box-shadow: 0 4px 0 #15803d, 0 0 0 0 rgba(74, 222, 128, 0.6); }
+      50% { transform: scale(1.02); box-shadow: 0 4px 0 #15803d, 0 0 0 8px rgba(74, 222, 128, 0); }
+    }
+    @keyframes itemSubtractOut {
+      0% { transform: scale(1); opacity: 1; }
+      40% { transform: scale(1.1); opacity: 0.9; }
+      100% { transform: scale(0.9); opacity: 0.45; filter: grayscale(50%); }
     }
 
-    .animate-float { animation: floatBounce 3.2s ease-in-out infinite; }
-    .animate-cloud-1 { animation: floatCloudSlow 28s ease-in-out infinite; }
-    .animate-cloud-2 { animation: floatCloudSlow 36s ease-in-out infinite reverse; }
+    .animate-float { animation: floatBounce 3s ease-in-out infinite; }
+    .animate-cloud-1 { animation: floatCloudSlow 30s ease-in-out infinite; }
+    .animate-cloud-2 { animation: floatCloudSlow 38s ease-in-out infinite reverse; }
     .animate-wave { transform-origin: bottom center; animation: waveHand 2s ease-in-out infinite; }
-    .animate-pop { animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-    .animate-shake { animation: shakeGentle 0.42s ease-in-out; }
+    .animate-pop { animation: popIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+    .animate-shake { animation: shakeGentle 0.4s ease-in-out; }
     .animate-pulse-glow { animation: pulseGlow 1.8s infinite; }
 
-    /* Overlay Peringatan Portrait khusus HP Sempit */
-    #portraitWarningOverlay {
-      display: none;
-    }
-    @media (orientation: portrait) and (max-width: 767px) {
+    /* Overlay Peringatan Orientasi Portrait */
+    #portraitWarningOverlay { display: none; }
+    @media (orientation: portrait) {
       #portraitWarningOverlay:not(.force-dismissed) {
         display: flex;
       }
@@ -352,40 +316,41 @@
 </head>
 <body class="relative w-screen h-[100dvh] max-h-[100dvh] overflow-hidden flex flex-col justify-between select-none">
 
-  <!-- ================= OVERLAY ORIENTASI PORTRAIT (KHUSUS HP PORTRAIT) ================= -->
-  <div id="portraitWarningOverlay" class="fixed inset-0 z-[60] bg-sky-600/95 backdrop-blur-md flex-col items-center justify-center p-6 text-center text-white">
-    <div class="w-24 h-24 rounded-3xl bg-amber-300 text-amber-950 flex items-center justify-center text-6xl mb-4 shadow-xl animate-bounce">
+  <!-- ================= 1. OVERLAY PERINGATAN ORIENTASI HP (PORTRAIT OVERLAY) ================= -->
+  <div id="portraitWarningOverlay" class="fixed inset-0 z-[70] bg-sky-700/95 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center text-white">
+    <div class="w-20 h-20 rounded-3xl bg-amber-300 text-amber-950 flex items-center justify-center text-5xl mb-3 shadow-2xl animate-bounce">
       📱🔄
     </div>
-    <h2 class="font-display font-bold text-3xl mb-2">Putar HP ke Posisi Landscape Yuk!</h2>
-    <p class="font-bold text-base text-sky-100 max-w-md mb-6">
-      Permainan <b>Petualangan Angka 1–20</b> dirancang khusus <b>Full Landscape 1 Layar Penuh</b> agar semua ikon dan tombolnya besar serta proporsional.
+    <h2 class="font-display font-bold text-2xl sm:text-3xl mb-1.5 text-amber-300">
+      Putar Layar ke Lanskap Yuk!
+    </h2>
+    <p class="font-bold text-sm sm:text-base text-sky-100 max-w-sm mb-5 leading-relaxed">
+      Permainan <b>Petualangan Angka 1–20</b> dirancang khusus <b>1 Layar Penuh Lanskap</b> agar seluruh benda, angka, dan tombol pas serta besar tanpa scroll!
     </p>
-    <div class="flex flex-col gap-3 w-full max-w-xs">
-      <button onclick="App.enterLandscapeFullscreen()" class="btn-3d btn-green py-3.5 px-5 text-lg w-full gap-2">
-        <span class="text-2xl">⛶</span>
-        <span>Layar Penuh & Landscape</span>
+    <div class="flex flex-col gap-2.5 w-full max-w-xs">
+      <button onclick="App.enterLandscapeFullscreen()" class="btn-3d btn-green py-3 px-4 text-base w-full gap-2">
+        <span class="text-xl">⛶</span>
+        <span>Kunci Layar Lanskap</span>
       </button>
-      <button onclick="App.dismissPortraitOverlay()" class="btn-3d btn-white py-3 px-4 text-base w-full">
+      <button onclick="App.dismissPortraitOverlay()" class="btn-3d btn-white py-2.5 px-4 text-sm w-full text-slate-700">
         Tetap Lanjut di Layar Ini
       </button>
     </div>
   </div>
 
-  <!-- ================= LATAR BELAKANG CERIA (PELANGI, MATAHARI, AWAN, RUMPUT) ================= -->
+  <!-- ================= LATAR BELAKANG CERIA (MATAHARI, AWAN, PELANGI, RUMPUT) ================= -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
-    <!-- Pelangi Cerah -->
-    <svg class="absolute -top-8 -right-12 w-[34vw] max-w-[480px] opacity-40" viewBox="0 0 400 220" fill="none">
-      <path d="M 20 220 A 180 180 0 0 1 380 220" stroke="#ef4444" stroke-width="16" stroke-linecap="round"/>
-      <path d="M 36 220 A 164 164 0 0 1 364 220" stroke="#f97316" stroke-width="16" stroke-linecap="round"/>
-      <path d="M 52 220 A 148 148 0 0 1 348 220" stroke="#eab308" stroke-width="16" stroke-linecap="round"/>
-      <path d="M 68 220 A 132 132 0 0 1 332 220" stroke="#22c55e" stroke-width="16" stroke-linecap="round"/>
-      <path d="M 84 220 A 116 116 0 0 1 316 220" stroke="#3b82f6" stroke-width="16" stroke-linecap="round"/>
-      <path d="M 100 220 A 100 100 0 0 1 300 220" stroke="#a855f7" stroke-width="16" stroke-linecap="round"/>
+    <!-- Pelangi Mini -->
+    <svg class="absolute -top-6 -right-10 w-[28vw] max-w-[380px] opacity-35" viewBox="0 0 400 220" fill="none">
+      <path d="M 20 220 A 180 180 0 0 1 380 220" stroke="#ef4444" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 38 220 A 162 162 0 0 1 362 220" stroke="#f97316" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 56 220 A 144 144 0 0 1 344 220" stroke="#eab308" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 74 220 A 126 126 0 0 1 326 220" stroke="#22c55e" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 92 220 A 108 108 0 0 1 308 220" stroke="#3b82f6" stroke-width="14" stroke-linecap="round"/>
     </svg>
 
-    <!-- Matahari Ceria -->
-    <svg class="absolute top-2 left-2 w-[9.5vmin] h-[9.5vmin] animate-float opacity-85" viewBox="0 0 120 120">
+    <!-- Matahari Tersenyum -->
+    <svg class="absolute top-1 left-2 w-[7.5vh] h-[7.5vh] animate-float opacity-85" viewBox="0 0 120 120">
       <circle cx="60" cy="60" r="36" fill="#fde047" stroke="#facc15" stroke-width="4"/>
       <g stroke="#facc15" stroke-width="6" stroke-linecap="round">
         <line x1="60" y1="8" x2="60" y2="18"/><line x1="60" y1="102" x2="60" y2="112"/>
@@ -398,237 +363,221 @@
       <path d="M 48 67 Q 60 77 72 67" stroke="#713f12" stroke-width="4" fill="none" stroke-linecap="round"/>
     </svg>
 
-    <!-- Awan Mengambang -->
-    <svg class="absolute top-[5vh] left-1/4 w-[18vw] max-w-[240px] opacity-80 animate-cloud-1" viewBox="0 0 200 100">
+    <!-- Awan Mengambang Halus -->
+    <svg class="absolute top-[3vh] left-1/4 w-[14vw] max-w-[180px] opacity-75 animate-cloud-1" viewBox="0 0 200 100">
       <path d="M 45 80 L 160 80 A 25 25 0 0 0 160 32 A 35 35 0 0 0 95 18 A 30 30 0 0 0 40 35 A 22 22 0 0 0 45 80 Z" fill="#ffffff"/>
     </svg>
-    <svg class="absolute top-[11vh] right-1/4 w-[15vw] max-w-[200px] opacity-75 animate-cloud-2" viewBox="0 0 200 100">
+    <svg class="absolute top-[7vh] right-1/4 w-[12vw] max-w-[150px] opacity-70 animate-cloud-2" viewBox="0 0 200 100">
       <path d="M 45 80 L 160 80 A 25 25 0 0 0 160 32 A 35 35 0 0 0 95 18 A 30 30 0 0 0 40 35 A 22 22 0 0 0 45 80 Z" fill="#ffffff"/>
     </svg>
 
-    <!-- Bukit Rumput Hijau di Bagian Bawah -->
-    <svg class="absolute bottom-0 left-0 w-full h-[12vh]" preserveAspectRatio="none" viewBox="0 0 1440 160">
+    <!-- Bukit Rumput Bawah -->
+    <svg class="absolute bottom-0 left-0 w-full h-[8vh]" preserveAspectRatio="none" viewBox="0 0 1440 160">
       <path fill="#4ade80" d="M0,96L80,85.3C160,75,320,53,480,64C640,75,800,117,960,122.7C1120,128,1280,96,1360,80L1440,64L1440,160L0,160Z"></path>
       <path fill="#22c55e" d="M0,128L120,117.3C240,107,480,85,720,96C960,107,1200,149,1320,154.7L1440,160L0,160Z"></path>
     </svg>
   </div>
 
-  <!-- Canvas Konfeti untuk Perayaan Jawaban Benar & Menang -->
+  <!-- Canvas Konfeti Perayaan Kemenangan -->
   <canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
 
-  <!-- ================= KONTAINER UTAMA APLIKASI (100vw x 100dvh, TANPA SCROLL) ================= -->
-  <div class="relative z-10 w-full h-full max-w-[1920px] mx-auto px-[1.4vw] py-[1.2dvh] flex flex-col justify-between gap-[1.2dvh] overflow-hidden">
+  <!-- ================= KONTAINER APLIKASI (100vw x 100dvh, ZERO-OVERFLOW) ================= -->
+  <div class="relative z-10 w-full h-full max-w-[1920px] mx-auto px-[1.2vw] py-[0.8vh] flex flex-col justify-between gap-[0.8vh] overflow-hidden">
 
-    <!-- ================= BARIS HEADER ATAS PROPORSIONAL (TINGGI ~9.5dvh, IKON BESAR) ================= -->
-    <header class="w-full h-[9.4dvh] min-h-[52px] max-h-[82px] shrink-0 flex items-center justify-between gap-2 bg-white/95 backdrop-blur-md px-[1.2vw] rounded-[22px] border-[3px] border-white shadow-md">
-      <!-- Kiri: Logo Besar + Judul + Badge Rentang Angka -->
-      <div class="flex items-center gap-[1vw] min-w-0">
-        <div onclick="App.showMainMenu()" class="flex items-center gap-[0.8vw] cursor-pointer group">
-          <div class="header-logo-icon rounded-2xl bg-gradient-to-br from-amber-300 to-orange-500 flex items-center justify-center shadow-inner border-2 border-white group-hover:scale-105 transition-transform shrink-0">
+    <!-- ================= BARIS HEADER ATAS RAMPING (TINGGI ~8.5vh, ANTI KEPOTONG) ================= -->
+    <header class="w-full app-header shrink-0 flex items-center justify-between gap-2 bg-white/95 backdrop-blur-md px-[1.2vw] rounded-2xl border-[2.5px] border-white shadow-sm">
+      <!-- Sisi Kiri: Logo + Judul + Indikator Rentang Angka -->
+      <div class="flex items-center gap-[0.8vw] min-w-0">
+        <div onclick="App.showMainMenu()" class="flex items-center gap-[0.6vw] cursor-pointer group">
+          <div class="w-[clamp(28px,5.8vh,46px)] h-[clamp(28px,5.8vh,46px)] rounded-xl bg-gradient-to-br from-amber-300 to-orange-500 flex items-center justify-center text-[clamp(1.1rem,2.8vh,1.9rem)] shadow-inner border border-white group-hover:scale-105 transition-transform shrink-0">
             🎮
           </div>
           <div class="leading-tight truncate">
-            <span class="font-display font-bold text-sky-700 text-[clamp(1rem,1.75vmin,1.65rem)] block leading-none">PETUALANGAN ANGKA 1–20</span>
-            <span class="text-[clamp(0.72rem,1.15vmin,1.02rem)] font-extrabold text-emerald-700 block mt-0.5">Kelas 1 SD • Belajar Sambil Bermain</span>
+            <span class="font-display font-bold text-sky-700 text-[clamp(0.82rem,2vh,1.35rem)] block leading-none">PETUALANGAN ANGKA 1–20</span>
+            <span class="text-[clamp(0.62rem,1.3vh,0.88rem)] font-extrabold text-emerald-700 block mt-0.5">Kelas 1 SD • Full Lanskap</span>
           </div>
         </div>
 
-        <span id="activeRangeBadge" class="hidden md:inline-flex items-center bg-emerald-500 text-white font-extrabold text-[clamp(0.75rem,1.2vmin,1.05rem)] px-3 py-1 rounded-full shadow-sm shrink-0">
-          🔢 Angka 1–20
+        <span id="activeRangeBadge" class="hidden sm:inline-flex items-center bg-emerald-500 text-white font-extrabold text-[clamp(0.65rem,1.4vh,0.92rem)] px-2.5 py-0.5 rounded-full shadow-sm shrink-0">
+          🔢 1–20
         </span>
-
-        <span id="relayStatusPill" class="hidden items-center bg-purple-600 text-white font-extrabold text-[clamp(0.75rem,1.2vmin,1.05rem)] px-3 py-1 rounded-full shadow-sm shrink-0">
-          🏃 Estafet Kelas Aktif
+        <span id="relayStatusPill" class="hidden items-center bg-purple-600 text-white font-extrabold text-[clamp(0.65rem,1.4vh,0.92rem)] px-2.5 py-0.5 rounded-full shadow-sm shrink-0">
+          🏃 Estafet
         </span>
       </div>
 
-      <!-- Kanan: Skor Tertinggi & Deretan Tombol Berikon Besar -->
-      <div class="flex items-center gap-[0.65vw] shrink-0">
-        <!-- Badge Skor Tertinggi -->
-        <div class="bg-amber-100 border-2 border-amber-300 rounded-2xl px-3 py-1 flex items-center gap-2 h-[clamp(42px,6.6dvh,62px)]">
-          <span class="header-btn-icon">🏆</span>
+      <!-- Sisi Kanan: Skor Tertinggi & Tombol Operasional Berikon Ceria -->
+      <div class="flex items-center gap-[0.5vw] shrink-0">
+        <!-- Skor Tertinggi -->
+        <div class="bg-amber-100 border border-amber-300 rounded-xl px-2.5 py-0.5 flex items-center gap-1.5 h-[clamp(30px,6.5vh,44px)]">
+          <span class="app-header-icon">🏆</span>
           <div class="text-left leading-none">
-            <span class="text-[clamp(0.6rem,0.9vmin,0.8rem)] font-extrabold text-amber-800 uppercase block">Skor Tertinggi</span>
-            <span id="highScoreBadge" class="font-display font-bold text-[clamp(0.9rem,1.5vmin,1.35rem)] text-amber-950">0 Poin</span>
+            <span class="text-[clamp(0.55rem,1.1vh,0.72rem)] font-extrabold text-amber-800 uppercase block">Skor</span>
+            <span id="highScoreBadge" class="font-display font-bold text-[clamp(0.75rem,1.7vh,1.15rem)] text-amber-950">0 Poin</span>
           </div>
         </div>
 
         <!-- Tombol Suara ON/OFF -->
-        <button id="btnSoundToggle" onclick="App.toggleSound()" class="btn-3d btn-yellow header-btn gap-2" title="Aktifkan atau Matikan Suara">
-          <span id="soundIcon" class="header-btn-icon">🔊</span>
-          <span id="soundLabel" class="hidden sm:inline">Suara: ON</span>
+        <button id="btnSoundToggle" onclick="App.toggleSound()" class="btn-3d btn-yellow app-header-btn gap-1.5" title="Suara ON/OFF">
+          <span id="soundIcon" class="app-header-icon">🔊</span>
+          <span id="soundLabel" class="hidden md:inline">Suara: ON</span>
         </button>
 
         <!-- Tombol Petunjuk -->
-        <button onclick="App.openModal('modalHelp')" class="btn-3d btn-blue header-btn gap-2" title="Petunjuk Permainan">
-          <span class="header-btn-icon">📘</span>
+        <button onclick="App.openModal('modalHelp')" class="btn-3d btn-blue app-header-btn gap-1.5" title="Petunjuk Permainan">
+          <span class="app-header-icon">📘</span>
           <span class="hidden lg:inline">Petunjuk</span>
         </button>
 
         <!-- Tombol Mode Guru -->
-        <button onclick="App.openModal('modalTeacher')" class="btn-3d btn-purple header-btn gap-2" title="Pengaturan Guru & Mode Estafet Kelas">
-          <span class="header-btn-icon">👩‍🏫</span>
-          <span class="hidden lg:inline">Mode Guru</span>
+        <button onclick="App.openModal('modalTeacher')" class="btn-3d btn-purple app-header-btn gap-1.5" title="Pengaturan Guru & Mode Estafet">
+          <span class="app-header-icon">👩‍🏫</span>
+          <span class="hidden lg:inline">Guru</span>
         </button>
 
         <!-- Tombol Layar Penuh -->
-        <button onclick="App.toggleFullscreen()" class="btn-3d btn-white header-btn gap-2" title="Mode Layar Penuh">
-          <span class="header-btn-icon">⛶</span>
+        <button onclick="App.toggleFullscreen()" class="btn-3d btn-white app-header-btn gap-1.5" title="Layar Penuh">
+          <span class="app-header-icon">⛶</span>
           <span class="hidden xl:inline">Layar Penuh</span>
         </button>
       </div>
     </header>
 
-    <!-- ================= 1. HALAMAN MENU UTAMA (LANDSCAPE 12 KOLOM PROPORSIONAL) ================= -->
-    <main id="screenMenu" class="flex-1 min-h-0 grid grid-cols-12 gap-[1.3vw] items-stretch overflow-hidden">
+    <!-- ================= 2. HALAMAN MENU UTAMA (RESPONSIF PENUH 1 LAYAR) ================= -->
+    <main id="screenMenu" class="flex-1 min-h-0 grid grid-cols-12 gap-[1vw] items-stretch overflow-hidden">
       
-      <!-- PANEL KIRI (4 KOLOM): MASKOT BUDI BESAR, BALON SAPAAN, INPUT NAMA & TOMBOL MULAI CEPAT -->
-      <section class="col-span-5 lg:col-span-4 game-card p-[2vmin] flex flex-col justify-between items-center text-center overflow-hidden">
+      <!-- PANEL KIRI (4 KOLOM): MASKOT BUDI, INPUT NAMA & TOMBOL MULAI CEPAT -->
+      <section class="col-span-4 lg:col-span-3 game-card p-[1.4vh] flex flex-col justify-between items-center text-center overflow-hidden">
         
-        <!-- Judul Panel Kiri -->
-        <div class="w-full flex flex-col items-center shrink-0">
-          <span class="inline-flex items-center gap-1.5 bg-sky-100 text-sky-800 font-extrabold px-3.5 py-1 rounded-full text-[clamp(0.72rem,1.2vmin,1rem)] border border-sky-200">
-            🌟 Anak Hebat Kelas 1 SD (6–7 Tahun)
+        <!-- Header Kecil Panel Kiri -->
+        <div class="w-full flex items-center justify-between shrink-0">
+          <span class="inline-block bg-sky-100 text-sky-800 font-extrabold px-2.5 py-0.5 rounded-full text-[clamp(0.65rem,1.3vh,0.85rem)] border border-sky-200">
+            🌟 Kelas 1 SD
           </span>
-          <h1 class="font-display font-bold text-sky-600 drop-shadow-sm text-[clamp(1.25rem,2.7vmin,2.35rem)] leading-tight mt-1">
-            Ayo Belajar Berhitung!
-          </h1>
-        </div>
-
-        <!-- Ilustrasi Maskot Budi SVG Interaktif (Ukuran Besar & Proporsional) -->
-        <div onclick="App.mascotSpeakGreeting()" class="cursor-pointer group relative w-[clamp(105px,24vmin,215px)] h-[clamp(105px,24vmin,215px)] flex items-center justify-center bg-gradient-to-b from-sky-100 to-emerald-100 rounded-full border-[5px] border-white shadow-lg animate-float shrink-0 my-auto" title="Sentuh Budi!">
-          <svg viewBox="0 0 220 220" class="w-full h-full">
-            <!-- Ransel Petualang -->
-            <rect x="52" y="110" width="116" height="75" rx="26" fill="#f97316" stroke="#9a3412" stroke-width="5"/>
-            <!-- Badan Baju Kaos Cerah -->
-            <path d="M 65 125 Q 110 115 155 125 L 168 195 Q 110 205 52 195 Z" fill="#22c55e" stroke="#15803d" stroke-width="5"/>
-            <!-- Bintang di Baju -->
-            <polygon points="110,142 115,154 128,155 118,163 121,176 110,169 99,176 102,163 92,155 105,154" fill="#fde047"/>
-            <!-- Tangan Kiri -->
-            <path d="M 65 132 Q 38 150 48 175" stroke="#fed7aa" stroke-width="18" stroke-linecap="round" fill="none"/>
-            <!-- Tangan Kanan Melambai -->
-            <g class="animate-wave" style="transform-origin: 155px 135px;">
-              <path d="M 155 135 Q 188 112 185 82" stroke="#fed7aa" stroke-width="18" stroke-linecap="round" fill="none"/>
-              <circle cx="185" cy="78" r="12" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
-            </g>
-            <!-- Kepala Anak -->
-            <circle cx="110" cy="86" r="44" fill="#fed7aa" stroke="#ea580c" stroke-width="4"/>
-            <!-- Pipi Merona -->
-            <ellipse cx="80" cy="96" rx="8" ry="5" fill="#fb7185" opacity="0.6"/>
-            <ellipse cx="140" cy="96" rx="8" ry="5" fill="#fb7185" opacity="0.6"/>
-            <!-- Mata Berbinar -->
-            <circle cx="92" cy="82" r="7" fill="#1e293b"/>
-            <circle cx="90" cy="79" r="2.5" fill="#ffffff"/>
-            <circle cx="128" cy="82" r="7" fill="#1e293b"/>
-            <circle cx="126" cy="79" r="2.5" fill="#ffffff"/>
-            <!-- Senyum Lebar Ceria -->
-            <path d="M 92 100 Q 110 118 128 100" stroke="#9a3412" stroke-width="5" fill="#ffffff" stroke-linecap="round"/>
-            <!-- Topi Petualang Anak SD -->
-            <path d="M 62 68 Q 110 22 158 68 Z" fill="#38bdf8" stroke="#0369a1" stroke-width="5"/>
-            <path d="M 55 68 Q 110 56 172 70" stroke="#fde047" stroke-width="10" stroke-linecap="round" fill="none"/>
-            <!-- Lencana Angka 123 di Topi -->
-            <rect x="92" y="40" width="36" height="20" rx="8" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
-            <text x="110" y="55" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="14" fill="#713f12">123</text>
-          </svg>
-          <span class="absolute -bottom-2 bg-amber-400 text-amber-950 font-display font-bold text-[clamp(0.75rem,1.25vmin,1.05rem)] px-3 py-0.5 rounded-full border-2 border-white shadow-md">
-            👋 Sentuh Budi!
+          <span class="font-display font-bold text-sky-700 text-[clamp(0.72rem,1.5vh,1rem)]">
+            Ayo Main!
           </span>
         </div>
 
-        <!-- Balon Sapaan Budi -->
-        <div id="mascotGreetingBubble" class="bg-amber-50 border-2 border-amber-300 rounded-2xl px-3.5 py-2 text-slate-700 font-bold text-[clamp(0.8rem,1.3vmin,1.08rem)] leading-snug w-full shrink-0">
-          "Halo teman-teman hebat! 👋 Pilih permainan di sebelah kanan atau tekan Mulai Cepat ya!"
-        </div>
-
-        <!-- Input Nama Panggilan & Tombol Mulai Cepat Berikon Besar -->
-        <div class="w-full flex flex-col gap-[1.1dvh] shrink-0">
-          <div class="flex items-center bg-slate-100 border-2 border-slate-300 rounded-2xl px-3.5 py-1.5 focus-within:border-sky-500 focus-within:bg-white">
-            <span class="text-[clamp(1.4rem,2.8vmin,2.1rem)] mr-2.5 leading-none">🧒</span>
-            <div class="flex-1 text-left">
-              <label for="playerNameInput" class="block text-[clamp(0.62rem,0.95vmin,0.8rem)] font-extrabold text-slate-500 uppercase leading-none">Nama Panggilanmu</label>
-              <input id="playerNameInput" type="text" maxlength="20" placeholder="Ketik namamu di sini..." onchange="App.savePlayerName(this.value)"
-                class="w-full bg-transparent font-display font-bold text-slate-800 text-[clamp(0.95rem,1.55vmin,1.3rem)] focus:outline-none leading-tight mt-0.5" />
-            </div>
+        <!-- Maskot Budi SVG + Balon Sapaan (Tersusun Fleksibel Agar Tidak Mendorong Layar) -->
+        <div class="w-full flex flex-row items-center justify-center gap-2.5 my-auto shrink-0">
+          <div onclick="App.mascotSpeakGreeting()" class="cursor-pointer group relative w-[clamp(56px,13vh,110px)] h-[clamp(56px,13vh,110px)] flex items-center justify-center bg-gradient-to-b from-sky-100 to-emerald-100 rounded-full border-[3px] border-white shadow-md animate-float shrink-0" title="Sentuh Budi!">
+            <svg viewBox="0 0 220 220" class="w-full h-full">
+              <rect x="52" y="110" width="116" height="75" rx="26" fill="#f97316" stroke="#9a3412" stroke-width="5"/>
+              <path d="M 65 125 Q 110 115 155 125 L 168 195 Q 110 205 52 195 Z" fill="#22c55e" stroke="#15803d" stroke-width="5"/>
+              <polygon points="110,142 115,154 128,155 118,163 121,176 110,169 99,176 102,163 92,155 105,154" fill="#fde047"/>
+              <path d="M 65 132 Q 38 150 48 175" stroke="#fed7aa" stroke-width="18" stroke-linecap="round" fill="none"/>
+              <g class="animate-wave" style="transform-origin: 155px 135px;">
+                <path d="M 155 135 Q 188 112 185 82" stroke="#fed7aa" stroke-width="18" stroke-linecap="round" fill="none"/>
+                <circle cx="185" cy="78" r="12" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+              </g>
+              <circle cx="110" cy="86" r="44" fill="#fed7aa" stroke="#ea580c" stroke-width="4"/>
+              <ellipse cx="80" cy="96" rx="8" ry="5" fill="#fb7185" opacity="0.6"/>
+              <ellipse cx="140" cy="96" rx="8" ry="5" fill="#fb7185" opacity="0.6"/>
+              <circle cx="92" cy="82" r="7" fill="#1e293b"/>
+              <circle cx="90" cy="79" r="2.5" fill="#ffffff"/>
+              <circle cx="128" cy="82" r="7" fill="#1e293b"/>
+              <circle cx="126" cy="79" r="2.5" fill="#ffffff"/>
+              <path d="M 92 100 Q 110 118 128 100" stroke="#9a3412" stroke-width="5" fill="#ffffff" stroke-linecap="round"/>
+              <path d="M 62 68 Q 110 22 158 68 Z" fill="#38bdf8" stroke="#0369a1" stroke-width="5"/>
+              <path d="M 55 68 Q 110 56 172 70" stroke="#fde047" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <rect x="92" y="40" width="36" height="20" rx="8" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+              <text x="110" y="55" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="14" fill="#713f12">123</text>
+            </svg>
           </div>
 
-          <button onclick="App.startGame('tantangan')" class="btn-3d btn-green w-full h-[clamp(48px,8.2dvh,74px)] text-[clamp(1.1rem,2.1vmin,1.7rem)] gap-2.5 animate-pulse-glow">
-            <span class="text-[clamp(1.5rem,3.2vmin,2.4rem)] leading-none">🚀</span>
+          <!-- Balon Sapaan Singkat & Bersahabat -->
+          <div id="mascotGreetingBubble" class="flex-1 bg-amber-50 border border-amber-300 rounded-xl p-2 text-left text-slate-700 font-bold text-[clamp(0.68rem,1.4vh,0.92rem)] leading-snug">
+            "Halo! 👋 Pilih menu di kanan atau tekan <b>Mulai Cepat</b> ya!"
+          </div>
+        </div>
+
+        <!-- Input Nama & Tombol Mulai Cepat -->
+        <div class="w-full flex flex-col gap-[0.7vh] shrink-0">
+          <div class="flex items-center bg-slate-100 border border-slate-300 rounded-xl px-2.5 py-1 focus-within:border-sky-500 focus-within:bg-white">
+            <span class="text-[clamp(1.1rem,2.2vh,1.6rem)] mr-1.5 leading-none">🧒</span>
+            <input id="playerNameInput" type="text" maxlength="20" placeholder="Ketik nama panggilanmu..." onchange="App.savePlayerName(this.value)"
+              class="w-full bg-transparent font-display font-bold text-slate-800 text-[clamp(0.78rem,1.6vh,1.1rem)] focus:outline-none leading-tight" />
+          </div>
+
+          <button onclick="App.startGame('tantangan')" class="btn-3d btn-green w-full h-[clamp(36px,7.5vh,52px)] text-[clamp(0.85rem,2vh,1.3rem)] gap-2 animate-pulse-glow">
+            <span class="text-[clamp(1.2rem,2.6vh,1.8rem)]">🚀</span>
             <span>MULAI CEPAT!</span>
           </button>
         </div>
 
       </section>
 
-      <!-- PANEL KANAN (8 KOLOM): GRID 4x2 BERISI 7 KARTU GAME DENGAN IKON RAKSASA PROPORSIONAL -->
-      <section class="col-span-7 lg:col-span-8 flex flex-col min-h-0 overflow-hidden" aria-label="Pilih Jenis Permainan">
-        <div class="grid grid-cols-4 grid-rows-2 gap-[1.3vmin] flex-1 min-h-0">
+      <!-- PANEL KANAN (8 KOLOM): 7 KARTU GAME BERUKURAN SEIMBANG & BESAR -->
+      <section class="col-span-8 lg:col-span-9 flex flex-col min-h-0 overflow-hidden" aria-label="Pilih Jenis Permainan">
+        <div class="grid grid-cols-4 grid-rows-2 gap-[0.8vh] flex-1 min-h-0">
           
           <!-- GAME 1: Mengenal Angka 1-20 -->
-          <button onclick="App.startGame('mengenal')" class="btn-3d btn-blue p-[1.5vmin] flex flex-col items-center justify-center text-center gap-[1dvh] group h-full min-h-0 overflow-hidden">
-            <div class="menu-card-icon-wrap bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-white/40">
-              <span class="menu-card-emoji">🔢</span>
+          <button onclick="App.startGame('mengenal')" class="btn-3d btn-blue menu-card flex flex-col items-center justify-center text-center gap-[0.6vh] group h-full min-h-0 overflow-hidden">
+            <div class="menu-emoji-badge bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-white/40">
+              <span class="menu-emoji">🔢</span>
             </div>
-            <span class="menu-card-title font-bold">Mengenal Angka 1–20</span>
-            <span class="menu-card-sub font-sans font-extrabold bg-sky-950/30 px-3 py-0.5 rounded-full">Sentuh & Dengar</span>
+            <span class="menu-title font-bold">Mengenal 1–20</span>
+            <span class="menu-sub font-sans font-extrabold bg-sky-950/30 px-2 py-0.5 rounded-full">Sentuh & Dengar</span>
           </button>
 
-          <!-- GAME 2: Berhitung Penjumlahan -->
-          <button onclick="App.startGame('penjumlahan')" class="btn-3d btn-green p-[1.5vmin] flex flex-col items-center justify-center text-center gap-[1dvh] group h-full min-h-0 overflow-hidden">
-            <div class="menu-card-icon-wrap bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-white/40">
-              <span class="menu-card-emoji">🍎</span>
+          <!-- GAME 2: Penjumlahan -->
+          <button onclick="App.startGame('penjumlahan')" class="btn-3d btn-green menu-card flex flex-col items-center justify-center text-center gap-[0.6vh] group h-full min-h-0 overflow-hidden">
+            <div class="menu-emoji-badge bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-white/40">
+              <span class="menu-emoji">🍎</span>
             </div>
-            <span class="menu-card-title font-bold">Penjumlahan (+)</span>
-            <span class="menu-card-sub font-sans font-extrabold bg-emerald-950/30 px-3 py-0.5 rounded-full">Gabungkan Benda</span>
+            <span class="menu-title font-bold">Penjumlahan (+)</span>
+            <span class="menu-sub font-sans font-extrabold bg-emerald-950/30 px-2 py-0.5 rounded-full">Gabung Benda</span>
           </button>
 
-          <!-- GAME 3: Berhitung Pengurangan -->
-          <button onclick="App.startGame('pengurangan')" class="btn-3d btn-orange p-[1.5vmin] flex flex-col items-center justify-center text-center gap-[1dvh] group h-full min-h-0 overflow-hidden">
-            <div class="menu-card-icon-wrap bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-white/40">
-              <span class="menu-card-emoji">🍌</span>
+          <!-- GAME 3: Pengurangan -->
+          <button onclick="App.startGame('pengurangan')" class="btn-3d btn-orange menu-card flex flex-col items-center justify-center text-center gap-[0.6vh] group h-full min-h-0 overflow-hidden">
+            <div class="menu-emoji-badge bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-white/40">
+              <span class="menu-emoji">🍌</span>
             </div>
-            <span class="menu-card-title font-bold">Pengurangan (–)</span>
-            <span class="menu-card-sub font-sans font-extrabold bg-orange-950/30 px-3 py-0.5 rounded-full">Hitung Sisa Benda</span>
+            <span class="menu-title font-bold">Pengurangan (–)</span>
+            <span class="menu-sub font-sans font-extrabold bg-orange-950/30 px-2 py-0.5 rounded-full">Hitung Sisa</span>
           </button>
 
-          <!-- GAME 4: Mana yang Lebih Banyak? -->
-          <button onclick="App.startGame('lebih_banyak')" class="btn-3d btn-purple p-[1.5vmin] flex flex-col items-center justify-center text-center gap-[1dvh] group h-full min-h-0 overflow-hidden">
-            <div class="menu-card-icon-wrap bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-white/40">
-              <span class="menu-card-emoji">🐰</span>
+          <!-- GAME 4: Lebih Banyak -->
+          <button onclick="App.startGame('lebih_banyak')" class="btn-3d btn-purple menu-card flex flex-col items-center justify-center text-center gap-[0.6vh] group h-full min-h-0 overflow-hidden">
+            <div class="menu-emoji-badge bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-white/40">
+              <span class="menu-emoji">🐰</span>
             </div>
-            <span class="menu-card-title font-bold">Lebih Banyak?</span>
-            <span class="menu-card-sub font-sans font-extrabold bg-purple-950/30 px-3 py-0.5 rounded-full">Bandingkan A & B</span>
+            <span class="menu-title font-bold">Lebih Banyak?</span>
+            <span class="menu-sub font-sans font-extrabold bg-purple-950/30 px-2 py-0.5 rounded-full">Bandingkan A & B</span>
           </button>
 
-          <!-- GAME 5: Mana yang Lebih Sedikit? -->
-          <button onclick="App.startGame('lebih_sedikit')" class="btn-3d btn-pink p-[1.5vmin] flex flex-col items-center justify-center text-center gap-[1dvh] group h-full min-h-0 overflow-hidden">
-            <div class="menu-card-icon-wrap bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-white/40">
-              <span class="menu-card-emoji">🐣</span>
+          <!-- GAME 5: Lebih Sedikit -->
+          <button onclick="App.startGame('lebih_sedikit')" class="btn-3d btn-pink menu-card flex flex-col items-center justify-center text-center gap-[0.6vh] group h-full min-h-0 overflow-hidden">
+            <div class="menu-emoji-badge bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-white/40">
+              <span class="menu-emoji">🐣</span>
             </div>
-            <span class="menu-card-title font-bold">Lebih Sedikit?</span>
-            <span class="menu-card-sub font-sans font-extrabold bg-pink-950/30 px-3 py-0.5 rounded-full">Cari yang Sedikit</span>
+            <span class="menu-title font-bold">Lebih Sedikit?</span>
+            <span class="menu-sub font-sans font-extrabold bg-pink-950/30 px-2 py-0.5 rounded-full">Cari yang Sedikit</span>
           </button>
 
           <!-- GAME 6: Soal Cerita -->
-          <button onclick="App.startGame('soal_cerita')" class="btn-3d btn-yellow p-[1.5vmin] flex flex-col items-center justify-center text-center gap-[1dvh] group h-full min-h-0 overflow-hidden">
-            <div class="menu-card-icon-wrap bg-amber-900/15 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-amber-900/20">
-              <span class="menu-card-emoji">📖</span>
+          <button onclick="App.startGame('soal_cerita')" class="btn-3d btn-yellow menu-card flex flex-col items-center justify-center text-center gap-[0.6vh] group h-full min-h-0 overflow-hidden">
+            <div class="menu-emoji-badge bg-amber-900/15 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-amber-900/20">
+              <span class="menu-emoji">📖</span>
             </div>
-            <span class="menu-card-title font-bold">Soal Cerita SD</span>
-            <span class="menu-card-sub font-sans font-extrabold bg-amber-950/15 px-3 py-0.5 rounded-full">Cerita & Suara</span>
+            <span class="menu-title font-bold">Soal Cerita SD</span>
+            <span class="menu-sub font-sans font-extrabold bg-amber-950/15 px-2 py-0.5 rounded-full">Cerita & Gambar</span>
           </button>
 
-          <!-- GAME 7: Tantangan Berhitung Acak (Col-Span-2 dengan Ikon Piala Raksasa) -->
-          <button onclick="App.startGame('tantangan')" class="col-span-2 btn-3d btn-green p-[2vmin] flex flex-row items-center justify-center text-left gap-[1.8vw] group h-full min-h-0 overflow-hidden">
-            <div class="w-[clamp(76px,13.5vmin,136px)] h-[clamp(76px,13.5vmin,136px)] rounded-[28px] bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border-2 border-white/40">
-              <span class="text-[clamp(3.2rem,7.8vmin,5.6rem)] leading-none drop-shadow">🏆</span>
+          <!-- GAME 7: Tantangan Acak (Span 2 Kolom) -->
+          <button onclick="App.startGame('tantangan')" class="col-span-2 btn-3d btn-green menu-card flex flex-row items-center justify-center text-left gap-[1vw] group h-full min-h-0 overflow-hidden">
+            <div class="w-[clamp(44px,9vh,82px)] h-[clamp(44px,9vh,82px)] rounded-2xl bg-white/25 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform shrink-0 border border-white/40">
+              <span class="text-[clamp(1.8rem,5.5vh,4rem)] leading-none drop-shadow">🏆</span>
             </div>
             <div class="min-w-0">
-              <span class="inline-block bg-yellow-300 text-yellow-950 text-[clamp(0.7rem,1.15vmin,0.95rem)] font-extrabold px-3 py-0.5 rounded-full uppercase mb-1 shadow-sm">
-                🌟 Tantangan Seru!
+              <span class="inline-block bg-yellow-300 text-yellow-950 text-[clamp(0.6rem,1.2vh,0.85rem)] font-extrabold px-2 py-0.5 rounded-full uppercase mb-0.5 shadow-sm">
+                🌟 Paling Seru!
               </span>
-              <span class="text-[clamp(1.25rem,2.6vmin,2.15rem)] font-bold block leading-tight">Tantangan Berhitung Acak</span>
-              <span class="text-[clamp(0.82rem,1.45vmin,1.15rem)] font-sans font-bold opacity-95 block mt-1 leading-snug">
-                Campuran penjumlahan, pengurangan, perbandingan & soal cerita!
+              <span class="text-[clamp(0.85rem,2.1vh,1.4rem)] font-bold block leading-tight">Tantangan Acak</span>
+              <span class="text-[clamp(0.65rem,1.35vh,0.92rem)] font-sans font-bold opacity-95 block mt-0.5 truncate">
+                Campuran penjumlahan, pengurangan & perbandingan!
               </span>
             </div>
           </button>
@@ -637,252 +586,243 @@
       </section>
     </main>
 
-    <!-- ================= 2. HALAMAN MENGENAL ANGKA 1–20 (PROPORSIONAL 1 LAYAR) ================= -->
-    <section id="screenExplorer" class="hidden flex-1 min-h-0 flex flex-col justify-between gap-[1.2dvh] overflow-hidden">
+    <!-- ================= 3. HALAMAN MENGENAL ANGKA 1–20 (BINGKAI SEPULUH) ================= -->
+    <section id="screenExplorer" class="hidden flex-1 min-h-0 flex flex-col justify-between gap-[0.8vh] overflow-hidden">
       
-      <!-- Navigasi Atas Mengenal Angka -->
-      <div class="game-card px-[1.4vw] py-[0.8dvh] h-[8.2dvh] min-h-[46px] max-h-[68px] shrink-0 flex items-center justify-between gap-3">
-        <button onclick="App.showMainMenu()" class="btn-3d btn-white header-btn gap-2">
-          <span class="header-btn-icon">🏠</span>
+      <!-- Sub-Bar Navigasi Mengenal Angka -->
+      <div class="game-card px-[1.2vw] py-[0.5vh] h-[clamp(34px,7vh,50px)] shrink-0 flex items-center justify-between gap-2">
+        <button onclick="App.showMainMenu()" class="btn-3d btn-white app-header-btn gap-1.5">
+          <span class="app-header-icon">🏠</span>
           <span>Menu Utama</span>
         </button>
 
-        <div class="flex items-center gap-3">
-          <h2 class="font-display font-bold text-[clamp(1.1rem,2.1vmin,1.8rem)] text-sky-700">
+        <div class="flex items-center gap-2 truncate">
+          <h2 class="font-display font-bold text-[clamp(0.85rem,2vh,1.3rem)] text-sky-700 truncate">
             🔢 Mengenal Angka 1 Sampai 20
           </h2>
-          <span id="explorerPlaceValueInfo" class="hidden md:inline-block bg-amber-100 px-3.5 py-1 rounded-full border-2 border-amber-300 text-amber-950 font-extrabold text-[clamp(0.82rem,1.35vmin,1.1rem)]">
+          <span id="explorerPlaceValueInfo" class="hidden md:inline-block bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300 text-amber-950 font-extrabold text-[clamp(0.65rem,1.4vh,0.92rem)]">
             0 Puluhan + 5 Satuan = 5
           </span>
         </div>
 
-        <button onclick="App.startGame('kuis_angka')" class="btn-3d btn-green header-btn gap-2">
-          <span class="header-btn-icon">🎯</span>
+        <button onclick="App.startGame('kuis_angka')" class="btn-3d btn-green app-header-btn gap-1.5">
+          <span class="app-header-icon">🎯</span>
           <span>Latihan Tebak Angka</span>
         </button>
       </div>
 
-      <!-- Area Tengah: 12 Kolom (4 Kolom Kartu Angka Raksasa + 8 Kolom Area Sentuh Ten-Frame) -->
-      <div class="flex-1 min-h-0 grid grid-cols-12 gap-[1.3vw] overflow-hidden">
+      <!-- Area Tengah: Kartu Angka Kiri + Bingkai Sepuluh Kanan -->
+      <div class="flex-1 min-h-0 grid grid-cols-12 gap-[1vw] overflow-hidden">
         
-        <!-- Kiri (4 Kolom): Kartu Angka Raksasa Interaktif -->
-        <div class="col-span-5 lg:col-span-4 game-card p-[2vmin] flex flex-col items-center justify-between bg-gradient-to-b from-sky-50 to-white overflow-hidden">
-          <span class="text-[clamp(0.72rem,1.15vmin,0.98rem)] font-extrabold uppercase text-sky-700 tracking-wider bg-sky-100 px-3 py-0.5 rounded-full">
-            👆 Sentuh Angka untuk Mendengar
+        <!-- Sisi Kiri (4 Kolom): Angka Raksasa & Tombol Aksi -->
+        <div class="col-span-4 lg:col-span-3 game-card p-[1.2vh] flex flex-col items-center justify-between bg-gradient-to-b from-sky-50 to-white overflow-hidden">
+          <span class="text-[clamp(0.6rem,1.2vh,0.82rem)] font-extrabold uppercase text-sky-700 tracking-wider bg-sky-100 px-2.5 py-0.5 rounded-full">
+            👆 Sentuh Angka
           </span>
           
           <div class="flex flex-col items-center my-auto">
-            <div id="explorerBigNumber" onclick="App.speakCurrentExplorerNumber()" class="font-display font-bold text-[clamp(4.2rem,11.5vmin,8.5rem)] leading-none text-sky-600 cursor-pointer select-none drop-shadow hover:scale-105 transition-transform">
+            <div id="explorerBigNumber" onclick="App.speakCurrentExplorerNumber()" class="font-display font-bold text-[clamp(2.8rem,9.5vh,6.5rem)] leading-none text-sky-600 cursor-pointer select-none drop-shadow hover:scale-105 transition-transform">
               5
             </div>
-            <div id="explorerNumberWord" class="font-display font-bold text-[clamp(1.4rem,3vmin,2.4rem)] text-orange-500 uppercase tracking-wide mt-1">
+            <div id="explorerNumberWord" class="font-display font-bold text-[clamp(1rem,2.4vh,1.6rem)] text-orange-500 uppercase tracking-wide mt-0.5">
               LIMA
             </div>
-            <p id="explorerNumberDesc" class="text-[clamp(0.95rem,1.65vmin,1.35rem)] font-extrabold text-slate-700 text-center mt-0.5">
+            <p id="explorerNumberDesc" class="text-[clamp(0.75rem,1.5vh,1.05rem)] font-extrabold text-slate-700 text-center truncate max-w-full">
               Lima buah apel merah 🍎
             </p>
           </div>
 
-          <!-- Tombol Ucapkan, Hitung 1 per 1 & Sebelumnya/Berikutnya -->
-          <div class="w-full flex flex-col gap-[1dvh]">
-            <div class="grid grid-cols-2 gap-2.5 w-full">
-              <button onclick="App.speakCurrentExplorerNumber()" class="btn-3d btn-yellow h-[clamp(42px,6.4dvh,58px)] text-[clamp(0.88rem,1.45vmin,1.2rem)] gap-1.5">
-                <span class="text-[clamp(1.25rem,2.4vmin,1.8rem)]">🔊</span>
-                <span>Ucapkan</span>
+          <!-- Tombol Ucapkan, Hitung 1-1, Sebelumnya & Berikutnya -->
+          <div class="w-full flex flex-col gap-[0.5vh]">
+            <div class="grid grid-cols-2 gap-2 w-full">
+              <button onclick="App.speakCurrentExplorerNumber()" class="btn-3d btn-yellow h-[clamp(30px,5.8vh,44px)] text-[clamp(0.72rem,1.5vh,1rem)] gap-1">
+                <span>🔊</span><span>Ucapkan</span>
               </button>
-              <button onclick="App.autoCountExplorerItems()" class="btn-3d btn-green h-[clamp(42px,6.4dvh,58px)] text-[clamp(0.88rem,1.45vmin,1.2rem)] gap-1.5">
-                <span class="text-[clamp(1.25rem,2.4vmin,1.8rem)]">✨</span>
-                <span>Hitung 1-1</span>
+              <button onclick="App.autoCountExplorerItems()" class="btn-3d btn-green h-[clamp(30px,5.8vh,44px)] text-[clamp(0.72rem,1.5vh,1rem)] gap-1">
+                <span>✨</span><span>Hitung 1-1</span>
               </button>
             </div>
-            <div class="grid grid-cols-2 gap-2.5 w-full">
-              <button onclick="App.stepExplorerNumber(-1)" class="btn-3d btn-white h-[clamp(38px,5.6dvh,50px)] text-[clamp(0.82rem,1.35vmin,1.1rem)] gap-1">
-                <span>⬅️</span><span>Sebelumnya</span>
+            <div class="grid grid-cols-2 gap-2 w-full">
+              <button onclick="App.stepExplorerNumber(-1)" class="btn-3d btn-white h-[clamp(28px,5.2vh,38px)] text-[clamp(0.68rem,1.4vh,0.92rem)] gap-1">
+                <span>⬅️</span><span>Sebelum</span>
               </button>
-              <button onclick="App.stepExplorerNumber(1)" class="btn-3d btn-white h-[clamp(38px,5.6dvh,50px)] text-[clamp(0.82rem,1.35vmin,1.1rem)] gap-1">
-                <span>Berikutnya</span><span>➡️</span>
+              <button onclick="App.stepExplorerNumber(1)" class="btn-3d btn-white h-[clamp(28px,5.2vh,38px)] text-[clamp(0.68rem,1.4vh,0.92rem)] gap-1">
+                <span>Lanjut</span><span>➡️</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Kanan (8 Kolom): Panggung Benda Proporsional (Otomatis Besar Saat Sedikit, Ten-Frame Saat Banyak) -->
-        <div class="col-span-7 lg:col-span-8 game-card p-[2vmin] bg-amber-50/95 flex flex-col justify-between overflow-hidden">
+        <!-- Sisi Kanan (8 Kolom): Visual Bingkai Sepuluh (Ten-Frame) yang Rapi -->
+        <div class="col-span-8 lg:col-span-9 game-card p-[1.2vh] bg-amber-50/90 flex flex-col justify-between overflow-hidden">
           <div class="flex items-center justify-between gap-2 shrink-0">
-            <span class="font-display font-bold text-[clamp(0.95rem,1.65vmin,1.4rem)] text-amber-950">
-              👆 Sentuh setiap gambar untuk menghitung bersama!
+            <span class="font-display font-bold text-[clamp(0.75rem,1.6vh,1.15rem)] text-amber-950 truncate">
+              👆 Sentuh kotak bergambar untuk menghitung bersama Budi!
             </span>
-            <span id="explorerTapCounter" class="bg-emerald-500 text-white font-display font-bold px-4 py-1 rounded-full text-[clamp(0.85rem,1.45vmin,1.2rem)] shadow shrink-0">
+            <span id="explorerTapCounter" class="bg-emerald-500 text-white font-display font-bold px-3 py-0.5 rounded-full text-[clamp(0.72rem,1.5vh,1rem)] shadow shrink-0">
               Terhitung: 0 / 5
             </span>
           </div>
 
-          <!-- Area Benda yang Disentuh (Otomatis Menyesuaikan Ukuran XL / LG / MD) -->
-          <div id="explorerItemsGrid" class="flex flex-wrap items-center justify-center gap-[1.3vmin] my-auto py-1 overflow-hidden">
+          <!-- Wadah Bingkai Sepuluh (Maksimal 2 Bingkai: Puluhan & Satuan) -->
+          <div id="explorerTenFramesContainer" class="flex flex-row items-center justify-center gap-[1.2vw] my-auto py-1 overflow-hidden">
             <!-- Diisi secara dinamis oleh JavaScript -->
           </div>
 
-          <div class="flex items-center justify-between text-[clamp(0.75rem,1.25vmin,1.02rem)] font-bold text-slate-600 border-t-2 border-amber-200/80 pt-1.5 shrink-0">
-            <span>💡 10 benda = <b>1 Puluhan</b></span>
-            <span class="text-amber-900 font-extrabold">Sentuh semua benda sampai muncul bintang perayaan! 🎉</span>
+          <div class="flex items-center justify-between text-[clamp(0.62rem,1.3vh,0.85rem)] font-bold text-slate-600 border-t border-amber-200 pt-1 shrink-0">
+            <span>💡 1 bingkai penuh = <b>10 benda (1 Puluhan)</b></span>
+            <span class="text-amber-900 font-extrabold truncate">Sentuh semua kotak sampai konfeti muncul! 🎉</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Baris Bawah: Deretan Tombol Pilih Cepat Angka 1 Sampai 20 (Besar & Mudah Disentuh) -->
-      <div class="game-card px-[1.2vw] py-[1dvh] shrink-0">
-        <div id="explorerNumbersBar" class="grid grid-cols-10 gap-[0.9vmin]">
-          <!-- Diisi tombol 1-20 oleh JavaScript -->
+      <!-- Baris Bawah: Deretan Tombol Pilih Cepat Angka 1 Sampai 20 -->
+      <div class="game-card px-[0.8vw] py-[0.5vh] shrink-0">
+        <div id="explorerNumbersBar" class="grid grid-cols-10 sm:grid-cols-20 gap-[0.5vmin]">
+          <!-- Diisi 20 tombol angka oleh JavaScript -->
         </div>
       </div>
 
     </section>
 
-    <!-- ================= 3. HALAMAN BERMAIN SOAL (IKON DINAMIS XL/LG/MD & ZERO LAYOUT SHIFT) ================= -->
-    <section id="screenQuiz" class="hidden flex-1 min-h-0 flex flex-col justify-between gap-[1.2dvh] overflow-hidden">
+    <!-- ================= 4. HALAMAN BERMAIN SOAL (KUIS ZERO-OVERFLOW) ================= -->
+    <section id="screenQuiz" class="hidden flex-1 min-h-0 flex flex-col justify-between gap-[0.8vh] overflow-hidden">
       
-      <!-- Top Bar HUD Permainan -->
-      <div class="game-card px-[1.4vw] py-[0.8dvh] h-[8.5dvh] min-h-[48px] max-h-[70px] shrink-0 flex items-center justify-between gap-3">
-        <div class="flex items-center gap-2 shrink-0">
-          <button onclick="App.showMainMenu()" class="btn-3d btn-white header-btn gap-1.5">
-            <span class="header-btn-icon">🏠</span>
+      <!-- Top Bar HUD Soal -->
+      <div class="game-card px-[1.2vw] py-[0.5vh] h-[clamp(36px,7.5vh,52px)] shrink-0 flex items-center justify-between gap-2">
+        <div class="flex items-center gap-1.5 shrink-0">
+          <button onclick="App.showMainMenu()" class="btn-3d btn-white app-header-btn gap-1">
+            <span class="app-header-icon">🏠</span>
             <span class="hidden sm:inline">Menu</span>
           </button>
-          <button onclick="App.restartCurrentGame()" class="btn-3d btn-white header-btn gap-1.5" title="Ulangi dari Soal 1">
-            <span class="header-btn-icon">🔄</span>
+          <button onclick="App.restartCurrentGame()" class="btn-3d btn-white app-header-btn gap-1" title="Ulangi Soal">
+            <span class="app-header-icon">🔄</span>
             <span class="hidden md:inline">Ulangi</span>
           </button>
         </div>
 
-        <!-- Tengah: Judul Mode + Progress Bar -->
-        <div class="flex-1 max-w-2xl flex flex-col gap-1">
-          <div class="flex items-center justify-between px-1">
-            <span id="quizModeTitle" class="font-display font-bold text-[clamp(0.95rem,1.65vmin,1.4rem)] text-sky-700 truncate">
-              🍎 Berhitung Penjumlahan
+        <!-- Judul Mode & Progress Bar -->
+        <div class="flex-1 max-w-xl flex flex-col gap-0.5">
+          <div class="flex items-center justify-between px-1 leading-tight">
+            <span id="quizModeTitle" class="font-display font-bold text-[clamp(0.78rem,1.7vh,1.15rem)] text-sky-700 truncate">
+              🍎 Penjumlahan
             </span>
-            <span id="quizProgressText" class="text-[clamp(0.8rem,1.35vmin,1.1rem)] font-extrabold text-slate-700 bg-slate-100 px-3 py-0.5 rounded-full border border-slate-200 shrink-0">
+            <span id="quizProgressText" class="text-[clamp(0.68rem,1.4vh,0.92rem)] font-extrabold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-full border border-slate-200 shrink-0">
               Soal 1 / 10
             </span>
           </div>
-          <div class="w-full h-[1.6dvh] min-h-[10px] max-h-[16px] bg-slate-200 rounded-full overflow-hidden p-0.5 border border-slate-300">
-            <div id="quizProgressBar" class="h-full bg-gradient-to-r from-emerald-400 to-green-500 rounded-full transition-all duration-500" style="width: 10%;"></div>
+          <div class="w-full h-[clamp(6px,1.2vh,10px)] bg-slate-200 rounded-full overflow-hidden p-0.5 border border-slate-300">
+            <div id="quizProgressBar" class="h-full bg-gradient-to-r from-emerald-400 to-green-500 rounded-full transition-all duration-300" style="width: 10%;"></div>
           </div>
         </div>
 
-        <!-- Kanan: Skor Bintang & Tombol Bacakan Soal -->
-        <div class="flex items-center gap-2.5 shrink-0">
-          <div class="bg-amber-100 border-2 border-amber-400 rounded-2xl px-3.5 py-1 flex items-center gap-1.5 h-[clamp(42px,6.6dvh,62px)]">
-            <span class="header-btn-icon">⭐</span>
-            <span id="quizScoreDisplay" class="font-display font-bold text-[clamp(1.1rem,1.9vmin,1.65rem)] text-amber-950">0</span>
+        <!-- Skor & Tombol Bacakan Soal -->
+        <div class="flex items-center gap-1.5 shrink-0">
+          <div class="bg-amber-100 border border-amber-400 rounded-xl px-2.5 py-0.5 flex items-center gap-1 h-[clamp(30px,6.2vh,42px)]">
+            <span class="app-header-icon">⭐</span>
+            <span id="quizScoreDisplay" class="font-display font-bold text-[clamp(0.85rem,1.8vh,1.3rem)] text-amber-950">0</span>
           </div>
-          <button onclick="App.speakCurrentQuestion()" class="btn-3d btn-yellow header-btn gap-2" title="Bacakan Soal dengan Suara">
-            <span class="header-btn-icon">🔊</span>
-            <span class="hidden sm:inline">Bacakan Soal</span>
+          <button onclick="App.speakCurrentQuestion()" class="btn-3d btn-yellow app-header-btn gap-1" title="Bacakan Soal">
+            <span class="app-header-icon">🔊</span>
+            <span class="hidden sm:inline">Bacakan</span>
           </button>
         </div>
       </div>
 
-      <!-- PANGGUNG SOAL UTAMA -->
-      <div id="questionStageCard" class="game-card p-[1.8vmin] flex-1 min-h-0 flex flex-col justify-between gap-[1.2dvh] relative overflow-hidden">
+      <!-- PANGGUNG SOAL UTAMA (3 BAGIAN: PROMPT ATAS, VISUAL TENGAH, JAWABAN BAWAH) -->
+      <div id="questionStageCard" class="game-card p-[1.2vh] flex-1 min-h-0 flex flex-col justify-between gap-[0.8vh] relative overflow-hidden">
         
-        <!-- BARIS ATAS TERPADU: TEKS PERTANYAAN + SLOT FEEDBACK LANGSUNG (ZERO LAYOUT SHIFT) -->
-        <div class="w-full shrink-0 flex flex-col lg:flex-row items-center justify-between gap-3 bg-sky-50/90 border-2 border-sky-200 rounded-2xl px-[1.5vw] py-[1dvh] min-h-[9.5dvh]">
-          
-          <!-- Teks Soal -->
-          <div class="flex-1 text-center lg:text-left min-w-0">
-            <span id="questionInstructionBadge" class="inline-block bg-sky-600 text-white font-extrabold text-[clamp(0.68rem,1.1vmin,0.92rem)] px-3 py-0.5 rounded-full mb-0.5">
+        <!-- BAGIAN A: BARIS SOAL + FEEDBACK TERPADU (TINGGI ~11vh, ZERO LAYOUT SHIFT) -->
+        <div class="w-full shrink-0 flex flex-row items-center justify-between gap-2 bg-sky-50/90 border border-sky-200 rounded-xl px-[1.2vw] py-[0.6vh] min-h-[clamp(38px,8.5vh,60px)]">
+          <!-- Teks Pertanyaan -->
+          <div class="flex-1 text-left min-w-0">
+            <span id="questionInstructionBadge" class="inline-block bg-sky-600 text-white font-extrabold text-[clamp(0.55rem,1.1vh,0.78rem)] px-2 py-0.2 rounded-full mb-0.5">
               👆 Sentuh benda untuk ikut menghitung!
             </span>
-            <h2 id="questionPromptText" class="font-display font-bold text-slate-800 quiz-prompt-text">
+            <h2 id="questionPromptText" class="font-display font-bold text-slate-800 text-[clamp(0.82rem,1.85vh,1.35rem)] leading-tight truncate">
               Berapa jumlah seluruh apel di bawah ini?
             </h2>
           </div>
 
-          <!-- Panel Respons Terpadu (Muncul Tanpa Menggeser Tombol Jawaban) -->
-          <div id="feedbackBanner" class="hidden shrink-0 rounded-2xl px-4 py-1.5 border-3 flex items-center gap-3 shadow-md">
-            <span id="feedbackEmoji" class="text-[clamp(1.8rem,4vmin,3rem)] leading-none">🌟</span>
+          <!-- Banner Respons Langsung (Muncul Tanpa Menggeser Tombol Jawaban) -->
+          <div id="feedbackBanner" class="hidden shrink-0 rounded-xl px-3 py-1 border-2 flex items-center gap-2 shadow-sm">
+            <span id="feedbackEmoji" class="text-[clamp(1.2rem,2.8vh,2.2rem)] leading-none">🌟</span>
             <div class="text-left leading-tight">
-              <h3 id="feedbackTitle" class="font-display font-bold text-[clamp(0.95rem,1.6vmin,1.4rem)]">
-                HEBAT! BENAR!
-              </h3>
-              <p id="feedbackSubtitle" class="font-bold text-[clamp(0.75rem,1.2vmin,1.02rem)] opacity-95">
-                Kamu dapat +10 Poin!
-              </p>
+              <h3 id="feedbackTitle" class="font-display font-bold text-[clamp(0.75rem,1.6vh,1.1rem)]">HEBAT! BENAR!</h3>
+              <p id="feedbackSubtitle" class="font-bold text-[clamp(0.6rem,1.2vh,0.85rem)] opacity-90">+10 Poin</p>
             </div>
-            <button id="btnNextQuestion" onclick="App.nextQuestion()" class="hidden btn-3d btn-green h-[clamp(42px,6.5dvh,60px)] px-5 text-[clamp(0.95rem,1.6vmin,1.35rem)] gap-2 ml-1">
+            <button id="btnNextQuestion" onclick="App.nextQuestion()" class="hidden btn-3d btn-green h-[clamp(30px,6.2vh,44px)] px-3 text-[clamp(0.75rem,1.6vh,1.1rem)] gap-1 ml-1">
               <span>Lanjut</span>
-              <span class="text-[clamp(1.2rem,2.2vmin,1.7rem)]">➡️</span>
+              <span>➡️</span>
             </button>
           </div>
         </div>
 
-        <!-- AREA TENGAH: VISUAL ILUSTRASI BENDA (DENGAN DYNAMIC SCALING XL/LG/MD) -->
-        <div id="questionVisualContainer" class="w-full flex-1 min-h-0 flex flex-col items-center justify-center gap-[1.2dvh] overflow-hidden">
+        <!-- BAGIAN B: VISUAL BINGKAI SEPULUH & BENDA HITUNG (TINGGI ~58vh, TIDAK PERNAH KEPOTONG) -->
+        <div id="questionVisualContainer" class="w-full flex-1 min-h-0 flex flex-col items-center justify-center gap-[0.8vh] overflow-hidden">
           <!-- Diisi secara dinamis sesuai tipe soal -->
         </div>
 
-        <!-- BARIS BAWAH: TOMBOL PILIHAN JAWABAN RAKSASA -->
-        <div id="answerChoicesGrid" class="grid grid-cols-3 gap-[1.8vw] max-w-5xl mx-auto w-full shrink-0 pt-0.5">
-          <!-- Diisi tombol pilihan jawaban besar oleh JavaScript -->
+        <!-- BAGIAN C: DERETAN TOMBOL PILIHAN JAWABAN BESAR (TINGGI ~20vh) -->
+        <div id="answerChoicesGrid" class="grid grid-cols-3 gap-[1.2vw] max-w-4xl mx-auto w-full shrink-0">
+          <!-- Diisi tombol pilihan jawaban oleh JavaScript -->
         </div>
 
       </div>
     </section>
 
-    <!-- ================= 4. HALAMAN AKHIR / HADIAH BINTANG & SKOR ================= -->
+    <!-- ================= 5. HALAMAN AKHIR / HASIL PERMAINAN ================= -->
     <section id="screenResult" class="hidden flex-1 min-h-0 flex items-center justify-center overflow-hidden">
-      <div class="game-card p-[3vmin] max-w-5xl w-full h-full max-h-[84dvh] grid grid-cols-12 gap-[2.2vw] items-center animate-pop overflow-hidden">
+      <div class="game-card p-[2vh] max-w-4xl w-full h-full max-h-[82vh] grid grid-cols-12 gap-[1.5vw] items-center animate-pop overflow-hidden">
         
-        <!-- Kiri (5 Kolom): Bintang Besar & Motivasi -->
-        <div class="col-span-12 md:col-span-5 flex flex-col items-center justify-center text-center bg-gradient-to-b from-amber-50 to-sky-50 border-3 border-amber-200 rounded-3xl p-[2.5vmin] h-full">
-          <span class="bg-amber-300 text-amber-950 font-extrabold px-4 py-1 rounded-full text-[clamp(0.8rem,1.35vmin,1.1rem)] shadow-sm">
-            🎉 Permainan Selesai!
+        <!-- Sisi Kiri (5 Kolom): Bintang & Pesan Motivasi -->
+        <div class="col-span-5 flex flex-col items-center justify-center text-center bg-gradient-to-b from-amber-50 to-sky-50 border-2 border-amber-200 rounded-2xl p-[1.5vh] h-full">
+          <span class="bg-amber-300 text-amber-950 font-extrabold px-3 py-0.5 rounded-full text-[clamp(0.68rem,1.4vh,0.95rem)] shadow-sm">
+            🎉 Selesai!
           </span>
-          <div id="resultStarsRow" class="flex items-center justify-center gap-3 my-[2dvh] text-[clamp(3.2rem,7.5vmin,5.6rem)]">
+          <div id="resultStarsRow" class="flex items-center justify-center gap-2 my-[1vh] text-[clamp(2.4rem,6vh,4.5rem)]">
             <span class="animate-bounce" style="animation-delay: 0ms;">⭐</span>
             <span class="animate-bounce" style="animation-delay: 150ms;">⭐</span>
             <span class="animate-bounce" style="animation-delay: 300ms;">⭐</span>
           </div>
-          <h2 id="resultHeadline" class="font-display font-bold text-[clamp(1.6rem,3.2vmin,2.8rem)] text-sky-600 leading-tight">
+          <h2 id="resultHeadline" class="font-display font-bold text-[clamp(1.2rem,2.8vh,2.2rem)] text-sky-600 leading-tight">
             🌟 LUAR BIASA!
           </h2>
-          <p id="resultPlayerMotivation" class="text-[clamp(0.9rem,1.45vmin,1.2rem)] font-bold text-slate-700 mt-1.5">
+          <p id="resultPlayerMotivation" class="text-[clamp(0.72rem,1.4vh,1.05rem)] font-bold text-slate-700 mt-1 leading-snug">
             Hebat sekali! Kamu sudah rajin belajar berhitung hari ini!
           </p>
         </div>
 
-        <!-- Kanan (7 Kolom): Statistik Skor Besar & Tombol Main Lagi -->
-        <div class="col-span-12 md:col-span-7 flex flex-col justify-between h-full py-2 gap-[2dvh]">
-          <div class="grid grid-cols-3 gap-[1.2vw] my-auto">
-            <div class="bg-amber-50 border-3 border-amber-300 rounded-3xl p-[2vmin] text-center shadow-sm">
-              <span class="text-[clamp(0.7rem,1.15vmin,0.95rem)] font-extrabold text-amber-800 uppercase block">Nilai Akhir</span>
-              <span id="resultTotalScore" class="font-display font-bold text-[clamp(2rem,4.5vmin,3.6rem)] text-amber-600 block leading-tight my-1">100</span>
-              <span class="text-[clamp(0.75rem,1.2vmin,1rem)] font-bold text-amber-900 block">Poin</span>
+        <!-- Sisi Kanan (7 Kolom): Ringkasan Nilai & Tombol Main Lagi -->
+        <div class="col-span-7 flex flex-col justify-between h-full py-1 gap-[1vh]">
+          <div class="grid grid-cols-3 gap-[0.8vw] my-auto">
+            <div class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-[1vh] text-center shadow-sm">
+              <span class="text-[clamp(0.58rem,1.2vh,0.82rem)] font-extrabold text-amber-800 uppercase block">Nilai Akhir</span>
+              <span id="resultTotalScore" class="font-display font-bold text-[clamp(1.6rem,4vh,3rem)] text-amber-600 block leading-tight my-0.5">100</span>
+              <span class="text-[clamp(0.62rem,1.3vh,0.88rem)] font-bold text-amber-900 block">Poin</span>
             </div>
 
-            <div class="bg-emerald-50 border-3 border-emerald-300 rounded-3xl p-[2vmin] text-center shadow-sm">
-              <span class="text-[clamp(0.7rem,1.15vmin,0.95rem)] font-extrabold text-emerald-800 uppercase block">Jawaban Benar</span>
-              <span id="resultCorrectCount" class="font-display font-bold text-[clamp(2rem,4.5vmin,3.6rem)] text-emerald-600 block leading-tight my-1">10/10</span>
-              <span class="text-[clamp(0.75rem,1.2vmin,1rem)] font-bold text-emerald-900 block">Soal Selesai</span>
+            <div class="bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-[1vh] text-center shadow-sm">
+              <span class="text-[clamp(0.58rem,1.2vh,0.82rem)] font-extrabold text-emerald-800 uppercase block">Benar</span>
+              <span id="resultCorrectCount" class="font-display font-bold text-[clamp(1.6rem,4vh,3rem)] text-emerald-600 block leading-tight my-0.5">10/10</span>
+              <span class="text-[clamp(0.62rem,1.3vh,0.88rem)] font-bold text-emerald-900 block">Soal</span>
             </div>
 
-            <div class="bg-sky-50 border-3 border-sky-300 rounded-3xl p-[2vmin] text-center shadow-sm">
-              <span class="text-[clamp(0.7rem,1.15vmin,0.95rem)] font-extrabold text-sky-800 uppercase block">Sekali Coba</span>
-              <span id="resultFirstTryCount" class="font-display font-bold text-[clamp(2rem,4.5vmin,3.6rem)] text-sky-600 block leading-tight my-1">9 Soal</span>
-              <span id="resultRetryNote" class="text-[clamp(0.7rem,1.1vmin,0.92rem)] font-bold text-sky-900 block truncate">Sangat Hebat!</span>
+            <div class="bg-sky-50 border-2 border-sky-300 rounded-2xl p-[1vh] text-center shadow-sm">
+              <span class="text-[clamp(0.58rem,1.2vh,0.82rem)] font-extrabold text-sky-800 uppercase block">1x Coba</span>
+              <span id="resultFirstTryCount" class="font-display font-bold text-[clamp(1.6rem,4vh,3rem)] text-sky-600 block leading-tight my-0.5">9 Soal</span>
+              <span id="resultRetryNote" class="text-[clamp(0.58rem,1.1vh,0.8rem)] font-bold text-sky-900 block truncate">Sangat Hebat!</span>
             </div>
           </div>
 
           <!-- Tombol Aksi Akhir -->
-          <div class="grid grid-cols-2 gap-4 w-full">
-            <button onclick="App.restartCurrentGame()" class="btn-3d btn-green h-[clamp(52px,9dvh,80px)] text-[clamp(1.15rem,2.2vmin,1.8rem)] gap-2.5">
-              <span class="text-[clamp(1.5rem,3vmin,2.4rem)]">🔄</span>
-              <span>Main Lagi</span>
+          <div class="grid grid-cols-2 gap-3 w-full">
+            <button onclick="App.restartCurrentGame()" class="btn-3d btn-green h-[clamp(40px,7.5vh,60px)] text-[clamp(0.92rem,2vh,1.4rem)] gap-2">
+              <span>🔄</span><span>Main Lagi</span>
             </button>
-            <button onclick="App.showMainMenu()" class="btn-3d btn-blue h-[clamp(52px,9dvh,80px)] text-[clamp(1.15rem,2.2vmin,1.8rem)] gap-2.5">
-              <span class="text-[clamp(1.5rem,3vmin,2.4rem)]">🏠</span>
-              <span>Menu Utama</span>
+            <button onclick="App.showMainMenu()" class="btn-3d btn-blue h-[clamp(40px,7.5vh,60px)] text-[clamp(0.92rem,2vh,1.4rem)] gap-2">
+              <span>🏠</span><span>Menu Utama</span>
             </button>
           </div>
         </div>
@@ -893,35 +833,35 @@
   </div>
 
   <!-- ================= MODAL 1: PETUNJUK PERMAINAN ================= -->
-  <div id="modalHelp" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden items-center justify-center p-[2.5vmin]">
-    <div class="game-card max-w-4xl w-full p-[2.8vmin] animate-pop overflow-hidden">
-      <div class="flex items-center justify-between border-b-2 border-slate-200 pb-3 mb-4">
-        <h3 class="font-display font-bold text-[clamp(1.25rem,2.4vmin,2rem)] text-sky-700">📘 Petunjuk Permainan (Kelas 1 SD)</h3>
-        <button onclick="App.closeModal('modalHelp')" class="btn-3d btn-white w-12 h-12 text-xl">✕</button>
+  <div id="modalHelp" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-[2vh]">
+    <div class="game-card max-w-3xl w-full p-[2vh] animate-pop overflow-hidden">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-3">
+        <h3 class="font-display font-bold text-[clamp(1rem,2.2vh,1.6rem)] text-sky-700">📘 Petunjuk Permainan (Kelas 1 SD)</h3>
+        <button onclick="App.closeModal('modalHelp')" class="btn-3d btn-white w-9 h-9 text-lg">✕</button>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 text-slate-700 font-bold text-[clamp(0.82rem,1.35vmin,1.08rem)] leading-snug">
-        <div class="bg-sky-50 border-2 border-sky-200 rounded-2xl p-4">
-          <div class="text-4xl mb-2">👆🍎</div>
-          <h4 class="font-display font-bold text-[clamp(1rem,1.65vmin,1.35rem)] text-sky-800 mb-1">1. Sentuh Benda</h4>
-          <p>Sentuh setiap gambar buah, hewan, atau mainan di layar. Akan muncul angka urut dan bunyi tangga nada berhitung!</p>
+      <div class="grid grid-cols-3 gap-3 text-slate-700 font-bold text-[clamp(0.72rem,1.4vh,0.98rem)] leading-snug">
+        <div class="bg-sky-50 border border-sky-200 rounded-xl p-3">
+          <div class="text-3xl mb-1">👆🍎</div>
+          <h4 class="font-display font-bold text-sky-800 text-[clamp(0.85rem,1.6vh,1.15rem)] mb-0.5">1. Sentuh Kotak</h4>
+          <p>Sentuh setiap kotak bergambar di layar. Akan muncul angka urut dan bunyi nada tangga musik berhitung!</p>
         </div>
 
-        <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-4">
-          <div class="text-4xl mb-2">💪💡</div>
-          <h4 class="font-display font-bold text-[clamp(1rem,1.65vmin,1.35rem)] text-emerald-800 mb-1">2. Petunjuk Visual</h4>
-          <p>Tidak ada batas waktu yang memburu. Jika jawaban belum tepat, muncul <b>Petunjuk Angka</b> di bawah gambar agar anak bisa menghitung ulang.</p>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3">
+          <div class="text-3xl mb-1">💡🔟</div>
+          <h4 class="font-display font-bold text-emerald-800 text-[clamp(0.85rem,1.6vh,1.15rem)] mb-0.5">2. Bingkai Sepuluh</h4>
+          <p>Benda disusun dalam kotak 10 (2 baris x 5 kolom) agar anak mudah melihat kelompok puluhan dan satuan.</p>
         </div>
 
-        <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4">
-          <div class="text-4xl mb-2">🔊🇮🇩</div>
-          <h4 class="font-display font-bold text-[clamp(1rem,1.65vmin,1.35rem)] text-amber-800 mb-1">3. Suara Indonesia</h4>
-          <p>Sentuh tombol <b>🔊 Bacakan Soal</b> agar soal dibacakan dengan jelas. Sangat membantu bagi siswa kelas 1 yang sedang belajar membaca.</p>
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-3">
+          <div class="text-3xl mb-1">🔊🇮🇩</div>
+          <h4 class="font-display font-bold text-amber-800 text-[clamp(0.85rem,1.6vh,1.15rem)] mb-0.5">3. Suara Jelas</h4>
+          <p>Sentuh tombol <b>🔊 Bacakan</b> agar soal dibacakan dengan suara ramah. Membantu anak yang baru belajar membaca.</p>
         </div>
       </div>
 
-      <div class="mt-5 text-center">
-        <button onclick="App.closeModal('modalHelp')" class="btn-3d btn-green px-10 py-3 text-lg gap-2">
+      <div class="mt-4 text-center">
+        <button onclick="App.closeModal('modalHelp')" class="btn-3d btn-green px-8 py-2 text-base gap-2">
           <span>🚀</span><span>Siap Bermain!</span>
         </button>
       </div>
@@ -929,100 +869,100 @@
   </div>
 
   <!-- ================= MODAL 2: MODE GURU & FITUR KELAS IFP ================= -->
-  <div id="modalTeacher" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden items-center justify-center p-[2.5vmin]">
-    <div class="game-card max-w-4xl w-full p-[2.8vmin] animate-pop overflow-hidden">
-      <div class="flex items-center justify-between border-b-2 border-slate-200 pb-2.5 mb-3.5">
+  <div id="modalTeacher" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-[2vh]">
+    <div class="game-card max-w-3xl w-full p-[2vh] animate-pop overflow-hidden">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-2.5">
         <div>
-          <h3 class="font-display font-bold text-[clamp(1.2rem,2.2vmin,1.9rem)] text-purple-700 leading-tight">👩‍🏫 Mode Guru & Pengaturan Kelas IFP</h3>
-          <p class="text-[clamp(0.75rem,1.2vmin,1rem)] font-bold text-slate-500">Sesuaikan tingkat kesulitan dan fitur layar interaktif di kelas</p>
+          <h3 class="font-display font-bold text-[clamp(1rem,2.2vh,1.5rem)] text-purple-700 leading-tight">👩‍🏫 Mode Guru & Pengaturan Layar IFP</h3>
+          <p class="text-[clamp(0.65rem,1.2vh,0.85rem)] font-bold text-slate-500">Sesuaikan tingkat kesulitan dan fitur papan sentuh interaktif kelas</p>
         </div>
-        <button onclick="App.closeModal('modalTeacher')" class="btn-3d btn-white w-12 h-12 text-xl">✕</button>
+        <button onclick="App.closeModal('modalTeacher')" class="btn-3d btn-white w-9 h-9 text-lg">✕</button>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 font-bold text-slate-700">
-        <!-- Kolom Kiri (6 Kolom): Rentang Angka & Jumlah Soal -->
-        <div class="col-span-12 md:col-span-6 flex flex-col gap-3">
-          <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-3.5">
-            <label class="block font-display font-bold text-base text-slate-800 mb-2">🔢 Rentang Angka Soal:</label>
-            <div class="grid grid-cols-2 gap-2.5">
-              <button id="btnRange10" onclick="App.setTeacherConfig('maxNumber', 10)" class="btn-3d btn-white py-2.5 text-sm">
+      <div class="grid grid-cols-12 gap-3 font-bold text-slate-700">
+        <!-- Kiri: Rentang Angka & Jumlah Soal -->
+        <div class="col-span-6 flex flex-col gap-2.5">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+            <label class="block font-display font-bold text-[clamp(0.75rem,1.5vh,1rem)] text-slate-800 mb-1.5">🔢 Rentang Angka Soal:</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button id="btnRange10" onclick="App.setTeacherConfig('maxNumber', 10)" class="btn-3d btn-white py-1.5 text-xs">
                 Angka 1–10 (Awal)
               </button>
-              <button id="btnRange20" onclick="App.setTeacherConfig('maxNumber', 20)" class="btn-3d btn-blue py-2.5 text-sm">
+              <button id="btnRange20" onclick="App.setTeacherConfig('maxNumber', 20)" class="btn-3d btn-blue py-1.5 text-xs">
                 Angka 1–20 (Lengkap)
               </button>
             </div>
           </div>
 
-          <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-3.5">
-            <label class="block font-display font-bold text-base text-slate-800 mb-2">📝 Jumlah Soal per Permainan:</label>
-            <div class="grid grid-cols-3 gap-2.5">
-              <button id="btnQCount5" onclick="App.setTeacherConfig('totalQuestions', 5)" class="btn-3d btn-white py-2.5 text-sm">5 Soal</button>
-              <button id="btnQCount10" onclick="App.setTeacherConfig('totalQuestions', 10)" class="btn-3d btn-blue py-2.5 text-sm">10 Soal</button>
-              <button id="btnQCount15" onclick="App.setTeacherConfig('totalQuestions', 15)" class="btn-3d btn-white py-2.5 text-sm">15 Soal</button>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+            <label class="block font-display font-bold text-[clamp(0.75rem,1.5vh,1rem)] text-slate-800 mb-1.5">📝 Jumlah Soal per Sesi:</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button id="btnQCount5" onclick="App.setTeacherConfig('totalQuestions', 5)" class="btn-3d btn-white py-1.5 text-xs">5 Soal</button>
+              <button id="btnQCount10" onclick="App.setTeacherConfig('totalQuestions', 10)" class="btn-3d btn-blue py-1.5 text-xs">10 Soal</button>
+              <button id="btnQCount15" onclick="App.setTeacherConfig('totalQuestions', 15)" class="btn-3d btn-white py-1.5 text-xs">15 Soal</button>
             </div>
           </div>
         </div>
 
-        <!-- Kolom Kanan (6 Kolom): Mode Estafet & Unduh File PWA -->
-        <div class="col-span-12 md:col-span-6 flex flex-col gap-3">
-          <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+        <!-- Kanan: Mode Estafet & Paket PWA -->
+        <div class="col-span-6 flex flex-col gap-2.5">
+          <div class="bg-purple-50 border border-purple-200 rounded-xl p-2.5 flex items-center justify-between gap-2">
             <div>
-              <h4 class="font-display font-bold text-base text-purple-900">🏃 Mode Estafet Kelas (IFP)</h4>
-              <p class="text-xs sm:text-sm text-purple-800 leading-snug">Layar pergantian giliran setiap selesai 1 soal agar siswa maju bergantian.</p>
+              <h4 class="font-display font-bold text-[clamp(0.78rem,1.5vh,1.05rem)] text-purple-900">🏃 Mode Estafet Siswa (IFP)</h4>
+              <p class="text-[clamp(0.62rem,1.2vh,0.82rem)] text-purple-800 leading-snug">Jeda pergantian siswa maju ke papan sentuh setiap selesai 1 soal.</p>
             </div>
-            <button id="btnRelayToggle" onclick="App.toggleRelayMode()" class="btn-3d btn-white px-5 py-2.5 text-sm shrink-0">
+            <button id="btnRelayToggle" onclick="App.toggleRelayMode()" class="btn-3d btn-white px-4 py-2 text-xs shrink-0">
               MATI
             </button>
           </div>
 
-          <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-3.5">
-            <h4 class="font-display font-bold text-base text-emerald-900 mb-1">📦 Unduh Aplikasi / PWA</h4>
-            <p class="text-xs sm:text-sm text-emerald-800 mb-2.5 leading-snug">
-              Siap diunggah ke GitHub Pages atau dijalankan offline di perangkat kelas:
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-2.5">
+            <h4 class="font-display font-bold text-[clamp(0.78rem,1.5vh,1.05rem)] text-emerald-900 mb-0.5">📦 Unduh File PWA / Offline</h4>
+            <p class="text-[clamp(0.62rem,1.2vh,0.82rem)] text-emerald-800 mb-2 leading-snug">
+              Jalankan offline di kelas atau upload ke GitHub Pages:
             </p>
-            <div class="flex flex-wrap gap-2">
-              <button onclick="App.downloadProjectFile('manifest.json')" class="btn-3d btn-white px-3 py-1.5 text-xs">⬇️ manifest.json</button>
-              <button onclick="App.downloadProjectFile('sw.js')" class="btn-3d btn-white px-3 py-1.5 text-xs">⬇️ sw.js</button>
-              <button onclick="App.downloadProjectFile('standalone-html')" class="btn-3d btn-green px-3.5 py-1.5 text-xs">⬇️ Unduh .HTML Lengkap</button>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="App.downloadProjectFile('manifest.json')" class="btn-3d btn-white px-2.5 py-1 text-[11px]">⬇️ manifest</button>
+              <button onclick="App.downloadProjectFile('sw.js')" class="btn-3d btn-white px-2.5 py-1 text-[11px]">⬇️ sw.js</button>
+              <button onclick="App.downloadProjectFile('standalone-html')" class="btn-3d btn-green px-3 py-1 text-[11px]">⬇️ Unduh .HTML</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center">
-        <button onclick="App.resetHighScore()" class="text-sm font-extrabold text-rose-600 underline px-2 py-1">Reset Skor Tertinggi</button>
-        <button onclick="App.closeModal('modalTeacher')" class="btn-3d btn-purple px-8 py-2.5 text-base">Simpan & Tutup</button>
+      <div class="mt-3 pt-2 border-t border-slate-200 flex justify-between items-center">
+        <button onclick="App.resetHighScore()" class="text-xs font-extrabold text-rose-600 underline">Reset Skor Tertinggi</button>
+        <button onclick="App.closeModal('modalTeacher')" class="btn-3d btn-purple px-6 py-2 text-sm">Simpan & Tutup</button>
       </div>
     </div>
   </div>
 
   <!-- ================= MODAL 3: LAYAR ESTAFET GILIRAN SISWA DI IFP ================= -->
-  <div id="modalRelayTurn" class="fixed inset-0 bg-purple-900/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
-    <div class="game-card max-w-lg w-full p-7 text-center flex flex-col items-center gap-3.5 animate-pop">
-      <div class="w-24 h-24 rounded-full bg-amber-300 border-4 border-white shadow-lg flex items-center justify-center text-6xl animate-bounce">
+  <div id="modalRelayTurn" class="fixed inset-0 bg-purple-900/85 backdrop-blur-md z-[60] hidden items-center justify-center p-4">
+    <div class="game-card max-w-md w-full p-5 text-center flex flex-col items-center gap-2.5 animate-pop">
+      <div class="w-18 h-18 rounded-full bg-amber-300 border-4 border-white shadow-lg flex items-center justify-center text-5xl animate-bounce">
         🙌
       </div>
-      <span id="relayStudentTurnBadge" class="bg-purple-100 text-purple-800 font-extrabold px-4 py-1 rounded-full text-sm border-2 border-purple-300">
-        Giliran Siswa Berikutnya!
+      <span id="relayStudentTurnBadge" class="bg-purple-100 text-purple-800 font-extrabold px-3 py-0.5 rounded-full text-xs border border-purple-300">
+        Giliran Teman Berikutnya!
       </span>
-      <h3 class="font-display font-bold text-3xl text-purple-700">
-        Ayo Maju ke Layar IFP!
+      <h3 class="font-display font-bold text-2xl text-purple-700">
+        Ayo Maju ke Layar Papan!
       </h3>
-      <p class="text-base font-bold text-slate-700">
-        Silakan siswa berikutnya maju ke depan kelas dan sentuh tombol hijau di bawah untuk menjawab soal!
+      <p class="text-sm font-bold text-slate-700">
+        Silakan siswa berikutnya maju ke depan dan sentuh tombol hijau untuk menjawab soal!
       </p>
-      <button onclick="App.confirmRelayReady()" class="btn-3d btn-green w-full py-4 text-2xl gap-2.5 mt-1">
+      <button onclick="App.confirmRelayReady()" class="btn-3d btn-green w-full py-3 text-xl gap-2 mt-1">
         <span>✋</span>
         <span>SAYA SIAP MENJAWAB!</span>
       </button>
     </div>
   </div>
 
-  <!-- ================= LOGIKA JAVASCRIPT UTAMA (MODULAR & BERSIH) ================= -->
+  <!-- ================= LOGIKA JAVASCRIPT LENGKAP ================= -->
   <script>
     /**
-     * Katalog Ilustrasi Benda Sehari-hari, Buah, Hewan, Kendaraan & Alat Sekolah
+     * Katalog Benda Ramah Anak Kelas 1 SD (Buah, Hewan, Benda Sekolah)
      */
     const ITEM_CATALOG = [
       { id: 'apel', emoji: '🍎', name: 'apel merah', unit: 'buah apel' },
@@ -1048,7 +988,7 @@
     ];
 
     /**
-     * Kata Bilangan Bahasa Indonesia 1 sampai 20
+     * Bilangan Kata Bahasa Indonesia
      */
     const NUMBER_WORDS_ID = {
       0: 'Nol',
@@ -1059,22 +999,7 @@
     };
 
     /**
-     * Fungsi Penentu Ukuran Kartu & Ikon Benda Secara Dinamis (Agar Tidak Pernah Kekecilan!)
-     */
-    function getDynamicItemSizeClass(itemCount, isSplitScreen = false) {
-      if (isSplitScreen) {
-        if (itemCount <= 4) return 'size-xl';
-        if (itemCount <= 8) return 'size-lg';
-        return 'size-md';
-      } else {
-        if (itemCount <= 6) return 'size-xl';
-        if (itemCount <= 10) return 'size-lg';
-        return 'size-md';
-      }
-    }
-
-    /**
-     * Sistem Web Audio API (Efek Suara Ceria Tanpa File MP3 Eksternal)
+     * Web Audio API (Sintesis Nada Ceria Tanpa File MP3 Eksternal)
      */
     const SoundFX = {
       ctx: null,
@@ -1145,7 +1070,7 @@
     };
 
     /**
-     * Sistem Pembaca Suara Bahasa Indonesia (Web Speech API)
+     * Web Speech API (Pembaca Soal Bahasa Indonesia)
      */
     const VoiceID = {
       speak(text) {
@@ -1172,7 +1097,7 @@
     };
 
     /**
-     * Sistem Animasi Konfeti Perayaan
+     * Partikel Konfeti Kemenangan
      */
     const Confetti = {
       canvas: null,
@@ -1193,16 +1118,16 @@
         this.canvas.height = window.innerHeight;
       },
 
-      burst(count = 70) {
+      burst(count = 65) {
         this.resize();
         const colors = ['#fde047', '#4ade80', '#38bdf8', '#fb923c', '#f472b6', '#a855f7'];
         for (let i = 0; i < count; i++) {
           this.particles.push({
-            x: this.canvas.width / 2 + (Math.random() - 0.5) * 260,
+            x: this.canvas.width / 2 + (Math.random() - 0.5) * 240,
             y: this.canvas.height * 0.45,
-            vx: (Math.random() - 0.5) * 16,
-            vy: -Math.random() * 14 - 4,
-            size: Math.random() * 11 + 6,
+            vx: (Math.random() - 0.5) * 15,
+            vy: -Math.random() * 12 - 4,
+            size: Math.random() * 9 + 6,
             color: colors[Math.floor(Math.random() * colors.length)],
             rot: Math.random() * 360,
             vrot: (Math.random() - 0.5) * 12,
@@ -1228,7 +1153,7 @@
           this.ctx.restore();
         });
 
-        this.particles = this.particles.filter(p => p.y < this.canvas.height + 40);
+        this.particles = this.particles.filter(p => p.y < this.canvas.height + 30);
         if (this.particles.length > 0) {
           this.animId = requestAnimationFrame(() => this.loop());
         } else {
@@ -1239,7 +1164,7 @@
     };
 
     /**
-     * Generator Soal Pintar Kelas 1 SD (Rentang 1-20, Tidak Ada Hasil Negatif)
+     * Pembuat Soal Berhitung Kelas 1 SD
      */
     const QuestionGenerator = {
       randInt(min, max) {
@@ -1257,8 +1182,8 @@
         while (choices.size < 3) {
           const offset = offsets[Math.floor(Math.random() * offsets.length)];
           let candidate = correctAnswer + offset;
-          if (candidate < 1) candidate = this.randInt(1, Math.min(6, maxLimit));
-          if (candidate > maxLimit) candidate = this.randInt(Math.max(1, maxLimit - 5), maxLimit);
+          if (candidate < 1) candidate = this.randInt(1, Math.min(5, maxLimit));
+          if (candidate > maxLimit) candidate = this.randInt(Math.max(1, maxLimit - 4), maxLimit);
           if (candidate !== correctAnswer) choices.add(candidate);
         }
         return Array.from(choices).sort(() => Math.random() - 0.5);
@@ -1304,15 +1229,10 @@
         const remain = total - taken;
         const item = this.pickRandomItem();
 
-        const actionVerbs = ['dimakan', 'diambil', 'diberikan kepada teman', 'jatuh'];
-        const verb = ['apel', 'pisang', 'jeruk', 'stroberi', 'semangka', 'permen', 'eskrim'].includes(item.id)
-          ? 'dimakan'
-          : actionVerbs[this.randInt(1, 2)];
-
         return {
           type: 'pengurangan',
-          prompt: `Ada ${total} ${item.unit}, lalu ${taken} ${item.name} ${verb}. Berapa yang tersisa?`,
-          speech: `Ada ${total} ${item.unit}. Kemudian ${taken} ${verb}. Berapa ${item.name} yang tersisa?`,
+          prompt: `Ada ${total} ${item.unit}, diambil ${taken}. Berapa yang tersisa?`,
+          speech: `Ada ${total} ${item.unit}. Kemudian ${taken} diambil. Berapa yang tersisa?`,
           itemA: item,
           countA: total,
           countB: taken,
@@ -1359,7 +1279,7 @@
             const item = ITEM_CATALOG.find(i => i.id === 'apel');
             return {
               storyType: 'add',
-              prompt: `Budi punya ${a} apel 🍎. Ibu memberi ${b} apel lagi. Berapa jumlah apel Budi sekarang?`,
+              prompt: `Budi punya ${a} apel 🍎. Ibu memberi ${b} apel lagi. Berapa apel Budi sekarang?`,
               speech: `Budi mempunyai ${a} buah apel. Ibu memberikan ${b} apel lagi. Berapa jumlah apel Budi sekarang?`,
               itemA: item, countA: a, countB: b,
               correctAnswer: a + b,
@@ -1372,8 +1292,8 @@
             const item = ITEM_CATALOG.find(i => i.id === 'permen');
             return {
               storyType: 'sub',
-              prompt: `Siti punya ${a} permen 🍬. Ia memberikan ${b} permen kepada temannya. Berapa sisa permen Siti?`,
-              speech: `Siti mempunyai ${a} permen. Ia memberikan ${b} permen kepada temannya. Berapa permen yang tersisa?`,
+              prompt: `Siti punya ${a} permen 🍬. Diberikan ${b} ke teman. Berapa sisa permen Siti?`,
+              speech: `Siti mempunyai ${a} permen. Diberikan ${b} permen kepada teman. Berapa yang tersisa?`,
               itemA: item, countA: a, countB: b,
               correctAnswer: a - b,
               choices: this.generateChoices(a - b, limit)
@@ -1385,7 +1305,7 @@
             const item = ITEM_CATALOG.find(i => i.id === 'burung');
             return {
               storyType: 'add',
-              prompt: `Ada ${a} burung 🐦 di pohon. Datang lagi ${b} ekor burung. Berapa jumlah burung sekarang?`,
+              prompt: `Ada ${a} burung 🐦 di pohon. Datang lagi ${b} ekor. Berapa jumlah burung sekarang?`,
               speech: `Ada ${a} burung di pohon. Datang lagi ${b} burung. Berapa jumlah burung sekarang?`,
               itemA: item, countA: a, countB: b,
               correctAnswer: a + b,
@@ -1398,53 +1318,27 @@
             const item = ITEM_CATALOG.find(i => i.id === 'bola');
             return {
               storyType: 'sub',
-              prompt: `Andi punya ${a} bola ⚽. Sebanyak ${b} bola dimasukkan ke kotak. Berapa sisa bola di luar kotak?`,
-              speech: `Andi mempunyai ${a} bola. Sebanyak ${b} bola dimasukkan ke kotak. Berapa sisa bola sekarang?`,
+              prompt: `Andi punya ${a} bola ⚽. Sebanyak ${b} bola disimpan. Berapa sisa bola di luar?`,
+              speech: `Andi mempunyai ${a} bola. Sebanyak ${b} bola disimpan. Berapa sisa bola sekarang?`,
               itemA: item, countA: a, countB: b,
               correctAnswer: a - b,
               choices: this.generateChoices(a - b, limit)
             };
           },
           () => {
-            let a = this.randInt(4, Math.min(12, limit));
-            let b = this.randInt(2, Math.min(12, limit));
+            let a = this.randInt(4, Math.min(10, limit));
+            let b = this.randInt(2, Math.min(10, limit));
             if (a === b) a += 1;
             const itemA = ITEM_CATALOG.find(i => i.id === 'kupu');
             const itemB = ITEM_CATALOG.find(i => i.id === 'lebah');
             const correct = a > b ? 'Kupu-kupu 🦋' : 'Lebah 🐝';
             return {
               storyType: 'compare',
-              prompt: `Di taman ada ${a} kupu-kupu 🦋 dan ${b} lebah 🐝. Hewan mana yang jumlahnya LEBIH BANYAK?`,
-              speech: `Di taman ada ${a} kupu-kupu dan ${b} lebah. Mana yang jumlahnya lebih banyak?`,
+              prompt: `Ada ${a} kupu-kupu 🦋 dan ${b} lebah 🐝. Mana yang LEBIH BANYAK?`,
+              speech: `Ada ${a} kupu-kupu dan ${b} lebah. Mana yang jumlahnya lebih banyak?`,
               itemA, itemB, countA: a, countB: b,
               correctAnswer: correct,
               choices: ['Kupu-kupu 🦋', 'Lebah 🐝']
-            };
-          },
-          () => {
-            const a = this.randInt(4, Math.floor(limit * 0.6));
-            const b = this.randInt(2, limit - a);
-            const item = ITEM_CATALOG.find(i => i.id === 'pensil');
-            return {
-              storyType: 'add',
-              prompt: `Lani membawa ${a} pensil ✏️. Ayah membelikan ${b} pensil baru. Berapa jumlah pensil Lani semuanya?`,
-              speech: `Lani membawa ${a} pensil. Ayah membelikan ${b} pensil baru. Berapa jumlah pensil Lani semuanya?`,
-              itemA: item, countA: a, countB: b,
-              correctAnswer: a + b,
-              choices: this.generateChoices(a + b, limit)
-            };
-          },
-          () => {
-            const a = this.randInt(5, limit);
-            const b = this.randInt(1, a - 1);
-            const item = ITEM_CATALOG.find(i => i.id === 'pisang');
-            return {
-              storyType: 'sub',
-              prompt: `Di meja ada ${a} buah pisang 🍌. Adik memakan ${b} pisang. Berapa pisang yang masih tersisa?`,
-              speech: `Di atas meja ada ${a} buah pisang. Adik memakan ${b} pisang. Berapa pisang yang tersisa?`,
-              itemA: item, countA: a, countB: b,
-              correctAnswer: a - b,
-              choices: this.generateChoices(a - b, limit)
             };
           }
         ];
@@ -1458,7 +1352,7 @@
     };
 
     /**
-     * Controller Utama Aplikasi Game "PETUALANGAN ANGKA 1-20"
+     * Aplikasi Utama "PETUALANGAN ANGKA 1-20"
      */
     const App = {
       state: {
@@ -1563,7 +1457,7 @@
         SoundFX.enabled = !SoundFX.enabled;
         if (SoundFX.enabled) {
           SoundFX.click();
-          VoiceID.speak('Suara diaktifkan');
+          VoiceID.speak('Suara aktif');
         } else {
           VoiceID.stop();
         }
@@ -1580,11 +1474,11 @@
         if (SoundFX.enabled) {
           icon.textContent = '🔊';
           label.textContent = 'Suara: ON';
-          btn.className = 'btn-3d btn-yellow header-btn gap-2';
+          btn.className = 'btn-3d btn-yellow app-header-btn gap-1.5';
         } else {
           icon.textContent = '🔇';
           label.textContent = 'Suara: OFF';
-          btn.className = 'btn-3d btn-white header-btn gap-2';
+          btn.className = 'btn-3d btn-white app-header-btn gap-1.5';
         }
       },
 
@@ -1641,25 +1535,25 @@
       updateTeacherModalUI() {
         const r10 = document.getElementById('btnRange10');
         const r20 = document.getElementById('btnRange20');
-        r10.className = `btn-3d py-2.5 text-sm ${this.state.maxNumber === 10 ? 'btn-blue' : 'btn-white'}`;
-        r20.className = `btn-3d py-2.5 text-sm ${this.state.maxNumber === 20 ? 'btn-blue' : 'btn-white'}`;
-        document.getElementById('activeRangeBadge').textContent = `🔢 Angka 1–${this.state.maxNumber}`;
+        r10.className = `btn-3d py-1.5 text-xs ${this.state.maxNumber === 10 ? 'btn-blue' : 'btn-white'}`;
+        r20.className = `btn-3d py-1.5 text-xs ${this.state.maxNumber === 20 ? 'btn-blue' : 'btn-white'}`;
+        document.getElementById('activeRangeBadge').textContent = `🔢 1–${this.state.maxNumber}`;
 
         [5, 10, 15].forEach(n => {
           const btn = document.getElementById('btnQCount' + n);
-          btn.className = `btn-3d py-2.5 text-sm ${this.state.totalQuestions === n ? 'btn-blue' : 'btn-white'}`;
+          btn.className = `btn-3d py-1.5 text-xs ${this.state.totalQuestions === n ? 'btn-blue' : 'btn-white'}`;
         });
 
         const relayBtn = document.getElementById('btnRelayToggle');
         const relayPill = document.getElementById('relayStatusPill');
         if (this.state.relayMode) {
           relayBtn.textContent = 'AKTIF ✅';
-          relayBtn.className = 'btn-3d btn-green px-5 py-2.5 text-sm shrink-0';
+          relayBtn.className = 'btn-3d btn-green px-4 py-2 text-xs shrink-0';
           relayPill.classList.remove('hidden');
           relayPill.classList.add('inline-flex');
         } else {
           relayBtn.textContent = 'MATI';
-          relayBtn.className = 'btn-3d btn-white px-5 py-2.5 text-sm shrink-0';
+          relayBtn.className = 'btn-3d btn-white px-4 py-2 text-xs shrink-0';
           relayPill.classList.add('hidden');
           relayPill.classList.remove('inline-flex');
         }
@@ -1669,12 +1563,11 @@
         SoundFX.correct();
         const name = this.state.playerName ? this.state.playerName : 'teman-teman';
         const messages = [
-          `Halo ${name}! Ayo kita berpetualang menghitung angka 1 sampai 20!`,
-          `Semangat belajar ya ${name}! Kamu pasti bisa menjawab semua soalnya!`,
-          `Pilih permainan di sebelah kanan untuk mulai bermain bersama Budi!`
+          `Halo ${name}! Ayo berpetualang berhitung bersama Budi!`,
+          `Pilih permainan di sebelah kanan atau tekan Mulai Cepat ya ${name}!`
         ];
         const msg = messages[Math.floor(Math.random() * messages.length)];
-        document.getElementById('mascotGreetingBubble').textContent = `"${msg}"`;
+        document.getElementById('mascotGreetingBubble').innerHTML = `"${msg}"`;
         VoiceID.speak(msg);
       },
 
@@ -1695,7 +1588,49 @@
         this.showScreen('screenMenu');
       },
 
-      // ================= LOGIKA GAME A: MENGENAL ANGKA 1–20 (DENGAN DYNAMIC SCALING) =================
+      // ================= FUNGSI HELPER PEMBUAT BINGKAI SEPULUH (TEN-FRAME) =================
+      createTenFrameElement(item, count, totalCapacity = 10, startNum = 1, isSubtractedOffset = null) {
+        const frame = document.createElement('div');
+        frame.className = 'ten-frame-grid';
+
+        for (let i = 1; i <= totalCapacity; i++) {
+          const cell = document.createElement('div');
+          const isFilled = i <= count;
+          const displayNum = startNum + i - 1;
+
+          if (isFilled) {
+            const isSubtracted = isSubtractedOffset !== null && displayNum > isSubtractedOffset;
+            cell.className = `ten-frame-cell ${isSubtracted ? 'subtracted-cell' : ''}`;
+            cell.innerHTML = `
+              <span class="item-emoji">${item.emoji}</span>
+              <span class="hint-badge item-badge hidden font-display font-bold rounded-full ${isSubtracted ? 'bg-rose-200 text-rose-900' : 'bg-amber-300 text-amber-950'}">
+                ${isSubtracted ? '✕' : displayNum}
+              </span>
+            `;
+
+            cell.onclick = () => {
+              if (!isSubtracted) {
+                cell.classList.add('counted-active');
+                const badge = cell.querySelector('.hint-badge');
+                if (badge) badge.classList.remove('hidden');
+                SoundFX.countNote(displayNum);
+                VoiceID.speak(NUMBER_WORDS_ID[displayNum] || String(displayNum));
+              } else {
+                SoundFX.tryAgain();
+              }
+            };
+          } else {
+            cell.className = 'ten-frame-cell empty-slot';
+            cell.innerHTML = `<span class="text-slate-300 text-base leading-none">•</span>`;
+          }
+
+          frame.appendChild(cell);
+        }
+
+        return frame;
+      },
+
+      // ================= LOGIKA GAME A: MENGENAL ANGKA 1–20 =================
       renderExplorerNumbersBar() {
         const bar = document.getElementById('explorerNumbersBar');
         bar.innerHTML = '';
@@ -1704,7 +1639,7 @@
           const colorClass = colors[(n - 1) % colors.length];
           const btn = document.createElement('button');
           btn.id = `expBtn_${n}`;
-          btn.className = `btn-3d ${colorClass} h-[clamp(36px,5.8dvh,54px)] text-[clamp(1.1rem,2.2vmin,1.8rem)] font-bold`;
+          btn.className = `btn-3d ${colorClass} h-[clamp(28px,5.2vh,40px)] text-[clamp(0.85rem,1.8vh,1.3rem)] font-bold`;
           btn.textContent = n;
           btn.onclick = () => this.selectExplorerNumber(n, true);
           bar.appendChild(btn);
@@ -1735,52 +1670,33 @@
         document.getElementById('explorerPlaceValueInfo').textContent =
           `${tens} Puluhan + ${ones} Satuan = ${num}`;
 
-        // Ukuran kartu otomatis besar (XL jika <=6, LG jika <=10, MD jika >10)
-        const sizeCls = getDynamicItemSizeClass(num, false);
-        const grid = document.getElementById('explorerItemsGrid');
-        grid.innerHTML = '';
+        // Render Bingkai Sepuluh (Ten-Frames)
+        const container = document.getElementById('explorerTenFramesContainer');
+        container.innerHTML = '';
 
-        for (let i = 1; i <= num; i++) {
-          const card = document.createElement('button');
-          card.type = 'button';
-          card.id = `expItem_${i}`;
-          card.className = `countable-item ${sizeCls} animate-pop`;
-          card.style.animationDelay = `${i * 20}ms`;
-          card.innerHTML = `
-            <span class="item-emoji">${item.emoji}</span>
-            <span id="expBadge_${i}" class="item-badge font-display font-bold rounded-full bg-slate-100 text-slate-600 leading-tight">
-              ${i}
-            </span>
-          `;
-          card.onclick = () => this.tapExplorerItem(i, num, item);
-          grid.appendChild(card);
+        if (num <= 10) {
+          const frame = this.createTenFrameElement(item, num, 10, 1);
+          container.appendChild(frame);
+        } else {
+          // Bingkai 1 (Puluhan Lengkap = 10)
+          const frame1Wrap = document.createElement('div');
+          frame1Wrap.className = 'flex flex-col items-center gap-1';
+          frame1Wrap.innerHTML = `<span class="font-display font-bold text-xs text-sky-800">10 (1 Puluhan)</span>`;
+          frame1Wrap.appendChild(this.createTenFrameElement(item, 10, 10, 1));
+
+          // Bingkai 2 (Satuan = num - 10)
+          const frame2Wrap = document.createElement('div');
+          frame2Wrap.className = 'flex flex-col items-center gap-1';
+          frame2Wrap.innerHTML = `<span class="font-display font-bold text-xs text-orange-800">${ones} Satuan</span>`;
+          frame2Wrap.appendChild(this.createTenFrameElement(item, ones, 10, 11));
+
+          container.appendChild(frame1Wrap);
+          container.appendChild(frame2Wrap);
         }
 
         if (shouldSpeak) {
           SoundFX.countNote(num);
           VoiceID.speak(`Angka ${word}. ${word} ${item.unit}.`);
-        }
-      },
-
-      tapExplorerItem(index, total, item) {
-        this.state.explorerTappedSet.add(index);
-        const countNow = this.state.explorerTappedSet.size;
-        const card = document.getElementById(`expItem_${index}`);
-        const badge = document.getElementById(`expBadge_${index}`);
-        if (card) card.classList.add('counted-active');
-        if (badge) {
-          badge.className = 'item-badge font-display font-bold rounded-full bg-amber-400 text-amber-950 leading-tight shadow-sm';
-          badge.textContent = countNow;
-        }
-        document.getElementById('explorerTapCounter').textContent = `Terhitung: ${countNow} / ${total}`;
-        SoundFX.countNote(countNow);
-        VoiceID.speak(NUMBER_WORDS_ID[countNow]);
-
-        if (countNow === total) {
-          Confetti.burst(40);
-          setTimeout(() => {
-            VoiceID.speak(`Hebat! Semuanya ada ${NUMBER_WORDS_ID[total]} ${item.unit}!`);
-          }, 600);
         }
       },
 
@@ -1795,35 +1711,33 @@
       autoCountExplorerItems() {
         const num = this.state.explorerNumber;
         this.state.explorerTappedSet.clear();
-        for (let i = 1; i <= num; i++) {
-          const card = document.getElementById(`expItem_${i}`);
-          if (card) card.classList.remove('counted-active');
-        }
+        const cells = document.querySelectorAll('#explorerTenFramesContainer .ten-frame-cell:not(.empty-slot)');
+        cells.forEach(c => c.classList.remove('counted-active'));
+
         let step = 1;
         const interval = setInterval(() => {
-          if (step > num) {
+          if (step > num || step > cells.length) {
             clearInterval(interval);
-            Confetti.burst(35);
+            Confetti.burst(30);
             return;
           }
-          const card = document.getElementById(`expItem_${step}`);
-          const badge = document.getElementById(`expBadge_${step}`);
-          if (card) card.classList.add('counted-active');
-          if (badge) {
-            badge.className = 'item-badge font-display font-bold rounded-full bg-amber-400 text-amber-950 leading-tight shadow-sm';
-            badge.textContent = step;
+          const c = cells[step - 1];
+          if (c) {
+            c.classList.add('counted-active');
+            const badge = c.querySelector('.hint-badge');
+            if (badge) badge.classList.remove('hidden');
           }
           document.getElementById('explorerTapCounter').textContent = `Terhitung: ${step} / ${num}`;
           SoundFX.countNote(step);
           step++;
-        }, 300);
+        }, 280);
       },
 
       stepExplorerNumber(delta) {
         this.selectExplorerNumber(this.state.explorerNumber + delta, true);
       },
 
-      // ================= LOGIKA SESI PERMAINAN SOAL (GAME B - G) =================
+      // ================= LOGIKA PERMAINAN SOAL =================
       startGame(mode) {
         SoundFX.click();
         this.state.currentMode = mode;
@@ -1865,12 +1779,12 @@
 
         const modeTitles = {
           kuis_angka: '🎯 Latihan Tebak Angka 1–20',
-          penjumlahan: '🍎 Berhitung Penjumlahan (+)',
-          pengurangan: '🍌 Berhitung Pengurangan (–)',
-          lebih_banyak: '🐰 Mana yang Lebih Banyak?',
-          lebih_sedikit: '🐣 Mana yang Lebih Sedikit?',
-          soal_cerita: '📖 Soal Cerita Kelas 1 SD',
-          tantangan: '🏆 Tantangan Berhitung Acak'
+          penjumlahan: '🍎 Penjumlahan (+)',
+          pengurangan: '🍌 Pengurangan (–)',
+          lebih_banyak: '🐰 Lebih Banyak?',
+          lebih_sedikit: '🐣 Lebih Sedikit?',
+          soal_cerita: '📖 Soal Cerita SD',
+          tantangan: '🏆 Tantangan Acak'
         };
         document.getElementById('quizModeTitle').textContent = modeTitles[mode] || '🎮 Petualangan Angka';
 
@@ -1905,192 +1819,94 @@
 
         setTimeout(() => {
           VoiceID.speak(q.speech);
-        }, 220);
+        }, 200);
       },
 
       renderQuestionVisuals(q) {
         const container = document.getElementById('questionVisualContainer');
         container.innerHTML = '';
 
-        // 1. Kuis Hitung Benda
+        // 1. Kuis Tebak Benda
         if (q.type === 'kuis_angka') {
-          const sizeCls = getDynamicItemSizeClass(q.countA, false);
-          const box = this.createCountableGroupBox(q.itemA, q.countA, 'Sentuh Benda untuk Menghitung', 'sky', false, 1, sizeCls);
-          box.classList.add('max-w-5xl', 'w-full', 'h-full');
-          container.appendChild(box);
+          const wrap = document.createElement('div');
+          wrap.className = 'flex flex-row items-center justify-center gap-3';
+          if (q.countA <= 10) {
+            wrap.appendChild(this.createTenFrameElement(q.itemA, q.countA, 10, 1));
+          } else {
+            wrap.appendChild(this.createTenFrameElement(q.itemA, 10, 10, 1));
+            wrap.appendChild(this.createTenFrameElement(q.itemA, q.countA - 10, 10, 11));
+          }
+          container.appendChild(wrap);
           return;
         }
 
-        // 2. Penjumlahan (atau Soal Cerita Penjumlahan) — Susunan Landscape Menyamping + Persamaan Besar
+        // 2. Penjumlahan (+)
         if (q.type === 'penjumlahan' || (q.type === 'soal_cerita' && q.storyType === 'add')) {
-          const maxSideCount = Math.max(q.countA, q.countB);
-          const sizeCls = getDynamicItemSizeClass(maxSideCount, true);
-
           const row = document.createElement('div');
-          row.className = 'w-full flex-1 min-h-0 flex flex-row items-stretch justify-center gap-[1.2vw] overflow-hidden';
+          row.className = 'flex flex-row items-center justify-center gap-[1.2vw]';
 
-          const boxA = this.createCountableGroupBox(q.itemA, q.countA, `${q.countA} ${q.itemA.name}`, 'sky', false, 1, sizeCls);
-          const plusSign = document.createElement('div');
-          plusSign.className = 'self-center font-display font-bold text-[clamp(2rem,4.5vmin,3.6rem)] text-emerald-600 bg-white w-[clamp(48px,8vmin,78px)] h-[clamp(48px,8vmin,78px)] rounded-full flex items-center justify-center shadow-md border-4 border-emerald-300 shrink-0';
-          plusSign.textContent = '+';
-          const boxB = this.createCountableGroupBox(q.itemA, q.countB, `${q.countB} ${q.itemA.name}`, 'emerald', false, q.countA + 1, sizeCls);
+          const frameA = this.createTenFrameElement(q.itemA, q.countA, 10, 1);
+          const plus = document.createElement('div');
+          plus.className = 'font-display font-bold text-[clamp(1.6rem,4vh,2.8rem)] text-emerald-600 bg-white w-[clamp(34px,6.8vh,54px)] h-[clamp(34px,6.8vh,54px)] rounded-full flex items-center justify-center shadow border-2 border-emerald-300 shrink-0';
+          plus.textContent = '+';
+          const frameB = this.createTenFrameElement(q.itemA, q.countB, 10, q.countA + 1);
 
-          row.appendChild(boxA);
-          row.appendChild(plusSign);
-          row.appendChild(boxB);
+          row.appendChild(frameA);
+          row.appendChild(plus);
+          row.appendChild(frameB);
           container.appendChild(row);
 
+          // Persamaan Angka Rapi di Bawah Bingkai
           const eqBar = document.createElement('div');
-          eqBar.className = 'shrink-0 bg-amber-50 border-3 border-amber-300 rounded-2xl px-7 py-1.5 font-display font-bold equation-pill-text text-slate-800 shadow-sm';
+          eqBar.className = 'shrink-0 bg-amber-50 border border-amber-300 rounded-xl px-5 py-1 font-display font-bold text-[clamp(1.1rem,2.8vh,1.9rem)] text-slate-800 shadow-sm leading-none';
           eqBar.innerHTML = `<span class="text-sky-600">${q.countA}</span> + <span class="text-emerald-600">${q.countB}</span> = <span id="equationResultSlot" class="text-orange-500">?</span>`;
           container.appendChild(eqBar);
           return;
         }
 
-        // 3. Pengurangan (atau Soal Cerita Pengurangan)
+        // 3. Pengurangan (–)
         if (q.type === 'pengurangan' || (q.type === 'soal_cerita' && q.storyType === 'sub')) {
-          const sizeCls = getDynamicItemSizeClass(q.countA, false);
           const remainCount = q.countA - q.countB;
+          const wrap = document.createElement('div');
+          wrap.className = 'flex flex-row items-center justify-center gap-3';
 
-          const groupBox = document.createElement('div');
-          groupBox.className = 'w-full max-w-5xl flex-1 min-h-0 bg-orange-50/95 border-3 border-orange-300 rounded-3xl px-5 py-2.5 flex flex-col items-center justify-between overflow-hidden shadow-sm';
-
-          const headerBar = document.createElement('div');
-          headerBar.className = 'w-full flex items-center justify-between gap-2 shrink-0';
-          headerBar.innerHTML = `
-            <span class="font-display font-bold text-[clamp(0.95rem,1.65vmin,1.4rem)] text-orange-950">
-              Mulanya ada <b>${q.countA}</b>, dikurangi <b>${q.countB}</b>:
-            </span>
-            <button type="button" onclick="App.replaySubtractionAnimation()" class="btn-3d btn-white px-3.5 py-1 text-[clamp(0.78rem,1.3vmin,1.05rem)] h-[clamp(34px,5.2dvh,46px)] gap-1.5">
-              <span>🔄</span><span>Ulangi Animasi</span>
-            </button>
-          `;
-          groupBox.appendChild(headerBar);
-
-          const itemsGrid = document.createElement('div');
-          itemsGrid.id = 'subtractionItemsGrid';
-          itemsGrid.className = 'flex flex-wrap items-center justify-center gap-[1.2vmin] my-auto py-1';
-
-          for (let i = 1; i <= q.countA; i++) {
-            const isSubtracted = i > remainCount;
-            const itemBtn = document.createElement('button');
-            itemBtn.type = 'button';
-            itemBtn.className = `countable-item ${sizeCls} ${isSubtracted ? 'subtracted-item' : ''}`;
-            if (isSubtracted) {
-              itemBtn.style.animationDelay = `${(i - remainCount) * 160}ms`;
-            }
-            itemBtn.innerHTML = `
-              <span class="item-emoji">${q.itemA.emoji}</span>
-              <span class="hint-badge item-badge hidden font-display font-bold rounded-full ${isSubtracted ? 'bg-rose-200 text-rose-900' : 'bg-emerald-400 text-emerald-950'} leading-tight">
-                ${isSubtracted ? 'Hilang' : i}
-              </span>
-            `;
-            itemBtn.onclick = () => {
-              if (!isSubtracted) {
-                itemBtn.classList.add('counted-active');
-                const badge = itemBtn.querySelector('.hint-badge');
-                if (badge) badge.classList.remove('hidden');
-                SoundFX.countNote(i);
-                VoiceID.speak(NUMBER_WORDS_ID[i]);
-              } else {
-                SoundFX.tryAgain();
-              }
-            };
-            itemsGrid.appendChild(itemBtn);
+          if (q.countA <= 10) {
+            wrap.appendChild(this.createTenFrameElement(q.itemA, q.countA, 10, 1, remainCount));
+          } else {
+            wrap.appendChild(this.createTenFrameElement(q.itemA, 10, 10, 1, remainCount));
+            wrap.appendChild(this.createTenFrameElement(q.itemA, q.countA - 10, 10, 11, remainCount));
           }
-
-          groupBox.appendChild(itemsGrid);
-          container.appendChild(groupBox);
+          container.appendChild(wrap);
 
           const eqBar = document.createElement('div');
-          eqBar.className = 'shrink-0 bg-amber-50 border-3 border-amber-300 rounded-2xl px-7 py-1.5 font-display font-bold equation-pill-text text-slate-800 shadow-sm';
+          eqBar.className = 'shrink-0 bg-amber-50 border border-amber-300 rounded-xl px-5 py-1 font-display font-bold text-[clamp(1.1rem,2.8vh,1.9rem)] text-slate-800 shadow-sm leading-none';
           eqBar.innerHTML = `<span class="text-orange-600">${q.countA}</span> – <span class="text-rose-600">${q.countB}</span> = <span id="equationResultSlot" class="text-emerald-600">?</span>`;
           container.appendChild(eqBar);
           return;
         }
 
-        // 4. Perbandingan Kelompok A vs Kelompok B (Menyamping 2 Kolom Landscape Proporsional)
+        // 4. Perbandingan Lebih Banyak / Lebih Sedikit
         if (q.type === 'lebih_banyak' || q.type === 'lebih_sedikit' || (q.type === 'soal_cerita' && q.storyType === 'compare')) {
-          const maxSide = Math.max(q.countA, q.countB);
-          const sizeCls = getDynamicItemSizeClass(maxSide, true);
           const grid = document.createElement('div');
-          grid.className = 'w-full flex-1 min-h-0 grid grid-cols-2 gap-[1.6vw] max-w-6xl overflow-hidden';
+          grid.className = 'flex flex-row items-center justify-center gap-[2vw]';
 
           const labelA = q.type === 'soal_cerita' ? `Kupu-kupu 🦋` : 'Kelompok A';
           const labelB = q.type === 'soal_cerita' ? `Lebah 🐝` : 'Kelompok B';
 
-          const boxA = this.createCountableGroupBox(q.itemA, q.countA, labelA, 'purple', true, 1, sizeCls);
-          const boxB = this.createCountableGroupBox(q.itemB || q.itemA, q.countB, labelB, 'pink', true, 1, sizeCls);
+          const boxA = document.createElement('div');
+          boxA.className = 'flex flex-col items-center gap-1';
+          boxA.innerHTML = `<span class="font-display font-bold text-xs sm:text-sm text-purple-900">${labelA}</span>`;
+          boxA.appendChild(this.createTenFrameElement(q.itemA, q.countA, 10, 1));
+
+          const boxB = document.createElement('div');
+          boxB.className = 'flex flex-col items-center gap-1';
+          boxB.innerHTML = `<span class="font-display font-bold text-xs sm:text-sm text-pink-900">${labelB}</span>`;
+          boxB.appendChild(this.createTenFrameElement(q.itemB || q.itemA, q.countB, 10, 1));
 
           grid.appendChild(boxA);
           grid.appendChild(boxB);
           container.appendChild(grid);
         }
-      },
-
-      createCountableGroupBox(item, count, title, themeColor = 'sky', showCountOnHintOnly = true, startNumber = 1, sizeCls = 'size-lg') {
-        const themes = {
-          sky: 'bg-sky-50/95 border-sky-300 text-sky-950',
-          emerald: 'bg-emerald-50/95 border-emerald-300 text-emerald-950',
-          purple: 'bg-purple-50/95 border-purple-300 text-purple-950',
-          pink: 'bg-pink-50/95 border-pink-300 text-pink-950'
-        };
-        const cls = themes[themeColor] || themes.sky;
-
-        const box = document.createElement('div');
-        box.className = `flex-1 min-h-0 border-3 rounded-3xl px-4 py-2.5 flex flex-col items-center justify-between gap-1.5 shadow-sm overflow-hidden ${cls}`;
-
-        const header = document.createElement('div');
-        header.className = 'flex items-center justify-between w-full px-1 shrink-0';
-        header.innerHTML = `
-          <span class="font-display font-bold text-[clamp(0.95rem,1.7vmin,1.45rem)] truncate">${title}</span>
-          <span class="hint-total-badge ${showCountOnHintOnly ? 'hidden' : ''} bg-white px-3.5 py-0.5 rounded-full font-display font-bold text-[clamp(0.85rem,1.45vmin,1.2rem)] border-2 border-current shrink-0 shadow-sm">
-            Jumlah: ${count}
-          </span>
-        `;
-        box.appendChild(header);
-
-        const itemsWrap = document.createElement('div');
-        itemsWrap.className = 'flex flex-wrap items-center justify-center gap-[1.1vmin] my-auto py-1 overflow-hidden';
-
-        for (let i = 1; i <= count; i++) {
-          const displayNum = startNumber + i - 1;
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = `countable-item ${sizeCls}`;
-          btn.innerHTML = `
-            <span class="item-emoji">${item.emoji}</span>
-            <span class="hint-badge item-badge hidden font-display font-bold rounded-full bg-amber-300 text-amber-950 leading-tight shadow-sm">
-              ${displayNum}
-            </span>
-          `;
-          btn.onclick = () => {
-            btn.classList.add('counted-active');
-            const badge = btn.querySelector('.hint-badge');
-            if (badge) {
-              badge.classList.remove('hidden');
-              badge.textContent = displayNum;
-            }
-            SoundFX.countNote(displayNum);
-            VoiceID.speak(NUMBER_WORDS_ID[displayNum] || String(displayNum));
-          };
-          itemsWrap.appendChild(btn);
-        }
-
-        box.appendChild(itemsWrap);
-        return box;
-      },
-
-      replaySubtractionAnimation() {
-        SoundFX.click();
-        const grid = document.getElementById('subtractionItemsGrid');
-        if (!grid) return;
-        const subtracted = grid.querySelectorAll('.subtracted-item');
-        subtracted.forEach(el => {
-          el.classList.remove('subtracted-item');
-          void el.offsetWidth;
-          el.classList.add('subtracted-item');
-        });
       },
 
       renderAnswerButtons(q) {
@@ -2099,8 +1915,8 @@
 
         const isTwoChoices = q.choices.length === 2;
         grid.className = isTwoChoices
-          ? 'grid grid-cols-2 gap-[2.2vw] max-w-4xl mx-auto w-full shrink-0'
-          : 'grid grid-cols-3 gap-[1.8vw] max-w-5xl mx-auto w-full shrink-0';
+          ? 'grid grid-cols-2 gap-[1.5vw] max-w-3xl mx-auto w-full shrink-0'
+          : 'grid grid-cols-3 gap-[1.2vw] max-w-4xl mx-auto w-full shrink-0';
 
         const btnColors = ['btn-blue', 'btn-purple', 'btn-orange', 'btn-pink'];
 
@@ -2108,7 +1924,7 @@
           const btn = document.createElement('button');
           btn.type = 'button';
           const colorCls = btnColors[idx % btnColors.length];
-          btn.className = `btn-3d ${colorCls} ${isTwoChoices ? 'answer-btn-compare' : 'answer-btn-giant'} px-5 font-bold`;
+          btn.className = `btn-3d ${colorCls} ${isTwoChoices ? 'answer-btn-compare' : 'answer-btn'} px-3 font-bold`;
           btn.textContent = choice;
           btn.onclick = () => this.submitAnswer(choice, btn);
           grid.appendChild(btn);
@@ -2136,18 +1952,18 @@
           const eqSlot = document.getElementById('equationResultSlot');
           if (eqSlot) eqSlot.textContent = q.correctAnswer;
 
-          btnElement.className = `btn-3d btn-green ${isTwoChoices ? 'answer-btn-compare' : 'answer-btn-giant'} px-5 font-bold`;
+          btnElement.className = `btn-3d btn-green ${isTwoChoices ? 'answer-btn-compare' : 'answer-btn'} px-3 font-bold`;
 
           SoundFX.correct();
-          Confetti.burst(70);
+          Confetti.burst(55);
 
-          fb.className = 'shrink-0 rounded-2xl px-4 py-1.5 border-3 bg-emerald-100 border-emerald-400 text-emerald-950 flex items-center gap-3 shadow-md animate-pop';
+          fb.className = 'shrink-0 rounded-xl px-3 py-1 border-2 bg-emerald-100 border-emerald-400 text-emerald-950 flex items-center gap-2 shadow-sm animate-pop';
           fbEmoji.textContent = '🌟';
           fbTitle.textContent = 'HEBAT! BENAR!';
           fbSub.textContent = `Jawabannya ${q.correctAnswer} (+10 Poin)`;
           btnNext.classList.remove('hidden');
 
-          VoiceID.speak(`Hebat! Jawaban kamu benar! Jawabannya adalah ${q.correctAnswer}.`);
+          VoiceID.speak(`Hebat! Jawaban benar, jawabannya adalah ${q.correctAnswer}.`);
         } else {
           this.state.hasFailedCurrentQuestion = true;
           btnElement.disabled = true;
@@ -2155,21 +1971,19 @@
 
           SoundFX.tryAgain();
 
-          fb.className = 'shrink-0 rounded-2xl px-4 py-1.5 border-3 bg-amber-100 border-amber-400 text-amber-950 flex items-center gap-3 shadow-md animate-pop';
+          fb.className = 'shrink-0 rounded-xl px-3 py-1 border-2 bg-amber-100 border-amber-400 text-amber-950 flex items-center gap-2 shadow-sm animate-pop';
           fbEmoji.textContent = '💪';
           fbTitle.textContent = 'YUK, COBA LAGI!';
-          fbSub.textContent = 'Lihat angka petunjuk di bawah gambar ya!';
+          fbSub.textContent = 'Hitung kotaknya pelan-pelan ya!';
 
           this.activateVisualHint();
-          VoiceID.speak('Yuk, coba lagi! Hitung gambarnya pelan-pelan ya.');
+          VoiceID.speak('Yuk, coba lagi! Hitung kotaknya pelan-pelan ya.');
         }
       },
 
       activateVisualHint() {
         this.state.hintActive = true;
-        const container = document.getElementById('questionVisualContainer');
-        container.querySelectorAll('.hint-badge').forEach(b => b.classList.remove('hidden'));
-        container.querySelectorAll('.hint-total-badge').forEach(b => b.classList.remove('hidden'));
+        document.querySelectorAll('#questionVisualContainer .hint-badge').forEach(b => b.classList.remove('hidden'));
       },
 
       speakCurrentQuestion() {
@@ -2186,7 +2000,7 @@
             document.getElementById('relayStudentTurnBadge').textContent =
               `Soal ke-${this.state.currentIndex + 1} dari ${this.state.questions.length}`;
             this.openModal('modalRelayTurn');
-            VoiceID.speak('Giliran teman berikutnya! Silakan maju ke papan layar dan sentuh tombol siap!');
+            VoiceID.speak('Giliran teman berikutnya maju ke layar!');
           } else {
             this.renderCurrentQuestion();
           }
@@ -2202,7 +2016,7 @@
 
       finishGameSession() {
         SoundFX.winFanfare();
-        Confetti.burst(130);
+        Confetti.burst(110);
 
         const totalQ = this.state.questions.length;
         const score = this.state.score;
@@ -2217,21 +2031,21 @@
         document.getElementById('resultCorrectCount').textContent = `${totalQ}/${totalQ}`;
         document.getElementById('resultFirstTryCount').textContent = `${firstTry} Soal`;
         document.getElementById('resultRetryNote').textContent =
-          retried === 0 ? 'Sempurna tanpa salah!' : `${retried} soal dibantu petunjuk`;
+          retried === 0 ? 'Sempurna!' : `${retried} dibantu petunjuk`;
 
-        let motivation = `Kamu berhasil menyelesaikan semua ${totalQ} soal dan meraih ${score} poin! Teruslah semangat belajar berhitung ya!`;
+        let motivation = `Kamu menyelesaikan semua ${totalQ} soal dan meraih ${score} poin! Terus semangat belajar berhitung ya!`;
         if (firstTry === totalQ) {
-          motivation = `SEMPURNA! Kamu menjawab seluruh ${totalQ} soal dengan benar pada percobaan pertama! Kamu juara berhitung kelas 1!`;
+          motivation = `SEMPURNA! Kamu menjawab semua ${totalQ} soal benar pada percobaan pertama! Juara berhitung kelas 1!`;
         }
         document.getElementById('resultPlayerMotivation').textContent = motivation;
 
         this.showScreen('screenResult');
         setTimeout(() => {
           VoiceID.speak(`Luar biasa! Kamu mendapatkan ${score} poin! ${motivation}`);
-        }, 400);
+        }, 350);
       },
 
-      // ================= GENERATOR PAKET FILE PWA & GITHUB PAGES =================
+      // ================= PWA & STANDALONE DOWNLOADER =================
       downloadProjectFile(fileType) {
         SoundFX.click();
         let filename = '';
@@ -2244,7 +2058,7 @@
           content = JSON.stringify({
             name: 'PETUALANGAN ANGKA 1-20 | Game Berhitung Kelas 1 SD',
             short_name: 'Petualangan Angka',
-            description: 'Belajar Berhitung Sambil Bermain untuk Anak Kelas 1 SD (Full Landscape Proporsional)',
+            description: 'Game Berhitung SD Kelas 1 Full Landscape',
             start_url: './index.html',
             display: 'standalone',
             orientation: 'landscape',
@@ -2261,7 +2075,7 @@
         } else if (fileType === 'sw.js') {
           filename = 'sw.js';
           mime = 'application/javascript;charset=utf-8';
-          content = `const CACHE_NAME = 'petualangan-angka-landscape-v2';\nconst ASSETS = ['./', './index.html', './manifest.json'];\n\nself.addEventListener('install', e => {\n  e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS)));\n});\n\nself.addEventListener('fetch', e => {\n  e.respondWith(caches.match(e.request).then(res => res || fetch(e.request)));\n});\n`;
+          content = `const CACHE_NAME = 'petualangan-angka-v3';\nconst ASSETS = ['./', './index.html', './manifest.json'];\nself.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS))));\nself.addEventListener('fetch', e => e.respondWith(caches.match(e.request).then(r => r || fetch(e.request))));\n`;
         } else {
           filename = 'index.html';
           mime = 'text/html;charset=utf-8';
