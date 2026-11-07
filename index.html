@@ -1,0 +1,2932 @@
+<!DOCTYPE html>
+<html lang="id"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwMTU1ODI4MDUyMDA5NjY3MzA2OCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2MyOGViNmQ2OTI2Y2Q3ZTJfaW5kZXguaHRtbC04OTUifSwiZXhwIjoxNzk0MDYxMzI0LCJpYXQiOjE3OTQwNTc3MjQsImFsZyI6IlJTMjU2In0.C-E59m5Dm20RuF6FFn6kuXLEE7C7z0toCEqBrTBzNSoxxX4ONb6wCIfMIIT5Kl-IzYfkq9u0kz3jqgyp4bt0OJ8dkZyElXHDsu9yOjT0k0DXqIdDEh05wZI-rCIXLXrkKkd8gZHMV34v7K2cQJdL1NoVJImMAcCOZQGxeQr7ZnlEL7vc7kwg3Pj_XMD1MAAlOqCmoN-vEiIPPTmXz-vFTs3JoTlyiJL_0t2sogHREcN63e8yaVYKaDp2Lx0ZfK_M1i5e-1K2aPu-01GG2KNYKVn9yQG-dduDkqzmSGB9iVdmkQfubwZuAYq19JW_Xe2Ld3vTvHvS4uIoRUO6J8x9ng","c_c28eb6d6926cd7e2_index.html-895")</script><script data-bard-client-injected="true">
+  document.addEventListener('input', (event) => {
+    if (event.target && (event.target.isContentEditable || event.target.hasAttribute('contenteditable'))) {
+      const clonedDoc = document.cloneNode(true);
+      const injectedScripts = clonedDoc.querySelectorAll('[data-bard-client-injected="true"]');
+      injectedScripts.forEach(el => el.remove());
+      window.parent.postMessage({
+        type: 'inlineEdit',
+        html: '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML
+      }, '*');
+    }
+  });
+</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-client-injected="true">(function(){'use strict';var k=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function m(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var q=m(this);
+function r(a,b){if(b)a:{var d=q;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&k(d,a,{configurable:!0,writable:!0,value:b})}}function t(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function u(a){return t(a())}
+r("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});r("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function v(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var aa=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let y=null;function z(a={}){return y?y:a.u?y=a.u:y=w(window.getComputedStyle(document.documentElement))}function A(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function B(a,b={}){var d;if(!(d=b.width)){d=A(a,"border-left-width");var c=A(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=A(a,"border-top-width"),c=A(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function C(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function ba(a){return u(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function ca(a,b,d){return u(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return ba(c)})}
+var D=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||D(a,b)};function da(a,b){return z(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function E(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=aa();try{b.className=`${b.className} ${f}`}catch(h){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=da(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function F(a){return a.search(/^(data:)/)!==-1}function G(a,b,d){return u(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var h=new FileReader;h.onerror=g;h.onloadend=()=>{try{f(d({v:c,result:h.result}))}catch(l){g(l)}};h.readAsDataURL(e)})})}const H={};function ea(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function I(a,b,d){return u(function*(){var c=ea(a,b,d.F);if(H[c]!=null)return H[c];d.B&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield G(a,d.l,({v:g,result:h})=>{b||(b=g.headers.get("Content-Type")||"");return h.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.o||""}return H[c]=e})};const J={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",C:"application/vnd.ms-fontobject",J:"image/png",H:"image/jpeg",G:"image/jpeg",D:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function K(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function fa(a){return u(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):C(b)})}function ha(a,b){return u(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return C(d)}d=a.poster;d=yield I(d,J[K(d).toLowerCase()]||"",b);return C(d)})}
+function ia(a,b){return u(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield L(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ja(a,b){return u(function*(){return D(a,HTMLCanvasElement)?fa(a):D(a,HTMLVideoElement)?ha(a,b):D(a,HTMLIFrameElement)?ia(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function ka(a,b,d){return u(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(D(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||D(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>L(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function la(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):z(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);D(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function ma(a,b){D(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function na(a,b){return u(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield L(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function L(a,b,d){return u(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ja(c,b)).then(c=>ka(a,c,b)).then(c=>{D(c,Element)&&(la(a,c,b),E(a,c,":before",b),E(a,c,":after",b),D(a,HTMLTextAreaElement)&&(c.textContent=a.value),D(a,HTMLInputElement)&&c.setAttribute("value",a.value),ma(a,c));return c}).then(c=>na(c,b)):null})};const M=/url\((['"]?)([^'"]+?)\1\)/g,oa=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,pa=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function qa(a){var b=[];a.replace(M,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!F(d))}
+function ra(a,b,d,c){return u(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield I(e,J[K(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function sa(a,{K:b}){return b?a.replace(pa,d=>{for(;;){let [c,,e]=oa.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function N(a,b,d){return u(function*(){if(a.search(M)===-1)return a;var c=sa(a,d);return qa(c).reduce((e,f)=>e.then(g=>ra(g,f,b,d)),Promise.resolve(c))})};function O(a,b,d){return u(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield N(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function ta(a,b){return u(function*(){(yield O("background",a,b))||(yield O("background-image",a,b));(yield O("mask",a,b))||(yield O("-webkit-mask",a,b))||(yield O("mask-image",a,b))||(yield O("-webkit-mask-image",a,b))})}
+function ua(a,b){return u(function*(){var d=D(a,HTMLImageElement);if(d&&!F(a.src)||D(a,SVGImageElement)&&!F(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield I(c,J[K(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.h?(...h)=>{try{f(b.h(...h))}catch(l){g(l)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function va(a,b){return u(function*(){var d=w(a.childNodes).map(c=>P(c,b));yield Promise.all(d).then(()=>a)})}function P(a,b){return u(function*(){D(a,Element)&&(yield ta(a,b),yield ua(a,b),yield va(a,b))})};const Q={};function R(a){return u(function*(){var b=Q[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return Q[a]=b})}function S(a,b){return u(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>u(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return G(g,b.l,({result:h})=>{d=d.replace(f,`url(${h})`);return[f,h]})}));return Promise.all(e).then(()=>d)})}
+function T(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function wa(a,b){return u(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let h=g+1;f=R(f.href).then(l=>S(l,b)).then(l=>T(l).forEach(p=>{try{e.insertRule(p,p.startsWith("@import")?h+=1:e.cssRules.length)}catch(x){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(h=>h.href==null)||document.styleSheets[0];e.href!=null&&c.push(R(e.href).then(h=>S(h,b)).then(h=>T(h).forEach(l=>{g.insertRule(l,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function xa(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(M)!==-1)}function ya(a,b){return u(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=yield wa(w(a.ownerDocument.styleSheets),b);return xa(d)})}
+function za(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function Aa(a,b){return u(function*(){var d=yield ya(a,b),c=za(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>N(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function Ba(a,b){return u(function*(){var d=b.m!=null?b.m:b.A?null:yield Aa(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function Ca(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield L(a,b,!0);yield Ba(e,b);yield P(e,b);v(e,b);return yield ca(e,d,c)})}
+function Da(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield Ca(a,b);e=yield C(e);var f=document.createElement("canvas"),g=f.getContext("2d"),h=b.I||window.devicePixelRatio||1,l=b.j||d,p=b.i||c;f.width=l*h;f.height=p*h;!b.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${l}`;f.style.height=`${p}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Ea(a,b={}){return u(function*(){return(yield Da(a,b)).toDataURL()})};const Fa=["gemini.google.com","corp.google.com","proxy.googlers.com"];function V(a){a=Number(a.replace(/px$/,""));return Number.isFinite(a)?a:0}function W(){return document.body.querySelectorAll('[class*="animate"]').length>0}function X(a,b){var d=document.createElement("canvas");d.width=a;d.height=b;return d.toDataURL("image/png")}const Y=X(1,1);
+function Z(a,b){return u(function*(){var d=Math.max(b?b.width:a.offsetWidth,1),c=Math.max(b?b.height:a.offsetHeight,1),e=HTMLCanvasElement.prototype.toDataURL;b&&(HTMLCanvasElement.prototype.toDataURL=function(f,g){var h;if(h=this.isConnected&&a.contains(this)){{let n=this.getBoundingClientRect();if(n.width===0||n.height===0)h=!1;else if(window.getComputedStyle(this).position==="fixed")h=n.bottom>0&&n.top<b.height&&n.right>0&&n.left<b.width;else{h=a.getBoundingClientRect();var l=n.top-h.top,p=n.left-
+h.left,x=n.right-h.left;h=n.bottom-h.top>b.scrollTop&&l<b.scrollTop+b.height&&x>b.scrollLeft&&p<b.scrollLeft+b.width}}h=!h}return h?"data:,":e.call(this,f,g)});try{let f=window.getComputedStyle(a),g=b?`${V(f.marginTop)-b.scrollTop}px`:void 0,h=b?`${V(f.marginLeft)-b.scrollLeft}px`:void 0,l=`${Math.max(a.offsetWidth,d)}px`,p,x=`${Math.max(a.offsetHeight,c+((p=b==null?void 0:b.scrollTop)!=null?p:0))}px`;return yield Ea(a,Object.assign({},{width:d,height:c,j:d,i:c},b?{style:{width:l,height:x,marginTop:g,
+marginLeft:h,marginBlockStart:g,marginInlineStart:h}}:{},{A:!0,filter:n=>{if(n.tagName==="IMG"){let U=n.getAttribute("src");if(!U||U.trim()===""||n.style.display==="none")return!1}return!0},o:Y,h:()=>Y}))}catch(f){return X(d,c)}finally{HTMLCanvasElement.prototype.toDataURL=e}})}
+function Ga(){return u(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ha(a){return u(function*(){var b={width:window.innerWidth||document.documentElement.clientWidth||document.body.offsetWidth,height:window.innerHeight||document.documentElement.clientHeight||document.body.offsetHeight,scrollTop:window.scrollY||document.documentElement.scrollTop||document.body.scrollTop||0,scrollLeft:window.scrollX||document.documentElement.scrollLeft||document.body.scrollLeft||0},d=document.body;if(W()){let c=yield Ga();d=c;document.body.appendChild(c)}b=yield Z(d,b);W()&&
+document.body.removeChild(d);window.parent.postMessage({type:"SEND_SCREENSHOT",image:b,topOffset:0},a.origin)})}function Ia(a){return u(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}window.addEventListener("message",a=>u(function*(){if(Fa.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ha(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ia(a)))}}));
+})();</script><script data-bard-client-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-client-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.j=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.i="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-client-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function() {
+  function normalizeSlug(str) {
+    try {
+      return str
+        .trim()
+        .toLowerCase()
+        .replace(/[^p{L}p{N}s_-]/gu, '')
+        .replace(/s+/g, '-');
+    } catch (e) {
+      return str
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9s_-]/g, '')
+        .replace(/s+/g, '-');
+    }
+  }
+
+  function findTargetElement(hash) {
+    if (!hash || hash === '#') {
+      return null;
+    }
+    const rawId = hash.startsWith('#') ? hash.slice(1) : hash;
+    let decodedId = rawId;
+    try {
+      decodedId = decodeURIComponent(rawId);
+    } catch (e) {
+      // Ignore URI malformed errors.
+    }
+
+    // 1. Direct ID match (raw and decoded).
+    let target = document.getElementById(rawId) || document.getElementById(decodedId);
+    if (target) {
+      return target;
+    }
+
+    // 2. Name attribute match (<a name="...">).
+    try {
+      if (typeof CSS !== 'undefined' && CSS.escape) {
+        target =
+          document.querySelector('[name="' + CSS.escape(rawId) + '"]') ||
+          document.querySelector('[name="' + CSS.escape(decodedId) + '"]');
+      } else {
+        const namedElements = document.getElementsByName(rawId);
+        if (namedElements && namedElements.length > 0) {
+          return namedElements[0];
+        }
+      }
+    } catch (e) {
+      // Ignore querySelector syntax errors.
+    }
+    if (target) {
+      return target;
+    }
+
+    // 3. Match heading text by slug (for Markdown TOCs where headings lack explicit IDs).
+    const targetSlug = normalizeSlug(decodedId);
+    if (targetSlug) {
+      for (const heading of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+        if (normalizeSlug(heading.textContent || '') === targetSlug) {
+          return heading;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  document.addEventListener('click', function(event) {
+    const target = event.target;
+    const anchor = target && typeof target.closest === 'function' ? target.closest('a') : null;
+    if (!anchor) {
+      return;
+    }
+
+    const href = anchor.getAttribute('href');
+    if (
+      !href ||
+      href.trim().toLowerCase().startsWith('javascript:') ||
+      anchor.hasAttribute('download')
+    ) {
+      return;
+    }
+
+    // Check if the link is an in-page hash / anchor link.
+    if (href.startsWith('#')) {
+      event.preventDefault();
+      const targetElement = findTargetElement(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+      return;
+    }
+
+    // Check if the URL has the same origin/pathname but with a hash.
+    try {
+      const url = new URL(anchor.href, window.location.href);
+      if (
+        url.hash &&
+        url.origin === window.location.origin &&
+        url.pathname === window.location.pathname
+      ) {
+        event.preventDefault();
+        const targetElement = findTargetElement(url.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+        return;
+      }
+    } catch (e) {
+      // Fall through if URL parsing fails.
+    }
+
+    // For all external or full navigation links, prevent iframe-level navigation
+    // (which breaks in AGSA WebView or sandboxed iframes) and ensure they open
+    // safely in a new tab/window.
+    if (anchor.target !== '_blank') {
+      event.preventDefault();
+      window.open(anchor.href, '_blank', 'noopener,noreferrer');
+    }
+  }, {capture: true});
+})();</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-client-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#38bdf8">
+  <meta name="description" content="Game Edukasi Berhitung Kelas 1 SD: Petualangan Angka 1-20. Belajar mengenal angka, penjumlahan, pengurangan, perbandingan, dan soal cerita sambil bermain!">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>🎮 PETUALANGAN ANGKA 1–20 | Belajar Berhitung Sambil Bermain!</title>
+
+  <!-- Google Fonts: Fredoka (Bulat & Ceria untuk Judul/Angka) & Nunito (Jelas untuk Soal Anak SD) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN untuk utilitas tata letak responsif -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --font-display: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+      --font-body: 'Nunito', sans-serif;
+      --sky-top: #38bdf8;
+      --sky-bottom: #e0f2fe;
+      --grass-light: #4ade80;
+      --grass-dark: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: var(--font-body);
+      background: linear-gradient(180deg, #38bdf8 0%, #bae6fd 65%, #bbf7d0 100%);
+      color: #1e293b;
+    }
+
+    .font-display {
+      font-family: var(--font-display);
+      letter-spacing: 0.02em;
+    }
+
+    /* Tipografi Responsif Khusus HP hingga Layar IFP 65-86 Inci */
+    .title-clamp {
+      font-size: clamp(1.75rem, 4vw + 0.5rem, 3.75rem);
+      line-height: 1.15;
+    }
+    .subtitle-clamp {
+      font-size: clamp(1rem, 1.8vw + 0.4rem, 1.75rem);
+    }
+    .question-clamp {
+      font-size: clamp(1.35rem, 2.5vw + 0.5rem, 2.6rem);
+      line-height: 1.35;
+    }
+    .equation-clamp {
+      font-size: clamp(2.2rem, 5vw + 0.75rem, 4.75rem);
+      line-height: 1.1;
+    }
+    .answer-btn-clamp {
+      font-size: clamp(1.85rem, 3.8vw + 0.5rem, 3.5rem);
+    }
+
+    /* Tombol 3D Anak-Anak yang Nyaman Disentuh Jari (Touch Target >= 64px) */
+    .btn-3d {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 64px;
+      min-width: 64px;
+      border-radius: 24px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease, filter 0.15s ease;
+      touch-action: manipulation;
+    }
+    .btn-3d:active:not(:disabled) {
+      transform: translateY(6px) scale(0.98);
+    }
+    .btn-3d:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: translateY(4px);
+    }
+
+    /* Variasi Warna Tombol 3D */
+    .btn-yellow {
+      background: linear-gradient(180deg, #fde047 0%, #facc15 100%);
+      color: #713f12;
+      border: 4px solid #fef08a;
+      box-shadow: 0 8px 0 #ca8a04, 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .btn-yellow:active:not(:disabled) {
+      box-shadow: 0 2px 0 #ca8a04, 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-green {
+      background: linear-gradient(180deg, #4ade80 0%, #22c55e 100%);
+      color: #ffffff;
+      border: 4px solid #bbf7d0;
+      box-shadow: 0 8px 0 #15803d, 0 12px 20px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    }
+    .btn-green:active:not(:disabled) {
+      box-shadow: 0 2px 0 #15803d, 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-blue {
+      background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+      color: #ffffff;
+      border: 4px solid #bae6fd;
+      box-shadow: 0 8px 0 #0369a1, 0 12px 20px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    }
+    .btn-blue:active:not(:disabled) {
+      box-shadow: 0 2px 0 #0369a1, 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-orange {
+      background: linear-gradient(180deg, #fb923c 0%, #ea580c 100%);
+      color: #ffffff;
+      border: 4px solid #fed7aa;
+      box-shadow: 0 8px 0 #9a3412, 0 12px 20px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    }
+    .btn-orange:active:not(:disabled) {
+      box-shadow: 0 2px 0 #9a3412, 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-purple {
+      background: linear-gradient(180deg, #c084fc 0%, #9333ea 100%);
+      color: #ffffff;
+      border: 4px solid #e9d5ff;
+      box-shadow: 0 8px 0 #6b21a8, 0 12px 20px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    }
+    .btn-purple:active:not(:disabled) {
+      box-shadow: 0 2px 0 #6b21a8, 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-pink {
+      background: linear-gradient(180deg, #f472b6 0%, #db2777 100%);
+      color: #ffffff;
+      border: 4px solid #fbcfe8;
+      box-shadow: 0 8px 0 #9d174d, 0 12px 20px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    }
+    .btn-pink:active:not(:disabled) {
+      box-shadow: 0 2px 0 #9d174d, 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: #1e293b;
+      border: 4px solid #e2e8f0;
+      box-shadow: 0 7px 0 #94a3b8, 0 10px 16px rgba(0,0,0,0.1);
+    }
+    .btn-white:active:not(:disabled) {
+      box-shadow: 0 2px 0 #94a3b8, 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Kartu Glass/Putih Ceria */
+    .game-card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 5px solid #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 14px 30px rgba(14, 116, 144, 0.18), 0 6px 0 #cbd5e1;
+    }
+
+    /* Animasi Awan, Bintang, dan Karakter */
+    @keyframes floatCloudSlow {
+      0% { transform: translateX(-10vw); }
+      50% { transform: translateX(10vw); }
+      100% { transform: translateX(-10vw); }
+    }
+    @keyframes floatBounce {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes waveHand {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(18deg); }
+      75% { transform: rotate(-10deg); }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.4); opacity: 0; }
+      70% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes shakeGentle {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-10px); }
+      40% { transform: translateX(10px); }
+      60% { transform: translateX(-7px); }
+      80% { transform: translateX(7px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7); }
+      50% { transform: scale(1.05); box-shadow: 0 0 0 14px rgba(250, 204, 21, 0); }
+    }
+    @keyframes itemSubtractOut {
+      0% { transform: scale(1) rotate(0deg); opacity: 1; }
+      40% { transform: scale(1.18) rotate(-12deg); opacity: 0.9; }
+      100% { transform: scale(0.78) rotate(8deg); opacity: 0.28; filter: grayscale(70%); }
+    }
+
+    .animate-float {
+      animation: floatBounce 3.2s ease-in-out infinite;
+    }
+    .animate-cloud-1 {
+      animation: floatCloudSlow 26s ease-in-out infinite;
+    }
+    .animate-cloud-2 {
+      animation: floatCloudSlow 34s ease-in-out infinite reverse;
+    }
+    .animate-wave {
+      transform-origin: bottom center;
+      animation: waveHand 2s ease-in-out infinite;
+    }
+    .animate-pop {
+      animation: popIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    .animate-shake {
+      animation: shakeGentle 0.45s ease-in-out;
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 1.8s infinite;
+    }
+    .subtracted-item {
+      animation: itemSubtractOut 0.75s ease forwards;
+      position: relative;
+    }
+    .subtracted-item::after {
+      content: "✕";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 900;
+      color: #ef4444;
+      text-shadow: 0 2px 4px #ffffff;
+    }
+
+    /* Item Benda yang Bisa Disentuh untuk Dihitung */
+    .countable-item {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: clamp(54px, 7vw, 88px);
+      min-height: clamp(54px, 7vw, 88px);
+      padding: 6px;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 3px solid #e2e8f0;
+      box-shadow: 0 4px 0 #cbd5e1;
+      cursor: pointer;
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .countable-item:active {
+      transform: scale(1.18);
+    }
+    .countable-item.counted-active {
+      background: #fef9c3;
+      border-color: #eab308;
+      box-shadow: 0 4px 0 #ca8a04;
+      transform: translateY(-4px) scale(1.06);
+    }
+
+    /* Scrollbar halus */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e0f2fe;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 9999px;
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-2{bottom:-0.5rem}.-right-16{right:-4rem}.-top-10{top:-2.5rem}.bottom-0{bottom:0px}.left-0{left:0px}.left-1\/4{left:25%}.left-4{left:1rem}.right-1\/4{right:25%}.top-12{top:3rem}.top-28{top:7rem}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.col-span-2{grid-column:span 2 / span 2}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.my-auto{margin-top:auto;margin-bottom:auto}.-mt-1{margin-top:-0.25rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-16{height:4rem}.h-20{height:5rem}.h-24{height:6rem}.h-4{height:1rem}.h-40{height:10rem}.h-full{height:100%}.h-14{height:3.5rem}.max-h-\[90vh\]{max-height:90vh}.\!min-h-\[42px\]{min-height:42px !important}.\!min-h-\[48px\]{min-height:48px !important}.\!min-h-\[52px\]{min-height:52px !important}.\!min-h-\[54px\]{min-height:54px !important}.min-h-\[160px\]{min-height:160px}.min-h-\[260px\]{min-height:260px}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-16{width:4rem}.w-20{width:5rem}.w-24{width:6rem}.w-36{width:9rem}.w-40{width:10rem}.w-80{width:20rem}.w-full{width:100%}.w-14{width:3.5rem}.\!min-w-\[48px\]{min-width:48px !important}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.max-w-3xl{max-width:48rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-items-center{justify-items:center}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-8{border-width:8px}.border-b-2{border-bottom-width:2px}.border-t-2{border-top-width:2px}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-amber-200\/80{border-color:rgb(253 230 138 / 0.8)}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77 / var(--tw-border-opacity, 1))}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255 / var(--tw-border-opacity, 1))}.border-purple-300{--tw-border-opacity:1;border-color:rgb(216 180 254 / var(--tw-border-opacity, 1))}.border-sky-200{--tw-border-opacity:1;border-color:rgb(186 230 253 / var(--tw-border-opacity, 1))}.border-sky-300{--tw-border-opacity:1;border-color:rgb(125 211 252 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.border-current{border-color:currentColor}.border-pink-300{--tw-border-opacity:1;border-color:rgb(249 168 212 / var(--tw-border-opacity, 1))}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-300{--tw-bg-opacity:1;background-color:rgb(252 211 77 / var(--tw-bg-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-50\/80{background-color:rgb(255 251 235 / 0.8)}.bg-amber-900\/15{background-color:rgb(120 53 15 / 0.15)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-900\/30{background-color:rgb(6 78 59 / 0.3)}.bg-orange-950\/30{background-color:rgb(67 20 7 / 0.3)}.bg-pink-950\/30{background-color:rgb(80 7 36 / 0.3)}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-purple-900\/80{background-color:rgb(88 28 135 / 0.8)}.bg-purple-950\/30{background-color:rgb(59 7 100 / 0.3)}.bg-sky-100{--tw-bg-opacity:1;background-color:rgb(224 242 254 / var(--tw-bg-opacity, 1))}.bg-sky-50{--tw-bg-opacity:1;background-color:rgb(240 249 255 / var(--tw-bg-opacity, 1))}.bg-sky-900\/30{background-color:rgb(12 74 110 / 0.3)}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/25{background-color:rgb(255 255 255 / 0.25)}.bg-white\/85{background-color:rgb(255 255 255 / 0.85)}.bg-yellow-300{--tw-bg-opacity:1;background-color:rgb(253 224 71 / var(--tw-bg-opacity, 1))}.bg-pink-50\/90{background-color:rgb(253 242 248 / 0.9)}.bg-purple-50\/90{background-color:rgb(250 245 255 / 0.9)}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/90{background-color:rgb(236 253 245 / 0.9)}.bg-sky-50\/90{background-color:rgb(240 249 255 / 0.9)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-amber-300{--tw-gradient-from:#fcd34d var(--tw-gradient-from-position);--tw-gradient-to:rgb(252 211 77 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-400{--tw-gradient-from:#34d399 var(--tw-gradient-from-position);--tw-gradient-to:rgb(52 211 153 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-sky-100{--tw-gradient-from:#e0f2fe var(--tw-gradient-from-position);--tw-gradient-to:rgb(224 242 254 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-50{--tw-gradient-to:#eff6ff var(--tw-gradient-to-position)}.to-emerald-100{--tw-gradient-to:#d1fae5 var(--tw-gradient-to-position)}.to-green-500{--tw-gradient-to:#22c55e var(--tw-gradient-to-position)}.to-orange-500{--tw-gradient-to:#f97316 var(--tw-gradient-to-position)}.p-0\.5{padding:0.125rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.pb-3{padding-bottom:0.75rem}.pb-8{padding-bottom:2rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-7xl{font-size:4.5rem;line-height:1}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-amber-950{--tw-text-opacity:1;color:rgb(69 26 3 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-emerald-950\/80{color:rgb(2 44 34 / 0.8)}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-purple-900{--tw-text-opacity:1;color:rgb(88 28 135 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-sky-600{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.text-sky-700{--tw-text-opacity:1;color:rgb(3 105 161 / var(--tw-text-opacity, 1))}.text-sky-800{--tw-text-opacity:1;color:rgb(7 89 133 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-950{--tw-text-opacity:1;color:rgb(66 32 6 / var(--tw-text-opacity, 1))}.text-pink-900{--tw-text-opacity:1;color:rgb(131 24 67 / var(--tw-text-opacity, 1))}.text-emerald-950{--tw-text-opacity:1;color:rgb(2 44 34 / var(--tw-text-opacity, 1))}.text-sky-900{--tw-text-opacity:1;color:rgb(12 74 110 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.opacity-45{opacity:0.45}.opacity-75{opacity:0.75}.opacity-85{opacity:0.85}.opacity-90{opacity:0.9}.opacity-95{opacity:0.95}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-sm{--tw-drop-shadow:drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.focus-within\:border-sky-500:focus-within{--tw-border-opacity:1;border-color:rgb(14 165 233 / var(--tw-border-opacity, 1))}.focus-within\:bg-white:focus-within{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:col-span-1{grid-column:span 1 / span 1}.sm\:col-span-2{grid-column:span 2 / span 2}.sm\:ml-auto{margin-left:auto}.sm\:inline{display:inline}.sm\:h-48{height:12rem}.sm\:h-5{height:1.25rem}.sm\:h-16{height:4rem}.sm\:w-48{width:12rem}.sm\:w-16{width:4rem}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:gap-3{gap:0.75rem}.sm\:gap-5{gap:1.25rem}.sm\:gap-2\.5{gap:0.625rem}.sm\:gap-6{gap:1.5rem}.sm\:p-4{padding:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.sm\:text-left{text-align:left}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-7xl{font-size:4.5rem;line-height:1}.sm\:text-8xl{font-size:6rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 768px){.md\:mb-5{margin-bottom:1.25rem}.md\:inline{display:inline}.md\:h-14{height:3.5rem}.md\:h-20{height:5rem}.md\:h-24{height:6rem}.md\:h-28{height:7rem}.md\:h-36{height:9rem}.md\:h-56{height:14rem}.md\:min-h-\[185px\]{min-height:185px}.md\:w-14{width:3.5rem}.md\:w-20{width:5rem}.md\:w-24{width:6rem}.md\:w-28{width:7rem}.md\:w-56{width:14rem}.md\:w-64{width:16rem}.md\:w-\[500px\]{width:500px}.md\:grid-cols-10{grid-template-columns:repeat(10, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:gap-5{gap:1.25rem}.md\:gap-6{gap:1.5rem}.md\:p-10{padding:2.5rem}.md\:p-4{padding:1rem}.md\:p-8{padding:2rem}.md\:px-5{padding-left:1.25rem;padding-right:1.25rem}.md\:py-3{padding-top:0.75rem;padding-bottom:0.75rem}.md\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-9xl{font-size:8rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 1024px){.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:inline{display:inline}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-start{align-items:flex-start}.lg\:text-left{text-align:left}}@media (min-width: 1280px){.xl\:col-span-2{grid-column:span 2 / span 2}.xl\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="relative min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- ================= LATAR BELAKANG CERIA (AWAN, PELANGI, BINTANG, RUMPUT) ================= -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <!-- Pelangi Indah -->
+    <svg class="absolute -top-10 -right-16 w-80 md:w-[500px] opacity-45" viewBox="0 0 400 220" fill="none">
+      <path d="M 20 220 A 180 180 0 0 1 380 220" stroke="#ef4444" stroke-width="16" stroke-linecap="round"></path>
+      <path d="M 36 220 A 164 164 0 0 1 364 220" stroke="#f97316" stroke-width="16" stroke-linecap="round"></path>
+      <path d="M 52 220 A 148 148 0 0 1 348 220" stroke="#eab308" stroke-width="16" stroke-linecap="round"></path>
+      <path d="M 68 220 A 132 132 0 0 1 332 220" stroke="#22c55e" stroke-width="16" stroke-linecap="round"></path>
+      <path d="M 84 220 A 116 116 0 0 1 316 220" stroke="#3b82f6" stroke-width="16" stroke-linecap="round"></path>
+      <path d="M 100 220 A 100 100 0 0 1 300 220" stroke="#a855f7" stroke-width="16" stroke-linecap="round"></path>
+    </svg>
+
+    <!-- Matahari Tersenyum -->
+    <svg class="absolute top-4 left-4 w-20 h-20 md:w-28 md:h-28 animate-float opacity-90" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="36" fill="#fde047" stroke="#facc15" stroke-width="4"></circle>
+      <g stroke="#facc15" stroke-width="6" stroke-linecap="round">
+        <line x1="60" y1="8" x2="60" y2="18"></line>
+        <line x1="60" y1="102" x2="60" y2="112"></line>
+        <line x1="8" y1="60" x2="18" y2="60"></line>
+        <line x1="102" y1="60" x2="112" y2="60"></line>
+        <line x1="23" y1="23" x2="30" y2="30"></line>
+        <line x1="90" y1="90" x2="97" y2="97"></line>
+        <line x1="97" y1="23" x2="90" y2="30"></line>
+        <line x1="30" y1="90" x2="23" y2="97"></line>
+      </g>
+      <circle cx="48" cy="54" r="4" fill="#713f12"></circle>
+      <circle cx="72" cy="54" r="4" fill="#713f12"></circle>
+      <path d="M 48 67 Q 60 77 72 67" stroke="#713f12" stroke-width="4" fill="none" stroke-linecap="round"></path>
+    </svg>
+
+    <!-- Awan Mengambang 1 -->
+    <svg class="absolute top-12 left-1/4 w-40 md:w-64 opacity-85 animate-cloud-1" viewBox="0 0 200 100">
+      <path d="M 45 80 L 160 80 A 25 25 0 0 0 160 32 A 35 35 0 0 0 95 18 A 30 30 0 0 0 40 35 A 22 22 0 0 0 45 80 Z" fill="#ffffff"></path>
+    </svg>
+
+    <!-- Awan Mengambang 2 -->
+    <svg class="absolute top-28 right-1/4 w-36 md:w-56 opacity-75 animate-cloud-2" viewBox="0 0 200 100">
+      <path d="M 45 80 L 160 80 A 25 25 0 0 0 160 32 A 35 35 0 0 0 95 18 A 30 30 0 0 0 40 35 A 22 22 0 0 0 45 80 Z" fill="#ffffff"></path>
+    </svg>
+
+    <!-- Bukit Rumput Hijau di Bagian Bawah -->
+    <svg class="absolute bottom-0 left-0 w-full h-24 md:h-36" preserveAspectRatio="none" viewBox="0 0 1440 160">
+      <path fill="#4ade80" d="M0,96L80,85.3C160,75,320,53,480,64C640,75,800,117,960,122.7C1120,128,1280,96,1360,80L1440,64L1440,160L1360,160C1280,160,1120,160,960,160C800,160,640,160,480,160C320,160,160,160,80,160L0,160Z"></path>
+      <path fill="#22c55e" d="M0,128L120,117.3C240,107,480,85,720,96C960,107,1200,149,1320,154.7L1440,160L1440,160L1320,160C1200,160,960,160,720,160C480,160,240,160,120,160L0,160Z"></path>
+    </svg>
+  </div>
+
+  <!-- Canvas Konfeti untuk Perayaan Jawaban Benar & Menang -->
+  <canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-50" width="1314" height="581"></canvas>
+
+  <!-- ================= KONTainer UTAMA APLIKASI ================= -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-6 py-3 md:py-5 flex-1 flex flex-col">
+
+    <!-- BARIS ATAS: PENGATURAN CEPAT, SUARA, LAYAR PENUH, MODE GURU -->
+    <header class="w-full flex flex-wrap items-center justify-between gap-2 mb-3 md:mb-5 bg-white/85 backdrop-blur-md px-3 py-2.5 md:px-5 md:py-3 rounded-3xl border-4 border-white shadow-md">
+      <!-- Identitas Mini / Logo -->
+      <div class="flex items-center gap-2.5 cursor-pointer" onclick="App.showMainMenu()">
+        <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-amber-300 to-orange-500 flex items-center justify-center text-2xl md:text-3xl shadow-inner border-2 border-white">
+          🎮
+        </div>
+        <div>
+          <span class="font-display font-bold text-sky-700 text-base md:text-xl block leading-tight">PETUALANGAN ANGKA 1–20</span>
+          <span class="text-xs md:text-sm font-bold text-emerald-700 block">Kelas 1 SD • Interaktif</span>
+        </div>
+      </div>
+
+      <!-- Skor Tertinggi & Nama Siswa -->
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="bg-amber-100 border-2 border-amber-300 rounded-2xl px-3 py-1.5 flex items-center gap-2">
+          <span class="text-xl md:text-2xl">🏆</span>
+          <div class="text-left">
+            <span class="text-[11px] md:text-xs font-extrabold text-amber-800 uppercase block leading-none">Skor Tertinggi</span>
+            <span id="highScoreBadge" class="font-display font-bold text-base md:text-xl text-amber-900">0 Poin</span>
+          </div>
+        </div>
+
+        <!-- Tombol Suara ON/OFF -->
+        <button id="btnSoundToggle" onclick="App.toggleSound()" class="btn-3d btn-yellow px-3.5 py-2 text-sm md:text-base gap-1.5 !min-h-[52px]" title="Aktifkan atau Matikan Suara">
+          <span id="soundIcon" class="text-xl md:text-2xl">🔊</span>
+          <span id="soundLabel" class="hidden sm:inline">Suara: ON</span>
+        </button>
+
+        <!-- Tombol Petunjuk -->
+        <button onclick="App.openModal('modalHelp')" class="btn-3d btn-blue px-3.5 py-2 text-sm md:text-base gap-1.5 !min-h-[52px]" title="Petunjuk Permainan">
+          <span class="text-xl md:text-2xl">📘</span>
+          <span class="hidden md:inline">Petunjuk</span>
+        </button>
+
+        <!-- Tombol Mode Guru (Khusus IFP / Kelas) -->
+        <button onclick="App.openModal('modalTeacher')" class="btn-3d btn-purple px-3.5 py-2 text-sm md:text-base gap-1.5 !min-h-[52px]" title="Pengaturan Guru &amp; Mode Estafet Kelas">
+          <span class="text-xl md:text-2xl">👩‍🏫</span>
+          <span class="hidden md:inline">Mode Guru</span>
+        </button>
+
+        <!-- Tombol Layar Penuh (Sangat Berguna di IFP & HP) -->
+        <button onclick="App.toggleFullscreen()" class="btn-3d btn-white px-3.5 py-2 text-sm md:text-base gap-1.5 !min-h-[52px]" title="Mode Layar Penuh">
+          <span class="text-xl md:text-2xl">⛶</span>
+          <span class="hidden lg:inline">Layar Penuh</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= 1. HALAMAN MENU UTAMA ================= -->
+    <main id="screenMenu" class="flex-1 flex flex-col justify-center gap-4 md:gap-6 pb-8 hidden">
+      <!-- Banner Hero + Maskot Anak / Kiko Ceria -->
+      <section class="game-card p-4 sm:p-6 md:p-8 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          <!-- Ilustrasi Maskot SVG Interaktif -->
+          <div class="lg:col-span-4 flex flex-col items-center justify-center">
+            <div onclick="App.mascotSpeakGreeting()" class="cursor-pointer group relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 flex items-center justify-center bg-gradient-to-b from-sky-100 to-emerald-100 rounded-full border-8 border-white shadow-xl animate-float" title="Sentuh Aku!">
+              <!-- Karakter Maskot Anak Ceria Berpetualang (SVG Murni) -->
+              <svg viewBox="0 0 220 220" class="w-full h-full">
+                <!-- Ransel Petualang -->
+                <rect x="52" y="110" width="116" height="75" rx="26" fill="#f97316" stroke="#9a3412" stroke-width="5"></rect>
+                <!-- Badan Baju Kaos Cerah -->
+                <path d="M 65 125 Q 110 115 155 125 L 168 195 Q 110 205 52 195 Z" fill="#22c55e" stroke="#15803d" stroke-width="5"></path>
+                <!-- Bintang di Baju -->
+                <polygon points="110,142 115,154 128,155 118,163 121,176 110,169 99,176 102,163 92,155 105,154" fill="#fde047"></polygon>
+                <!-- Tangan Kiri -->
+                <path d="M 65 132 Q 38 150 48 175" stroke="#fed7aa" stroke-width="18" stroke-linecap="round" fill="none"></path>
+                <!-- Tangan Kanan Melambai -->
+                <g class="animate-wave" style="transform-origin: 155px 135px;">
+                  <path d="M 155 135 Q 188 112 185 82" stroke="#fed7aa" stroke-width="18" stroke-linecap="round" fill="none"></path>
+                  <circle cx="185" cy="78" r="12" fill="#fed7aa" stroke="#ea580c" stroke-width="3"></circle>
+                </g>
+                <!-- Kepala Anak -->
+                <circle cx="110" cy="86" r="44" fill="#fed7aa" stroke="#ea580c" stroke-width="4"></circle>
+                <!-- Pipi Merona -->
+                <ellipse cx="80" cy="96" rx="8" ry="5" fill="#fb7185" opacity="0.6"></ellipse>
+                <ellipse cx="140" cy="96" rx="8" ry="5" fill="#fb7185" opacity="0.6"></ellipse>
+                <!-- Mata Berbinar -->
+                <circle cx="92" cy="82" r="7" fill="#1e293b"></circle>
+                <circle cx="90" cy="79" r="2.5" fill="#ffffff"></circle>
+                <circle cx="128" cy="82" r="7" fill="#1e293b"></circle>
+                <circle cx="126" cy="79" r="2.5" fill="#ffffff"></circle>
+                <!-- Senyum Lebar Ceria -->
+                <path d="M 92 100 Q 110 118 128 100" stroke="#9a3412" stroke-width="5" fill="#ffffff" stroke-linecap="round"></path>
+                <!-- Topi Petualang Anak SD -->
+                <path d="M 62 68 Q 110 22 158 68 Z" fill="#38bdf8" stroke="#0369a1" stroke-width="5"></path>
+                <path d="M 55 68 Q 110 56 172 70" stroke="#fde047" stroke-width="10" stroke-linecap="round" fill="none"></path>
+                <!-- Lencana Angka 123 di Topi -->
+                <rect x="92" y="40" width="36" height="20" rx="8" fill="#fde047" stroke="#ca8a04" stroke-width="2"></rect>
+                <text x="110" y="55" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="14" fill="#713f12">123</text>
+              </svg>
+              <span class="absolute -bottom-2 bg-amber-400 text-amber-950 font-display font-bold text-xs sm:text-sm px-3 py-1 rounded-full border-2 border-white shadow">
+                👋 Sentuh Budi!
+              </span>
+            </div>
+          </div>
+
+          <!-- Judul Utama, Sapaan & Input Nama Pemain -->
+          <div class="lg:col-span-8 text-center lg:text-left flex flex-col items-center lg:items-start gap-3">
+            <div class="inline-flex items-center gap-2 bg-sky-100 text-sky-800 font-extrabold px-4 py-1.5 rounded-full text-xs sm:text-sm border-2 border-sky-200">
+              <span>🌟 Game Edukasi Anak Kelas 1 SD (Usia 6–7 Tahun)</span>
+              <span id="activeRangeBadge" class="bg-emerald-500 text-white px-2.5 py-0.5 rounded-full">Angka 1–10</span>
+            </div>
+
+            <h1 class="font-display font-bold text-sky-600 drop-shadow-sm title-clamp">
+              🎮 PETUALANGAN ANGKA 1–20
+            </h1>
+            <p class="font-display font-semibold text-orange-500 subtitle-clamp -mt-1">
+              Belajar Berhitung Sambil Bermain!
+            </p>
+
+            <!-- Balon Bicara Maskot -->
+            <div id="mascotGreetingBubble" class="bg-amber-50 border-3 border-amber-300 rounded-2xl p-3.5 md:p-4 text-slate-700 font-bold text-sm sm:text-base md:text-lg shadow-sm w-full">
+              "Halo teman-teman kelas 1 yang hebat! 👋 Ayo kita belajar mengenal angka dan berhitung bersama. Pilih permainan kesukaanmu di bawah ya!"
+            </div>
+
+            <!-- Baris Nama Pemain & Tombol Mulai Cepat -->
+            <div class="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-1">
+              <div class="flex-1 flex items-center bg-slate-100 border-3 border-slate-300 rounded-2xl px-4 py-2 focus-within:border-sky-500 focus-within:bg-white">
+                <span class="text-2xl mr-2">🧒</span>
+                <div class="flex-1 text-left">
+                  <label for="playerNameInput" class="block text-[11px] font-extrabold text-slate-500 uppercase">Nama Panggilanmu (Opsional)</label>
+                  <input id="playerNameInput" type="text" maxlength="20" placeholder="Ketik namamu di sini..." onchange="App.savePlayerName(this.value)" class="w-full bg-transparent font-display font-bold text-slate-800 text-base md:text-xl focus:outline-none">
+                </div>
+              </div>
+
+              <button onclick="App.startGame('tantangan')" class="btn-3d btn-green px-6 py-3.5 text-lg md:text-2xl gap-2.5 animate-pulse-glow">
+                <span>🚀</span>
+                <span>Mulai Bermain!</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DAFTAR 7 TOMBOL MENU PERMAINAN BESAR (RESPONSIVE GRID KHUSUS HP & IFP) -->
+      <section aria-label="Pilih Jenis Permainan">
+        <div class="flex items-center justify-between mb-3 px-2">
+          <h2 class="font-display font-bold text-xl sm:text-2xl md:text-3xl text-slate-800 drop-shadow-sm">
+            🎯 Pilih Permainan Seru:
+          </h2>
+          <span id="relayStatusPill" class="bg-purple-600 text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-full shadow">
+            🏃 Mode Estafet Kelas Aktif!
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
+          <!-- GAME A: Mengenal Angka 1-20 -->
+          <button onclick="App.startGame('mengenal')" class="btn-3d btn-blue p-5 flex flex-col items-center text-center gap-2 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/25 flex items-center justify-center text-4xl md:text-5xl shadow-inner group-hover:scale-110 transition-transform">
+              🔢
+            </div>
+            <span class="text-xl md:text-2xl font-bold leading-tight mt-1">Mengenal Angka 1–20</span>
+            <span class="text-xs md:text-sm font-sans font-bold bg-sky-900/30 px-3 py-1 rounded-full">Sentuh angka, dengar suara &amp; hitung benda!</span>
+          </button>
+
+          <!-- GAME B: Berhitung Penjumlahan -->
+          <button onclick="App.startGame('penjumlahan')" class="btn-3d btn-green p-5 flex flex-col items-center text-center gap-2 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/25 flex items-center justify-center text-4xl md:text-5xl shadow-inner group-hover:scale-110 transition-transform">
+              🍎
+            </div>
+            <span class="text-xl md:text-2xl font-bold leading-tight mt-1">Berhitung Penjumlahan</span>
+            <span class="text-xs md:text-sm font-sans font-bold bg-emerald-900/30 px-3 py-1 rounded-full">Gabungkan dua kelompok benda (+)</span>
+          </button>
+
+          <!-- GAME C: Berhitung Pengurangan -->
+          <button onclick="App.startGame('pengurangan')" class="btn-3d btn-orange p-5 flex flex-col items-center text-center gap-2 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/25 flex items-center justify-center text-4xl md:text-5xl shadow-inner group-hover:scale-110 transition-transform">
+              🍌
+            </div>
+            <span class="text-xl md:text-2xl font-bold leading-tight mt-1">Berhitung Pengurangan</span>
+            <span class="text-xs md:text-sm font-sans font-bold bg-orange-950/30 px-3 py-1 rounded-full">Hitung sisa benda yang berkurang (–)</span>
+          </button>
+
+          <!-- GAME D: Mana yang Lebih Banyak? -->
+          <button onclick="App.startGame('lebih_banyak')" class="btn-3d btn-purple p-5 flex flex-col items-center text-center gap-2 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/25 flex items-center justify-center text-4xl md:text-5xl shadow-inner group-hover:scale-110 transition-transform">
+              🐰
+            </div>
+            <span class="text-xl md:text-2xl font-bold leading-tight mt-1">Mana yang Lebih Banyak?</span>
+            <span class="text-xs md:text-sm font-sans font-bold bg-purple-950/30 px-3 py-1 rounded-full">Bandingkan Kelompok A dan Kelompok B</span>
+          </button>
+
+          <!-- GAME E: Mana yang Lebih Sedikit? -->
+          <button onclick="App.startGame('lebih_sedikit')" class="btn-3d btn-pink p-5 flex flex-col items-center text-center gap-2 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/25 flex items-center justify-center text-4xl md:text-5xl shadow-inner group-hover:scale-110 transition-transform">
+              🐣
+            </div>
+            <span class="text-xl md:text-2xl font-bold leading-tight mt-1">Mana yang Lebih Sedikit?</span>
+            <span class="text-xs md:text-sm font-sans font-bold bg-pink-950/30 px-3 py-1 rounded-full">Cari kelompok yang jumlahnya sedikit</span>
+          </button>
+
+          <!-- GAME F: Soal Cerita -->
+          <button onclick="App.startGame('soal_cerita')" class="btn-3d btn-yellow p-5 flex flex-col items-center text-center gap-2 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-amber-900/15 flex items-center justify-center text-4xl md:text-5xl shadow-inner group-hover:scale-110 transition-transform">
+              📖
+            </div>
+            <span class="text-xl md:text-2xl font-bold leading-tight mt-1">Soal Cerita</span>
+            <span class="text-xs md:text-sm font-sans font-bold bg-amber-900/15 px-3 py-1 rounded-full">Cerita sehari-hari dengan suara &amp; gambar</span>
+          </button>
+
+          <!-- GAME G: Tantangan Berhitung (Campuran Semua Soal) -->
+          <button onclick="App.startGame('tantangan')" class="btn-3d btn-green sm:col-span-2 lg:col-span-3 xl:col-span-2 p-5 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-4 group min-h-[160px] md:min-h-[185px]">
+            <div class="w-20 h-20 md:w-24 md:h-24 rounded-3xl bg-white/25 flex items-center justify-center text-5xl md:text-6xl shadow-inner group-hover:scale-110 transition-transform shrink-0">
+              🏆
+            </div>
+            <div>
+              <span class="inline-block bg-yellow-300 text-yellow-950 text-xs font-extrabold px-2.5 py-0.5 rounded-full uppercase mb-1">Paling Seru!</span>
+              <span class="text-2xl md:text-3xl font-bold block leading-tight">Tantangan Berhitung Acak</span>
+              <span class="text-sm md:text-base font-sans font-bold opacity-95 block mt-1">Campuran soal penjumlahan, pengurangan, perbandingan &amp; cerita!</span>
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= 2. HALAMAN MENGENAL ANGKA 1–20 (GAME A) ================= -->
+    <section id="screenExplorer" class="hidden flex-1 flex flex-col gap-4 pb-8">
+      <!-- Navigasi Atas Game A -->
+      <div class="game-card p-3 sm:p-4 flex flex-wrap items-center justify-between gap-2">
+        <button onclick="App.showMainMenu()" class="btn-3d btn-white px-4 py-2 text-base md:text-lg gap-2 !min-h-[54px]">
+          <span>🏠</span>
+          <span>Menu Utama</span>
+        </button>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl md:text-3xl text-sky-700 text-center">
+          🔢 Mengenal Angka 1 Sampai 20
+        </h2>
+
+        <button onclick="App.startGame('kuis_angka')" class="btn-3d btn-green px-4 py-2 text-base md:text-lg gap-2 !min-h-[54px]">
+          <span>🎯</span>
+          <span>Latihan Tebak Angka</span>
+        </button>
+      </div>
+
+      <!-- Panggung Interaktif Angka yang Dipilih -->
+      <div class="game-card p-4 sm:p-6 md:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          <!-- Kartu Angka Raksasa -->
+          <div class="lg:col-span-4 flex flex-col items-center justify-center bg-gradient-to-b from-sky-100 to-blue-50 border-4 border-sky-300 rounded-3xl p-5 shadow-inner">
+            <span class="text-xs sm:text-sm font-extrabold uppercase text-sky-700 tracking-wider">Sentuh Angka untuk Mendengar</span>
+            <div id="explorerBigNumber" onclick="App.speakCurrentExplorerNumber()" class="font-display font-bold text-7xl sm:text-8xl md:text-9xl text-sky-600 cursor-pointer select-none my-1 drop-shadow hover:scale-105 transition-transform animate-pop">5</div>
+            <div id="explorerNumberWord" class="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-orange-500 uppercase tracking-wide">Lima</div>
+            <p id="explorerNumberDesc" class="text-base sm:text-lg font-extrabold text-slate-700 mt-1 text-center">Lima potong semangka 🍉</p>
+
+            <!-- Tombol Suara & Hitung Otomatis -->
+            <div class="flex flex-wrap justify-center gap-2 mt-4 w-full">
+              <button onclick="App.speakCurrentExplorerNumber()" class="btn-3d btn-yellow px-4 py-2 text-sm sm:text-base gap-1.5 flex-1 !min-h-[52px]">
+                <span>🔊</span>
+                <span>Ucapkan</span>
+              </button>
+              <button onclick="App.autoCountExplorerItems()" class="btn-3d btn-green px-4 py-2 text-sm sm:text-base gap-1.5 flex-1 !min-h-[52px]">
+                <span>✨</span>
+                <span>Hitung 1 per 1</span>
+              </button>
+            </div>
+
+            <!-- Navigasi Sebelumnya / Berikutnya -->
+            <div class="flex items-center justify-between gap-3 w-full mt-3">
+              <button onclick="App.stepExplorerNumber(-1)" class="btn-3d btn-white flex-1 py-2 text-base !min-h-[48px]">⬅️ Sebelumnya</button>
+              <button onclick="App.stepExplorerNumber(1)" class="btn-3d btn-white flex-1 py-2 text-base !min-h-[48px]">Berikutnya ➡️</button>
+            </div>
+          </div>
+
+          <!-- Area Ilustrasi Benda yang Bisa Disentuh Jari Satu per Satu -->
+          <div class="lg:col-span-8 flex flex-col justify-between bg-amber-50/80 border-4 border-amber-200 rounded-3xl p-4 sm:p-6 min-h-[260px]">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-display font-bold text-base sm:text-xl text-amber-900">
+                👆 Sentuh gambar di bawah satu per satu untuk menghitung!
+              </span>
+              <span id="explorerTapCounter" class="bg-emerald-500 text-white font-display font-bold px-4 py-1 rounded-full text-sm sm:text-base shadow">Terhitung: 0 / 5</span>
+            </div>
+
+            <!-- Grid Benda (Maksimal 20 Benda dalam Susunan Puluhan Rapi) -->
+            <div id="explorerItemsGrid" class="grid grid-cols-5 sm:grid-cols-5 md:grid-cols-10 gap-2.5 sm:gap-3 my-auto py-2 justify-items-center"><button type="button" id="expItem_1" class="countable-item animate-pop" style="animation-delay: 25ms;">
+            <span class="text-3xl sm:text-4xl md:text-5xl leading-none">🍉</span>
+            <span id="expBadge_1" class="mt-1 text-xs sm:text-sm font-display font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              1
+            </span>
+          </button><button type="button" id="expItem_2" class="countable-item animate-pop" style="animation-delay: 50ms;">
+            <span class="text-3xl sm:text-4xl md:text-5xl leading-none">🍉</span>
+            <span id="expBadge_2" class="mt-1 text-xs sm:text-sm font-display font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              2
+            </span>
+          </button><button type="button" id="expItem_3" class="countable-item animate-pop" style="animation-delay: 75ms;">
+            <span class="text-3xl sm:text-4xl md:text-5xl leading-none">🍉</span>
+            <span id="expBadge_3" class="mt-1 text-xs sm:text-sm font-display font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              3
+            </span>
+          </button><button type="button" id="expItem_4" class="countable-item animate-pop" style="animation-delay: 100ms;">
+            <span class="text-3xl sm:text-4xl md:text-5xl leading-none">🍉</span>
+            <span id="expBadge_4" class="mt-1 text-xs sm:text-sm font-display font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              4
+            </span>
+          </button><button type="button" id="expItem_5" class="countable-item animate-pop" style="animation-delay: 125ms;">
+            <span class="text-3xl sm:text-4xl md:text-5xl leading-none">🍉</span>
+            <span id="expBadge_5" class="mt-1 text-xs sm:text-sm font-display font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              5
+            </span>
+          </button></div>
+
+            <!-- Visual Kotak Puluhan (Ten-Frame) -->
+            <div class="mt-4 pt-3 border-t-2 border-amber-200/80 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-bold text-slate-600">
+              <span>💡 Tips Kelas 1: Satu baris penuh berisi <b>10 benda</b> (1 puluhan).</span>
+              <span id="explorerPlaceValueInfo" class="bg-white px-3 py-1 rounded-xl border border-amber-300 text-amber-950 font-extrabold">0 Puluhan + 5 Satuan = 5</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tombol Grid Angka 1 sampai 20 -->
+      <div class="game-card p-4 sm:p-6">
+        <h3 class="font-display font-bold text-lg sm:text-xl text-slate-700 mb-3 text-center">
+          👇 Pilih Angka 1 Sampai 20:
+        </h3>
+        <div id="explorerNumbersBar" class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-10 gap-2.5 sm:gap-3"><button id="expBtn_1" class="btn-3d btn-blue py-3 text-2xl sm:text-3xl font-bold">1</button><button id="expBtn_2" class="btn-3d btn-green py-3 text-2xl sm:text-3xl font-bold">2</button><button id="expBtn_3" class="btn-3d btn-orange py-3 text-2xl sm:text-3xl font-bold">3</button><button id="expBtn_4" class="btn-3d btn-purple py-3 text-2xl sm:text-3xl font-bold">4</button><button id="expBtn_5" class="btn-3d btn-pink py-3 text-2xl sm:text-3xl font-bold">5</button><button id="expBtn_6" class="btn-3d btn-yellow py-3 text-2xl sm:text-3xl font-bold">6</button><button id="expBtn_7" class="btn-3d btn-blue py-3 text-2xl sm:text-3xl font-bold">7</button><button id="expBtn_8" class="btn-3d btn-green py-3 text-2xl sm:text-3xl font-bold">8</button><button id="expBtn_9" class="btn-3d btn-orange py-3 text-2xl sm:text-3xl font-bold">9</button><button id="expBtn_10" class="btn-3d btn-purple py-3 text-2xl sm:text-3xl font-bold">10</button><button id="expBtn_11" class="btn-3d btn-pink py-3 text-2xl sm:text-3xl font-bold">11</button><button id="expBtn_12" class="btn-3d btn-yellow py-3 text-2xl sm:text-3xl font-bold">12</button><button id="expBtn_13" class="btn-3d btn-blue py-3 text-2xl sm:text-3xl font-bold">13</button><button id="expBtn_14" class="btn-3d btn-green py-3 text-2xl sm:text-3xl font-bold">14</button><button id="expBtn_15" class="btn-3d btn-orange py-3 text-2xl sm:text-3xl font-bold">15</button><button id="expBtn_16" class="btn-3d btn-purple py-3 text-2xl sm:text-3xl font-bold">16</button><button id="expBtn_17" class="btn-3d btn-pink py-3 text-2xl sm:text-3xl font-bold">17</button><button id="expBtn_18" class="btn-3d btn-yellow py-3 text-2xl sm:text-3xl font-bold">18</button><button id="expBtn_19" class="btn-3d btn-blue py-3 text-2xl sm:text-3xl font-bold">19</button><button id="expBtn_20" class="btn-3d btn-green py-3 text-2xl sm:text-3xl font-bold">20</button></div>
+      </div>
+    </section>
+
+    <!-- ================= 3. HALAMAN BERMAIN SOAL (GAME B, C, D, E, F, G) ================= -->
+    <section id="screenQuiz" class="flex-1 flex flex-col justify-between gap-4 pb-8">
+      
+      <!-- Top Bar Permainan: Kembali, Ulangi, Indikator Soal, Progress Bar & Skor -->
+      <div class="game-card p-3 sm:p-4 flex flex-col gap-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <button onclick="App.showMainMenu()" class="btn-3d btn-white px-3.5 py-2 text-sm sm:text-base gap-1.5 !min-h-[52px]">
+              <span>🏠</span>
+              <span class="hidden sm:inline">Menu Utama</span>
+            </button>
+            <button onclick="App.restartCurrentGame()" class="btn-3d btn-white px-3.5 py-2 text-sm sm:text-base gap-1.5 !min-h-[52px]" title="Ulangi Permainan dari Soal 1">
+              <span>🔄</span>
+              <span class="hidden sm:inline">Ulangi</span>
+            </button>
+          </div>
+
+          <!-- Judul Mode Aktif & Indikator Soal -->
+          <div class="text-center">
+            <span id="quizModeTitle" class="font-display font-bold text-base sm:text-xl text-sky-700 block">🏆 Tantangan Berhitung Acak</span>
+            <span id="quizProgressText" class="text-xs sm:text-sm font-extrabold text-slate-600 bg-slate-100 px-3 py-0.5 rounded-full inline-block">Soal 2 dari 10</span>
+          </div>
+
+          <!-- Skor Saat Ini & Tombol Bacakan Soal -->
+          <div class="flex items-center gap-2">
+            <div class="bg-amber-100 border-2 border-amber-400 rounded-2xl px-3.5 py-1.5 flex items-center gap-1.5">
+              <span class="text-xl sm:text-2xl">⭐</span>
+              <span id="quizScoreDisplay" class="font-display font-bold text-lg sm:text-2xl text-amber-900">20</span>
+            </div>
+            <button onclick="App.speakCurrentQuestion()" class="btn-3d btn-yellow px-3.5 py-2 text-sm sm:text-base gap-1.5 !min-h-[52px]" title="Bacakan Soal dengan Suara">
+              <span class="text-xl">🔊</span>
+              <span class="hidden md:inline">Bacakan Soal</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Progress Bar Ceria -->
+        <div class="w-full h-4 sm:h-5 bg-slate-200 rounded-full overflow-hidden p-0.5 border border-slate-300">
+          <div id="quizProgressBar" class="h-full bg-gradient-to-r from-emerald-400 to-green-500 rounded-full transition-all duration-500" style="width: 20%;"></div>
+        </div>
+      </div>
+
+      <!-- PANGGUNG SOAL UTAMA -->
+      <div id="questionStageCard" class="game-card p-4 sm:p-6 md:p-8 flex-1 flex flex-col justify-between gap-5 relative">
+        
+        <!-- Teks Pertanyaan / Cerita -->
+        <div class="text-center max-w-4xl mx-auto w-full">
+          <p id="questionInstructionBadge" class="inline-block bg-sky-100 text-sky-800 font-extrabold text-xs sm:text-sm px-4 py-1 rounded-full mb-2">
+            👆 Sentuh benda untuk ikut menghitung!
+          </p>
+          <h2 id="questionPromptText" class="font-display font-bold text-slate-800 question-clamp">Berapa hasil dari 3 kelinci lucu ditambah 1 kelinci lucu?</h2>
+        </div>
+
+        <!-- Area Visual Ilustrasi Benda (Penjumlahan / Pengurangan / Perbandingan / Soal Cerita) -->
+        <div id="questionVisualContainer" class="w-full my-auto flex flex-col items-center justify-center gap-4"><div class="w-full flex flex-col lg:flex-row items-center justify-center gap-3 sm:gap-5"><div class="flex-1 border-4 rounded-3xl p-4 sm:p-5 flex flex-col items-center justify-between gap-3 shadow-sm bg-sky-50/90 border-sky-300 text-sky-900"><div class="flex items-center justify-between w-full px-1">
+          <span class="font-display font-bold text-lg sm:text-xl">3 kelinci lucu</span>
+          <span class="hint-total-badge  bg-white px-3 py-0.5 rounded-full font-display font-bold text-base border-2 border-current">
+            Jumlah: 3
+          </span>
+        </div><div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 my-auto py-1"><button type="button" class="countable-item">
+            <span class="text-3xl sm:text-4xl leading-none">🐰</span>
+            <span class="hint-badge hidden mt-1 text-xs font-display font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950">
+              1
+            </span>
+          </button><button type="button" class="countable-item">
+            <span class="text-3xl sm:text-4xl leading-none">🐰</span>
+            <span class="hint-badge hidden mt-1 text-xs font-display font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950">
+              2
+            </span>
+          </button><button type="button" class="countable-item">
+            <span class="text-3xl sm:text-4xl leading-none">🐰</span>
+            <span class="hint-badge hidden mt-1 text-xs font-display font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950">
+              3
+            </span>
+          </button></div></div><div class="font-display font-bold text-4xl sm:text-6xl text-emerald-600 bg-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow border-4 border-emerald-200 shrink-0">+</div><div class="flex-1 border-4 rounded-3xl p-4 sm:p-5 flex flex-col items-center justify-between gap-3 shadow-sm bg-emerald-50/90 border-emerald-300 text-emerald-900"><div class="flex items-center justify-between w-full px-1">
+          <span class="font-display font-bold text-lg sm:text-xl">1 kelinci lucu</span>
+          <span class="hint-total-badge  bg-white px-3 py-0.5 rounded-full font-display font-bold text-base border-2 border-current">
+            Jumlah: 1
+          </span>
+        </div><div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 my-auto py-1"><button type="button" class="countable-item">
+            <span class="text-3xl sm:text-4xl leading-none">🐰</span>
+            <span class="hint-badge hidden mt-1 text-xs font-display font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950">
+              4
+            </span>
+          </button></div></div></div><div class="mt-2 bg-amber-50 border-4 border-amber-300 rounded-3xl px-6 py-2.5 font-display font-bold equation-clamp text-slate-800 shadow-sm"><span class="text-sky-600">3</span> + <span class="text-emerald-600">1</span> = <span id="equationResultSlot" class="text-orange-500">4</span></div></div>
+
+        <!-- Pesan Respons Langsung (Benar / Coba Lagi + Petunjuk Visual) -->
+        <div id="feedbackBanner" class="rounded-3xl p-4 sm:p-5 border-4 bg-emerald-100 border-emerald-400 text-emerald-950 text-center animate-pop">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <span id="feedbackEmoji" class="text-4xl sm:text-5xl">🌟</span>
+            <div class="text-center sm:text-left">
+              <h3 id="feedbackTitle" class="font-display font-bold text-xl sm:text-2xl md:text-3xl">HEBAT! JAWABAN KAMU BENAR!</h3>
+              <p id="feedbackSubtitle" class="font-bold text-sm sm:text-base md:text-lg opacity-95">Jawabannya adalah 4. Kamu dapat +10 Poin!</p>
+            </div>
+            <button id="btnNextQuestion" onclick="App.nextQuestion()" class="btn-3d btn-green px-6 py-3 text-lg sm:text-xl gap-2 sm:ml-auto">
+              <span>Soal Berikutnya</span>
+              <span>➡️</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Area Tombol Pilihan Jawaban Besar -->
+        <div id="answerChoicesGrid" class="grid grid-cols-3 gap-3 sm:gap-5 max-w-3xl mx-auto w-full pt-2"><button type="button" class="btn-3d btn-green py-4 sm:py-5 px-4 answer-btn-clamp font-bold">4</button><button type="button" class="btn-3d btn-purple py-4 sm:py-5 px-4 answer-btn-clamp font-bold">7</button><button type="button" class="btn-3d btn-orange py-4 sm:py-5 px-4 answer-btn-clamp font-bold">5</button></div>
+
+      </div>
+    </section>
+
+    <!-- ================= 4. HALAMAN AKHIR / HADIAH BINTANG & SKOR ================= -->
+    <section id="screenResult" class="hidden flex-1 flex flex-col items-center justify-center py-6">
+      <div class="game-card p-6 sm:p-8 md:p-10 max-w-2xl w-full text-center flex flex-col items-center gap-4 animate-pop">
+        
+        <span class="bg-amber-100 text-amber-800 font-extrabold px-4 py-1.5 rounded-full text-sm border-2 border-amber-300">
+          🎉 Permainan Selesai!
+        </span>
+
+        <h2 id="resultHeadline" class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-sky-600">
+          🌟 LUAR BIASA!
+        </h2>
+
+        <p id="resultPlayerMotivation" class="text-base sm:text-xl font-bold text-slate-700">
+          Hebat sekali! Kamu sudah rajin belajar berhitung hari ini!
+        </p>
+
+        <!-- Barisan Bintang Penghargaan -->
+        <div id="resultStarsRow" class="flex items-center justify-center gap-3 sm:gap-5 my-2 text-5xl sm:text-7xl">
+          <span class="animate-bounce" style="animation-delay: 0ms;">⭐</span>
+          <span class="animate-bounce" style="animation-delay: 150ms;">⭐</span>
+          <span class="animate-bounce" style="animation-delay: 300ms;">⭐</span>
+        </div>
+
+        <!-- Kotak Ringkasan Nilai Akhir -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full my-2">
+          <div class="bg-amber-50 border-3 border-amber-300 rounded-2xl p-3.5">
+            <span class="text-xs font-extrabold text-amber-800 uppercase block">Nilai Akhir</span>
+            <span id="resultTotalScore" class="font-display font-bold text-3xl sm:text-4xl text-amber-600">100</span>
+            <span class="text-xs font-bold text-amber-800 block">Poin</span>
+          </div>
+
+          <div class="bg-emerald-50 border-3 border-emerald-300 rounded-2xl p-3.5">
+            <span class="text-xs font-extrabold text-emerald-800 uppercase block">Jawaban Benar</span>
+            <span id="resultCorrectCount" class="font-display font-bold text-3xl sm:text-4xl text-emerald-600">10 / 10</span>
+            <span class="text-xs font-bold text-emerald-800 block">Soal Selesai</span>
+          </div>
+
+          <div class="col-span-2 sm:col-span-1 bg-sky-50 border-3 border-sky-300 rounded-2xl p-3.5">
+            <span class="text-xs font-extrabold text-sky-800 uppercase block">Percobaan Pertama</span>
+            <span id="resultFirstTryCount" class="font-display font-bold text-3xl sm:text-4xl text-sky-600">9 Soal</span>
+            <span id="resultRetryNote" class="text-xs font-bold text-sky-800 block">1 soal dicoba ulang</span>
+          </div>
+        </div>
+
+        <!-- Tombol Aksi Akhir -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 w-full mt-3">
+          <button onclick="App.restartCurrentGame()" class="btn-3d btn-green flex-1 py-4 text-xl gap-2">
+            <span>🔄</span>
+            <span>Main Lagi</span>
+          </button>
+          <button onclick="App.showMainMenu()" class="btn-3d btn-blue flex-1 py-4 text-xl gap-2">
+            <span>🏠</span>
+            <span>Menu Utama</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Kecil -->
+    <footer class="text-center text-xs sm:text-sm font-bold text-emerald-950/80 py-2">
+      🎮 PETUALANGAN ANGKA 1–20 • Media Pembelajaran Interaktif Kelas 1 SD (Responsif HP, Laptop &amp; Layar IFP Kelas)
+    </footer>
+
+  </div>
+
+  <!-- ================= MODAL 1: PETUNJUK PERMAINAN ================= -->
+  <div id="modalHelp" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 items-center justify-center p-4 hidden">
+    <div class="game-card max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto animate-pop">
+      <div class="flex items-center justify-between border-b-2 border-slate-200 pb-3 mb-4">
+        <h3 class="font-display font-bold text-2xl sm:text-3xl text-sky-700">📘 Petunjuk Permainan</h3>
+        <button onclick="App.closeModal('modalHelp')" class="btn-3d btn-white !min-h-[48px] !min-w-[48px] text-xl">✕</button>
+      </div>
+
+      <div class="space-y-4 text-slate-700 font-bold text-sm sm:text-base leading-relaxed">
+        <div class="bg-sky-50 border-2 border-sky-200 rounded-2xl p-4">
+          <h4 class="font-display font-bold text-lg text-sky-800 mb-1">1. Sentuh Benda untuk Menghitung 👆</h4>
+          <p>Anak-anak dapat menyentuh setiap gambar buah, hewan, atau mainan di layar IFP maupun HP. Setiap disentuh, akan muncul angka urut dan bunyi musik berhitung!</p>
+        </div>
+
+        <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-4">
+          <h4 class="font-display font-bold text-lg text-emerald-800 mb-1">2. Tidak Perlu Takut Salah 💪</h4>
+          <p>Tidak ada batas waktu yang memburu anak. Jika jawaban belum tepat, permainan akan memberikan <b>Petunjuk Angka Visual</b> di bawah gambar agar anak bisa menghitung ulang dan mencoba lagi.</p>
+        </div>
+
+        <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4">
+          <h4 class="font-display font-bold text-lg text-amber-800 mb-1">3. Suara Bahasa Indonesia 🔊</h4>
+          <p>Sentuh tombol <b>🔊 Bacakan Soal</b> agar soal dibacakan dengan jelas. Sangat membantu untuk siswa kelas 1 SD yang sedang belajar lancar membaca.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <button onclick="App.closeModal('modalHelp')" class="btn-3d btn-green px-8 py-3 text-lg">Siap Bermain! 🚀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 2: MODE GURU & FITUR KELAS IFP ================= -->
+  <div id="modalTeacher" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 items-center justify-center p-4 flex">
+    <div class="game-card max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto animate-pop">
+      <div class="flex items-center justify-between border-b-2 border-slate-200 pb-3 mb-4">
+        <div>
+          <h3 class="font-display font-bold text-2xl sm:text-3xl text-purple-700">👩‍🏫 Mode Guru &amp; Pengaturan Kelas IFP</h3>
+          <p class="text-xs sm:text-sm font-bold text-slate-500">Sesuaikan tingkat kesulitan dan fitur layar interaktif di kelas</p>
+        </div>
+        <button onclick="App.closeModal('modalTeacher')" class="btn-3d btn-white !min-h-[48px] !min-w-[48px] text-xl">✕</button>
+      </div>
+
+      <div class="space-y-5 font-bold text-slate-700">
+        <!-- Pilihan Rentang Angka -->
+        <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4">
+          <label class="block font-display font-bold text-lg text-slate-800 mb-2">🔢 Rentang Angka Soal:</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button id="btnRange10" onclick="App.setTeacherConfig('maxNumber', 10)" class="btn-3d py-3 text-base btn-blue">
+              Angka 1–10 (Tahap Awal)
+            </button>
+            <button id="btnRange20" onclick="App.setTeacherConfig('maxNumber', 20)" class="btn-3d py-3 text-base btn-white">
+              Angka 1–20 (Lengkap)
+            </button>
+          </div>
+        </div>
+
+        <!-- Pilihan Jumlah Soal per Sesi -->
+        <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4">
+          <label class="block font-display font-bold text-lg text-slate-800 mb-2">📝 Jumlah Soal per Permainan:</label>
+          <div class="grid grid-cols-3 gap-3">
+            <button id="btnQCount5" onclick="App.setTeacherConfig('totalQuestions', 5)" class="btn-3d py-2.5 text-base btn-white">5 Soal</button>
+            <button id="btnQCount10" onclick="App.setTeacherConfig('totalQuestions', 10)" class="btn-3d py-2.5 text-base btn-white">10 Soal</button>
+            <button id="btnQCount15" onclick="App.setTeacherConfig('totalQuestions', 15)" class="btn-3d py-2.5 text-base btn-blue">15 Soal</button>
+          </div>
+        </div>
+
+        <!-- Mode Estafet Kelas (Anak Maju Satu per Satu ke Layar IFP) -->
+        <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-display font-bold text-lg text-purple-900">🏃 Mode Estafet Kelas (Layar IFP)</h4>
+            <p class="text-xs sm:text-sm text-purple-800">Tampilkan layar pergantian giliran setiap selesai 1 soal agar siswa bisa maju bergantian ke papan IFP.</p>
+          </div>
+          <button id="btnRelayToggle" onclick="App.toggleRelayMode()" class="btn-3d btn-green px-5 py-2.5 text-base shrink-0">AKTIF ✅</button>
+        </div>
+
+        <!-- Paket Kode Terpisah untuk GitHub Pages / PWA -->
+        <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-4">
+          <h4 class="font-display font-bold text-lg text-emerald-900 mb-1">📦 Unduh File Terpisah (Siap Upload GitHub Pages / PWA)</h4>
+          <p class="text-xs sm:text-sm text-emerald-800 mb-3">
+            Ingin mengunggah proyek ini dalam struktur file terpisah (<code class="bg-white px-1.5 py-0.5 rounded">index.html</code>, <code class="bg-white px-1.5 py-0.5 rounded">style.css</code>, <code class="bg-white px-1.5 py-0.5 rounded">script.js</code>, <code class="bg-white px-1.5 py-0.5 rounded">manifest.json</code>, <code class="bg-white px-1.5 py-0.5 rounded">sw.js</code>)? Unduh file-nya di bawah ini:
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <button onclick="App.downloadProjectFile('manifest.json')" class="btn-3d btn-white px-3 py-1.5 text-xs !min-h-[42px]">⬇️ manifest.json</button>
+            <button onclick="App.downloadProjectFile('sw.js')" class="btn-3d btn-white px-3 py-1.5 text-xs !min-h-[42px]">⬇️ sw.js (PWA)</button>
+            <button onclick="App.downloadProjectFile('standalone-html')" class="btn-3d btn-green px-4 py-1.5 text-xs !min-h-[42px]">⬇️ Unduh Aplikasi Lengkap (.html)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-between items-center">
+        <button onclick="App.resetHighScore()" class="text-xs sm:text-sm font-extrabold text-rose-600 underline px-2 py-1">Reset Skor Tertinggi</button>
+        <button onclick="App.closeModal('modalTeacher')" class="btn-3d btn-purple px-8 py-3 text-lg">Simpan &amp; Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 3: LAYAR ESTAFET GILIRAN SISWA DI IFP ================= -->
+  <div id="modalRelayTurn" class="fixed inset-0 bg-purple-900/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="game-card max-w-xl w-full p-6 sm:p-8 text-center flex flex-col items-center gap-4 animate-pop">
+      <div class="w-24 h-24 rounded-full bg-amber-300 border-4 border-white shadow-lg flex items-center justify-center text-6xl animate-bounce">
+        🙌
+      </div>
+      <span id="relayStudentTurnBadge" class="bg-purple-100 text-purple-800 font-extrabold px-4 py-1 rounded-full text-sm border-2 border-purple-300">
+        Giliran Siswa Berikutnya!
+      </span>
+      <h3 class="font-display font-bold text-3xl sm:text-4xl text-purple-700">
+        Ayo Maju ke Layar IFP!
+      </h3>
+      <p class="text-base sm:text-xl font-bold text-slate-700">
+        Silakan siswa berikutnya maju ke depan kelas dan sentuh tombol hijau di bawah untuk menjawab soal!
+      </p>
+      <button onclick="App.confirmRelayReady()" class="btn-3d btn-green w-full py-4 text-2xl gap-3 mt-2">
+        <span>✋</span>
+        <span>SAYA SIAP MENJAWAB!</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= LOGIKA JAVASCRIPT UTAMA (MODULAR & BERSIH) ================= -->
+  <script>
+    /**
+     * Katalog Ilustrasi Benda Sehari-hari, Buah, Hewan, Kendaraan & Alat Sekolah
+     * Menggunakan karakter vektor/emoji kontras tinggi yang tidak mungkin gagal dimuat (0 broken image)
+     */
+    const ITEM_CATALOG = [
+      { id: 'apel', emoji: '🍎', name: 'apel merah', unit: 'buah apel' },
+      { id: 'pisang', emoji: '🍌', name: 'pisang kuning', unit: 'buah pisang' },
+      { id: 'jeruk', emoji: '🍊', name: 'jeruk manis', unit: 'buah jeruk' },
+      { id: 'stroberi', emoji: '🍓', name: 'stroberi', unit: 'buah stroberi' },
+      { id: 'semangka', emoji: '🍉', name: 'semangka', unit: 'potong semangka' },
+      { id: 'kelinci', emoji: '🐰', name: 'kelinci lucu', unit: 'ekor kelinci' },
+      { id: 'anak_ayam', emoji: '🐣', name: 'anak ayam', unit: 'ekor anak ayam' },
+      { id: 'kucing', emoji: '🐱', name: 'kucing imut', unit: 'ekor kucing' },
+      { id: 'ikan', emoji: '🐟', name: 'ikan biru', unit: 'ekor ikan' },
+      { id: 'kupu', emoji: '🦋', name: 'kupu-kupu', unit: 'ekor kupu-kupu' },
+      { id: 'lebah', emoji: '🐝', name: 'lebah madu', unit: 'ekor lebah' },
+      { id: 'burung', emoji: '🐦', name: 'burung kecil', unit: 'ekor burung' },
+      { id: 'mobil', emoji: '🚗', name: 'mobil mainan', unit: 'mobil mainan' },
+      { id: 'bola', emoji: '⚽', name: 'bola sepak', unit: 'buah bola' },
+      { id: 'balon', emoji: '🎈', name: 'balon merah', unit: 'buah balon' },
+      { id: 'bintang', emoji: '⭐', name: 'bintang emas', unit: 'bintang' },
+      { id: 'permen', emoji: '🍬', name: 'permen manis', unit: 'bungkus permen' },
+      { id: 'eskrim', emoji: '🍦', name: 'es krim', unit: 'es krim' },
+      { id: 'pensil', emoji: '✏️', name: 'pensil warna', unit: 'batang pensil' },
+      { id: 'buku', emoji: '📘', name: 'buku cerita', unit: 'buah buku' }
+    ];
+
+    /**
+     * Kata Bilangan Bahasa Indonesia 1 sampai 20
+     */
+    const NUMBER_WORDS_ID = {
+      0: 'Nol',
+      1: 'Satu', 2: 'Dua', 3: 'Tiga', 4: 'Empat', 5: 'Lima',
+      6: 'Enam', 7: 'Tujuh', 8: 'Delapan', 9: 'Sembilan', 10: 'Sepuluh',
+      11: 'Sebelas', 12: 'Dua Belas', 13: 'Tiga Belas', 14: 'Empat Belas', 15: 'Lima Belas',
+      16: 'Enam Belas', 17: 'Tujuh Belas', 18: 'Delapan Belas', 19: 'Sembilan Belas', 20: 'Dua Puluh'
+    };
+
+    /**
+     * Sistem Web Audio API (Efek Suara Ceria Tanpa File MP3 Eksternal)
+     */
+    const SoundFX = {
+      ctx: null,
+      enabled: true,
+
+      init() {
+        if (!this.ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) this.ctx = new AudioCtx();
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      },
+
+      playTone(freq, type = 'sine', duration = 0.15, delay = 0, gainVal = 0.18) {
+        if (!this.enabled) return;
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const now = this.ctx.currentTime + delay;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, now);
+          gain.gain.setValueAtTime(gainVal, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now);
+          osc.stop(now + duration);
+        } catch (e) {
+          // Abaikan jika browser memblokir sebelum interaksi
+        }
+      },
+
+      click() {
+        this.playTone(520, 'triangle', 0.08, 0, 0.15);
+      },
+
+      countNote(index) {
+        // Tangga nada ceria saat anak menyentuh benda ke-1 sampai ke-20
+        const scale = [
+          261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88,
+          523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77,
+          1046.50, 1174.66, 1318.51, 1396.91, 1567.98, 1760.00
+        ];
+        const freq = scale[(index - 1) % scale.length] || 523.25;
+        this.playTone(freq, 'sine', 0.18, 0, 0.22);
+      },
+
+      correct() {
+        // Fanfare jawaban benar (C5 - E5 - G5 - C6)
+        this.playTone(523.25, 'triangle', 0.14, 0.0, 0.2);
+        this.playTone(659.25, 'triangle', 0.14, 0.1, 0.2);
+        this.playTone(783.99, 'triangle', 0.14, 0.2, 0.2);
+        this.playTone(1046.50, 'triangle', 0.35, 0.3, 0.25);
+      },
+
+      tryAgain() {
+        // Nada lembut menyemangati (tidak mengagetkan anak)
+        this.playTone(349.23, 'sine', 0.18, 0.0, 0.16);
+        this.playTone(329.63, 'sine', 0.28, 0.15, 0.16);
+      },
+
+      winFanfare() {
+        const notes = [523.25, 659.25, 783.99, 1046.50, 783.99, 1046.50];
+        const times = [0, 0.12, 0.24, 0.36, 0.52, 0.66];
+        notes.forEach((n, idx) => {
+          this.playTone(n, 'triangle', idx === notes.length - 1 ? 0.5 : 0.15, times[idx], 0.22);
+        });
+      }
+    };
+
+    /**
+     * Sistem Pembaca Suara Bahasa Indonesia (Web Speech API)
+     */
+    const VoiceID = {
+      speak(text) {
+        if (!SoundFX.enabled || !('speechSynthesis' in window)) return;
+        try {
+          window.speechSynthesis.cancel();
+          const utter = new SpeechSynthesisUtterance(text);
+          utter.lang = 'id-ID';
+          utter.rate = 0.92; // Sedikit pelan dan artikulatif untuk anak kelas 1 SD
+          utter.pitch = 1.1;
+
+          const voices = window.speechSynthesis.getVoices();
+          const indoVoice = voices.find(v => v.lang && v.lang.toLowerCase().includes('id'));
+          if (indoVoice) utter.voice = indoVoice;
+
+          window.speechSynthesis.speak(utter);
+        } catch (e) {
+          // Fallback aman jika TTS tidak didukung perangkat
+        }
+      },
+      stop() {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+      }
+    };
+
+    /**
+     * Sistem Animasi Konfeti Perayaan
+     */
+    const Confetti = {
+      canvas: null,
+      ctx: null,
+      particles: [],
+      animId: null,
+
+      init() {
+        this.canvas = document.getElementById('confettiCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+      },
+
+      resize() {
+        if (!this.canvas) return;
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+      },
+
+      burst(count = 75) {
+        this.resize();
+        const colors = ['#fde047', '#4ade80', '#38bdf8', '#fb923c', '#f472b6', '#a855f7'];
+        for (let i = 0; i < count; i++) {
+          this.particles.push({
+            x: this.canvas.width / 2 + (Math.random() - 0.5) * 220,
+            y: this.canvas.height * 0.45,
+            vx: (Math.random() - 0.5) * 16,
+            vy: -Math.random() * 14 - 4,
+            size: Math.random() * 10 + 7,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rot: Math.random() * 360,
+            vrot: (Math.random() - 0.5) * 12,
+            gravity: 0.35
+          });
+        }
+        if (!this.animId) this.loop();
+      },
+
+      loop() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.rot += p.vrot;
+
+          this.ctx.save();
+          this.ctx.translate(p.x, p.y);
+          this.ctx.rotate((p.rot * Math.PI) / 180);
+          this.ctx.fillStyle = p.color;
+          this.ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.65);
+          this.ctx.restore();
+        });
+
+        this.particles = this.particles.filter(p => p.y < this.canvas.height + 40);
+        if (this.particles.length > 0) {
+          this.animId = requestAnimationFrame(() => this.loop());
+        } else {
+          this.animId = null;
+          this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+      }
+    };
+
+    /**
+     * Generator Soal Pintar Kelas 1 SD (Rentang 1-20, Tidak Ada Hasil Negatif)
+     */
+    const QuestionGenerator = {
+      randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      },
+
+      pickRandomItem(excludeId = null) {
+        const pool = excludeId ? ITEM_CATALOG.filter(i => i.id !== excludeId) : ITEM_CATALOG;
+        return pool[Math.floor(Math.random() * pool.length)];
+      },
+
+      generateChoices(correctAnswer, maxLimit = 20) {
+        const choices = new Set([correctAnswer]);
+        const offsets = [-3, -2, -1, 1, 2, 3, 4];
+        while (choices.size < 3) {
+          const offset = offsets[Math.floor(Math.random() * offsets.length)];
+          let candidate = correctAnswer + offset;
+          if (candidate < 1) candidate = this.randInt(1, Math.min(6, maxLimit));
+          if (candidate > maxLimit) candidate = this.randInt(Math.max(1, maxLimit - 5), maxLimit);
+          if (candidate !== correctAnswer) choices.add(candidate);
+        }
+        return Array.from(choices).sort(() => Math.random() - 0.5);
+      },
+
+      // Soal Kuis Tebak Jumlah Benda (Latihan dari Mengenal Angka)
+      createCountingQuestion(maxNum) {
+        const count = this.randInt(1, maxNum);
+        const item = this.pickRandomItem();
+        return {
+          type: 'kuis_angka',
+          prompt: `Hitung ada berapa ${item.unit} di bawah ini?`,
+          speech: `Hitung ada berapa ${item.unit} di bawah ini?`,
+          itemA: item,
+          countA: count,
+          correctAnswer: count,
+          choices: this.generateChoices(count, maxNum)
+        };
+      },
+
+      // GAME B: Penjumlahan (Hasil maksimal 20 atau sesuai Mode Guru)
+      createAdditionQuestion(maxNum) {
+        const sumMax = Math.min(20, maxNum);
+        const total = this.randInt(2, sumMax);
+        const a = this.randInt(1, total - 1);
+        const b = total - a;
+        const item = this.pickRandomItem();
+
+        return {
+          type: 'penjumlahan',
+          prompt: `Berapa hasil dari ${a} ${item.name} ditambah ${b} ${item.name}?`,
+          speech: `Ada ${a} ${item.unit}, ditambah ${b} ${item.unit}. Berapa jumlah semuanya?`,
+          itemA: item,
+          countA: a,
+          countB: b,
+          correctAnswer: total,
+          choices: this.generateChoices(total, sumMax)
+        };
+      },
+
+      // GAME C: Pengurangan (Hasil tidak pernah negatif, minimal 1)
+      createSubtractionQuestion(maxNum) {
+        const startMax = Math.min(20, maxNum);
+        const total = this.randInt(3, startMax);
+        const taken = this.randInt(1, total - 1);
+        const remain = total - taken;
+        const item = this.pickRandomItem();
+
+        const actionVerbs = ['dimakan', 'diambil', 'diberikan kepada teman', 'jatuh'];
+        const verb = ['apel', 'pisang', 'jeruk', 'stroberi', 'semangka', 'permen', 'eskrim'].includes(item.id)
+          ? 'dimakan'
+          : actionVerbs[this.randInt(1, 2)];
+
+        return {
+          type: 'pengurangan',
+          prompt: `Ada ${total} ${item.unit}. Kemudian ${taken} ${item.name} ${verb}. Berapa yang tersisa?`,
+          speech: `Ada ${total} ${item.unit}. Kemudian ${taken} ${verb}. Berapa ${item.name} yang tersisa?`,
+          itemA: item,
+          countA: total,
+          countB: taken,
+          correctAnswer: remain,
+          choices: this.generateChoices(remain, startMax)
+        };
+      },
+
+      // GAME D & E: Perbandingan Lebih Banyak / Lebih Sedikit
+      createComparisonQuestion(mode, maxNum) {
+        const limit = Math.min(15, maxNum);
+        let a = this.randInt(2, limit);
+        let b = this.randInt(1, limit);
+        while (a === b) {
+          b = this.randInt(1, limit);
+        }
+        const itemA = this.pickRandomItem();
+        const itemB = this.pickRandomItem(itemA.id);
+        const isMore = mode === 'lebih_banyak';
+        const correctGroup = isMore
+          ? (a > b ? 'Kelompok A' : 'Kelompok B')
+          : (a < b ? 'Kelompok A' : 'Kelompok B');
+
+        const questionLabel = isMore ? 'LEBIH BANYAK' : 'LEBIH SEDIKIT';
+
+        return {
+          type: mode,
+          prompt: `Kelompok mana yang jumlah bendanya ${questionLabel}?`,
+          speech: `Perhatikan Kelompok A dan Kelompok B. Kelompok mana yang jumlahnya ${questionLabel.toLowerCase()}?`,
+          itemA,
+          itemB,
+          countA: a,
+          countB: b,
+          correctAnswer: correctGroup,
+          choices: ['Kelompok A', 'Kelompok B']
+        };
+      },
+
+      // GAME F: Soal Cerita Bahasa Indonesia Kelas 1 SD
+      createWordProblem(maxNum) {
+        const limit = Math.min(20, maxNum);
+        const templates = [
+          () => {
+            const a = this.randInt(3, Math.floor(limit * 0.6));
+            const b = this.randInt(2, limit - a);
+            const item = ITEM_CATALOG.find(i => i.id === 'apel');
+            return {
+              storyType: 'add',
+              prompt: `Budi mempunyai ${a} buah apel 🍎. Ibu memberikan ${b} apel lagi kepada Budi. Berapa jumlah apel Budi sekarang?`,
+              speech: `Budi mempunyai ${a} buah apel. Ibu memberikan ${b} apel lagi. Berapa jumlah apel Budi sekarang?`,
+              itemA: item, countA: a, countB: b,
+              correctAnswer: a + b,
+              choices: this.generateChoices(a + b, limit)
+            };
+          },
+          () => {
+            const a = this.randInt(5, limit);
+            const b = this.randInt(2, a - 1);
+            const item = ITEM_CATALOG.find(i => i.id === 'permen');
+            return {
+              storyType: 'sub',
+              prompt: `Siti mempunyai ${a} bungkus permen 🍬. Ia memberikan ${b} permen kepada temannya. Berapa permen Siti yang tersisa?`,
+              speech: `Siti mempunyai ${a} permen. Ia memberikan ${b} permen kepada temannya. Berapa permen yang tersisa?`,
+              itemA: item, countA: a, countB: b,
+              correctAnswer: a - b,
+              choices: this.generateChoices(a - b, limit)
+            };
+          },
+          () => {
+            const a = this.randInt(3, Math.floor(limit * 0.65));
+            const b = this.randInt(2, limit - a);
+            const item = ITEM_CATALOG.find(i => i.id === 'burung');
+            return {
+              storyType: 'add',
+              prompt: `Ada ${a} ekor burung 🐦 di pohon. Datang lagi ${b} ekor burung. Berapa jumlah burung di pohon sekarang?`,
+              speech: `Ada ${a} burung di pohon. Datang lagi ${b} burung. Berapa jumlah burung sekarang?`,
+              itemA: item, countA: a, countB: b,
+              correctAnswer: a + b,
+              choices: this.generateChoices(a + b, limit)
+            };
+          },
+          () => {
+            const a = this.randInt(6, limit);
+            const b = this.randInt(2, a - 2);
+            const item = ITEM_CATALOG.find(i => i.id === 'bola');
+            return {
+              storyType: 'sub',
+              prompt: `Andi mempunyai ${a} bola kelereng ⚽. Saat bermain, ${b} bola dimasukkan ke dalam kotak. Berapa sisa bola di luar kotak?`,
+              speech: `Andi mempunyai ${a} bola. Sebanyak ${b} bola dimasukkan ke kotak. Berapa sisa bola sekarang?`,
+              itemA: item, countA: a, countB: b,
+              correctAnswer: a - b,
+              choices: this.generateChoices(a - b, limit)
+            };
+          },
+          () => {
+            let a = this.randInt(4, Math.min(12, limit));
+            let b = this.randInt(2, Math.min(12, limit));
+            if (a === b) a += 1;
+            const itemA = ITEM_CATALOG.find(i => i.id === 'kupu');
+            const itemB = ITEM_CATALOG.find(i => i.id === 'lebah');
+            const correct = a > b ? 'Kupu-kupu 🦋' : 'Lebah 🐝';
+            return {
+              storyType: 'compare',
+              prompt: `Di taman bunga ada ${a} ekor kupu-kupu 🦋 dan ${b} ekor lebah 🐝. Hewan mana yang jumlahnya LEBIH BANYAK?`,
+              speech: `Di taman ada ${a} kupu-kupu dan ${b} lebah. Mana yang jumlahnya lebih banyak?`,
+              itemA, itemB, countA: a, countB: b,
+              correctAnswer: correct,
+              choices: ['Kupu-kupu 🦋', 'Lebah 🐝']
+            };
+          },
+          () => {
+            const a = this.randInt(4, Math.floor(limit * 0.6));
+            const b = this.randInt(2, limit - a);
+            const item = ITEM_CATALOG.find(i => i.id === 'pensil');
+            return {
+              storyType: 'add',
+              prompt: `Lani membawa ${a} batang pensil ✏️ di tempat pensilnya. Ayah membelikan ${b} pensil baru. Berapa jumlah pensil Lani semuanya?`,
+              speech: `Lani membawa ${a} pensil. Ayah membelikan ${b} pensil baru. Berapa jumlah pensil Lani semuanya?`,
+              itemA: item, countA: a, countB: b,
+              correctAnswer: a + b,
+              choices: this.generateChoices(a + b, limit)
+            };
+          },
+          () => {
+            const a = this.randInt(5, limit);
+            const b = this.randInt(1, a - 1);
+            const item = ITEM_CATALOG.find(i => i.id === 'pisang');
+            return {
+              storyType: 'sub',
+              prompt: `Di atas meja makan ada ${a} buah pisang 🍌. Adik memakan ${b} buah pisang. Berapa buah pisang yang masih ada di meja?`,
+              speech: `Di atas meja ada ${a} buah pisang. Adik memakan ${b} pisang. Berapa pisang yang tersisa?`,
+              itemA: item, countA: a, countB: b,
+              correctAnswer: a - b,
+              choices: this.generateChoices(a - b, limit)
+            };
+          }
+        ];
+
+        const chosen = templates[Math.floor(Math.random() * templates.length)]();
+        return {
+          type: 'soal_cerita',
+          ...chosen
+        };
+      }
+    };
+
+    /**
+     * Controller Utama Aplikasi Game "PETUALANGAN ANGKA 1-20"
+     */
+    const App = {
+      state: {
+        playerName: '',
+        highScore: 0,
+        maxNumber: 20,
+        totalQuestions: 10,
+        relayMode: false,
+        currentMode: 'penjumlahan',
+        explorerNumber: 5,
+        explorerTappedSet: new Set(),
+        questions: [],
+        currentIndex: 0,
+        score: 0,
+        firstTryCorrectCount: 0,
+        hasFailedCurrentQuestion: false,
+        questionAnswered: false,
+        hintActive: false
+      },
+
+      init() {
+        Confetti.init();
+        this.loadStorage();
+        this.renderExplorerNumbersBar();
+        this.selectExplorerNumber(5, false);
+        this.updateTeacherModalUI();
+      },
+
+      loadStorage() {
+        try {
+          const savedName = localStorage.getItem('pa120_playerName');
+          const savedHigh = localStorage.getItem('pa120_highScore');
+          const savedSound = localStorage.getItem('pa120_sound');
+          const savedMax = localStorage.getItem('pa120_maxNumber');
+          const savedTotalQ = localStorage.getItem('pa120_totalQ');
+          const savedRelay = localStorage.getItem('pa120_relay');
+
+          if (savedName) {
+            this.state.playerName = savedName;
+            document.getElementById('playerNameInput').value = savedName;
+          }
+          if (savedHigh) {
+            this.state.highScore = parseInt(savedHigh, 10) || 0;
+            document.getElementById('highScoreBadge').textContent = `${this.state.highScore} Poin`;
+          }
+          if (savedSound !== null) {
+            SoundFX.enabled = savedSound === 'true';
+            this.updateSoundUI();
+          }
+          if (savedMax) this.state.maxNumber = parseInt(savedMax, 10) || 20;
+          if (savedTotalQ) this.state.totalQuestions = parseInt(savedTotalQ, 10) || 10;
+          if (savedRelay) this.state.relayMode = savedRelay === 'true';
+        } catch (e) {
+          // Abaikan jika mode penyamaran memblokir localStorage
+        }
+      },
+
+      savePlayerName(val) {
+        this.state.playerName = (val || '').trim();
+        try {
+          localStorage.setItem('pa120_playerName', this.state.playerName);
+        } catch (e) {}
+      },
+
+      saveHighScore(newScore) {
+        if (newScore > this.state.highScore) {
+          this.state.highScore = newScore;
+          document.getElementById('highScoreBadge').textContent = `${this.state.highScore} Poin`;
+          try {
+            localStorage.setItem('pa120_highScore', String(this.state.highScore));
+          } catch (e) {}
+        }
+      },
+
+      resetHighScore() {
+        SoundFX.click();
+        this.state.highScore = 0;
+        document.getElementById('highScoreBadge').textContent = '0 Poin';
+        try {
+          localStorage.setItem('pa120_highScore', '0');
+        } catch (e) {}
+      },
+
+      toggleSound() {
+        SoundFX.enabled = !SoundFX.enabled;
+        if (SoundFX.enabled) {
+          SoundFX.click();
+          VoiceID.speak('Suara diaktifkan');
+        } else {
+          VoiceID.stop();
+        }
+        this.updateSoundUI();
+        try {
+          localStorage.setItem('pa120_sound', String(SoundFX.enabled));
+        } catch (e) {}
+      },
+
+      updateSoundUI() {
+        const icon = document.getElementById('soundIcon');
+        const label = document.getElementById('soundLabel');
+        const btn = document.getElementById('btnSoundToggle');
+        if (SoundFX.enabled) {
+          icon.textContent = '🔊';
+          label.textContent = 'Suara: ON';
+          btn.className = 'btn-3d btn-yellow px-3.5 py-2 text-sm md:text-base gap-1.5 !min-h-[52px]';
+        } else {
+          icon.textContent = '🔇';
+          label.textContent = 'Suara: OFF';
+          btn.className = 'btn-3d btn-white px-3.5 py-2 text-sm md:text-base gap-1.5 !min-h-[52px]';
+        }
+      },
+
+      toggleFullscreen() {
+        SoundFX.click();
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      },
+
+      openModal(id) {
+        SoundFX.click();
+        const el = document.getElementById(id);
+        if (el) {
+          el.classList.remove('hidden');
+          el.classList.add('flex');
+        }
+      },
+
+      closeModal(id) {
+        SoundFX.click();
+        const el = document.getElementById(id);
+        if (el) {
+          el.classList.add('hidden');
+          el.classList.remove('flex');
+        }
+      },
+
+      setTeacherConfig(key, value) {
+        SoundFX.click();
+        this.state[key] = value;
+        try {
+          if (key === 'maxNumber') localStorage.setItem('pa120_maxNumber', String(value));
+          if (key === 'totalQuestions') localStorage.setItem('pa120_totalQ', String(value));
+        } catch (e) {}
+        this.updateTeacherModalUI();
+      },
+
+      toggleRelayMode() {
+        SoundFX.click();
+        this.state.relayMode = !this.state.relayMode;
+        try {
+          localStorage.setItem('pa120_relay', String(this.state.relayMode));
+        } catch (e) {}
+        this.updateTeacherModalUI();
+      },
+
+      updateTeacherModalUI() {
+        const r10 = document.getElementById('btnRange10');
+        const r20 = document.getElementById('btnRange20');
+        r10.className = `btn-3d py-3 text-base ${this.state.maxNumber === 10 ? 'btn-blue' : 'btn-white'}`;
+        r20.className = `btn-3d py-3 text-base ${this.state.maxNumber === 20 ? 'btn-blue' : 'btn-white'}`;
+        document.getElementById('activeRangeBadge').textContent = `Angka 1–${this.state.maxNumber}`;
+
+        [5, 10, 15].forEach(n => {
+          const btn = document.getElementById('btnQCount' + n);
+          btn.className = `btn-3d py-2.5 text-base ${this.state.totalQuestions === n ? 'btn-blue' : 'btn-white'}`;
+        });
+
+        const relayBtn = document.getElementById('btnRelayToggle');
+        const relayPill = document.getElementById('relayStatusPill');
+        if (this.state.relayMode) {
+          relayBtn.textContent = 'AKTIF ✅';
+          relayBtn.className = 'btn-3d btn-green px-5 py-2.5 text-base shrink-0';
+          relayPill.classList.remove('hidden');
+        } else {
+          relayBtn.textContent = 'MATI';
+          relayBtn.className = 'btn-3d btn-white px-5 py-2.5 text-base shrink-0';
+          relayPill.classList.add('hidden');
+        }
+      },
+
+      mascotSpeakGreeting() {
+        SoundFX.correct();
+        const name = this.state.playerName ? this.state.playerName : 'teman-teman';
+        const messages = [
+          `Halo ${name}! Ayo kita berpetualang menghitung angka 1 sampai 20!`,
+          `Semangat belajar ya ${name}! Kamu pasti bisa menjawab semua soalnya!`,
+          `Sentuh tombol permainan di bawah untuk mulai bermain bersama Budi!`
+        ];
+        const msg = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById('mascotGreetingBubble').textContent = `"${msg}"`;
+        VoiceID.speak(msg);
+      },
+
+      showScreen(screenId) {
+        ['screenMenu', 'screenExplorer', 'screenQuiz', 'screenResult'].forEach(id => {
+          const el = document.getElementById(id);
+          if (id === screenId) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      showMainMenu() {
+        SoundFX.click();
+        VoiceID.stop();
+        this.showScreen('screenMenu');
+      },
+
+      // ================= LOGIKA GAME A: MENGENAL ANGKA 1–20 =================
+      renderExplorerNumbersBar() {
+        const bar = document.getElementById('explorerNumbersBar');
+        bar.innerHTML = '';
+        const colors = ['btn-blue', 'btn-green', 'btn-orange', 'btn-purple', 'btn-pink', 'btn-yellow'];
+        for (let n = 1; n <= 20; n++) {
+          const colorClass = colors[(n - 1) % colors.length];
+          const btn = document.createElement('button');
+          btn.id = `expBtn_${n}`;
+          btn.className = `btn-3d ${colorClass} py-3 text-2xl sm:text-3xl font-bold`;
+          btn.textContent = n;
+          btn.onclick = () => this.selectExplorerNumber(n, true);
+          bar.appendChild(btn);
+        }
+      },
+
+      selectExplorerNumber(num, shouldSpeak = true) {
+        if (num < 1) num = 20;
+        if (num > 20) num = 1;
+        this.state.explorerNumber = num;
+        this.state.explorerTappedSet.clear();
+
+        const item = ITEM_CATALOG[(num - 1) % ITEM_CATALOG.length];
+        const word = NUMBER_WORDS_ID[num];
+
+        const bigNumEl = document.getElementById('explorerBigNumber');
+        bigNumEl.textContent = num;
+        bigNumEl.classList.remove('animate-pop');
+        void bigNumEl.offsetWidth;
+        bigNumEl.classList.add('animate-pop');
+
+        document.getElementById('explorerNumberWord').textContent = word;
+        document.getElementById('explorerNumberDesc').textContent = `${word} ${item.unit} ${item.emoji}`;
+        document.getElementById('explorerTapCounter').textContent = `Terhitung: 0 / ${num}`;
+
+        const tens = Math.floor(num / 10);
+        const ones = num % 10;
+        document.getElementById('explorerPlaceValueInfo').textContent =
+          `${tens} Puluhan + ${ones} Satuan = ${num}`;
+
+        // Render ilustrasi benda sesuai jumlah angka
+        const grid = document.getElementById('explorerItemsGrid');
+        grid.innerHTML = '';
+        for (let i = 1; i <= num; i++) {
+          const card = document.createElement('button');
+          card.type = 'button';
+          card.id = `expItem_${i}`;
+          card.className = 'countable-item animate-pop';
+          card.style.animationDelay = `${i * 25}ms`;
+          card.innerHTML = `
+            <span class="text-3xl sm:text-4xl md:text-5xl leading-none">${item.emoji}</span>
+            <span id="expBadge_${i}" class="mt-1 text-xs sm:text-sm font-display font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              ${i}
+            </span>
+          `;
+          card.onclick = () => this.tapExplorerItem(i, num, item);
+          grid.appendChild(card);
+        }
+
+        if (shouldSpeak) {
+          SoundFX.countNote(num);
+          VoiceID.speak(`Angka ${word}. ${word} ${item.unit}.`);
+        }
+      },
+
+      tapExplorerItem(index, total, item) {
+        this.state.explorerTappedSet.add(index);
+        const countNow = this.state.explorerTappedSet.size;
+        const card = document.getElementById(`expItem_${index}`);
+        const badge = document.getElementById(`expBadge_${index}`);
+        if (card) card.classList.add('counted-active');
+        if (badge) {
+          badge.className = 'mt-1 text-xs sm:text-sm font-display font-bold px-2.5 py-0.5 rounded-full bg-amber-400 text-amber-950';
+          badge.textContent = countNow;
+        }
+        document.getElementById('explorerTapCounter').textContent = `Terhitung: ${countNow} / ${total}`;
+        SoundFX.countNote(countNow);
+        VoiceID.speak(NUMBER_WORDS_ID[countNow]);
+
+        if (countNow === total) {
+          Confetti.burst(35);
+          setTimeout(() => {
+            VoiceID.speak(`Hebat! Semuanya ada ${NUMBER_WORDS_ID[total]} ${item.unit}!`);
+          }, 650);
+        }
+      },
+
+      speakCurrentExplorerNumber() {
+        const num = this.state.explorerNumber;
+        const item = ITEM_CATALOG[(num - 1) % ITEM_CATALOG.length];
+        const word = NUMBER_WORDS_ID[num];
+        SoundFX.click();
+        VoiceID.speak(`Angka ${word}. ${word} ${item.unit}.`);
+      },
+
+      autoCountExplorerItems() {
+        const num = this.state.explorerNumber;
+        this.state.explorerTappedSet.clear();
+        for (let i = 1; i <= num; i++) {
+          const card = document.getElementById(`expItem_${i}`);
+          if (card) card.classList.remove('counted-active');
+        }
+        let step = 1;
+        const interval = setInterval(() => {
+          if (step > num) {
+            clearInterval(interval);
+            Confetti.burst(30);
+            return;
+          }
+          const card = document.getElementById(`expItem_${step}`);
+          const badge = document.getElementById(`expBadge_${step}`);
+          if (card) card.classList.add('counted-active');
+          if (badge) {
+            badge.className = 'mt-1 text-xs sm:text-sm font-display font-bold px-2.5 py-0.5 rounded-full bg-amber-400 text-amber-950';
+            badge.textContent = step;
+          }
+          document.getElementById('explorerTapCounter').textContent = `Terhitung: ${step} / ${num}`;
+          SoundFX.countNote(step);
+          step++;
+        }, 320);
+      },
+
+      stepExplorerNumber(delta) {
+        this.selectExplorerNumber(this.state.explorerNumber + delta, true);
+      },
+
+      // ================= LOGIKA SESI PERMAINAN SOAL (GAME B - G) =================
+      startGame(mode) {
+        SoundFX.click();
+        this.state.currentMode = mode;
+
+        if (mode === 'mengenal') {
+          this.showScreen('screenExplorer');
+          this.selectExplorerNumber(1, true);
+          return;
+        }
+
+        // Bangun daftar soal acak sesuai jumlah soal di Mode Guru
+        const totalQ = this.state.totalQuestions;
+        const maxNum = this.state.maxNumber;
+        const questions = [];
+
+        for (let i = 0; i < totalQ; i++) {
+          let qMode = mode;
+          if (mode === 'tantangan') {
+            const modesPool = ['penjumlahan', 'pengurangan', 'lebih_banyak', 'lebih_sedikit', 'soal_cerita'];
+            qMode = modesPool[i % modesPool.length];
+          }
+
+          if (qMode === 'kuis_angka') {
+            questions.push(QuestionGenerator.createCountingQuestion(maxNum));
+          } else if (qMode === 'penjumlahan') {
+            questions.push(QuestionGenerator.createAdditionQuestion(maxNum));
+          } else if (qMode === 'pengurangan') {
+            questions.push(QuestionGenerator.createSubtractionQuestion(maxNum));
+          } else if (qMode === 'lebih_banyak' || qMode === 'lebih_sedikit') {
+            questions.push(QuestionGenerator.createComparisonQuestion(qMode, maxNum));
+          } else if (qMode === 'soal_cerita') {
+            questions.push(QuestionGenerator.createWordProblem(maxNum));
+          }
+        }
+
+        // Acak urutan soal
+        this.state.questions = questions.sort(() => Math.random() - 0.5);
+        this.state.currentIndex = 0;
+        this.state.score = 0;
+        this.state.firstTryCorrectCount = 0;
+
+        const modeTitles = {
+          kuis_angka: '🎯 Latihan Tebak Angka 1–20',
+          penjumlahan: '🍎 Berhitung Penjumlahan',
+          pengurangan: '🍌 Berhitung Pengurangan',
+          lebih_banyak: '🐰 Mana yang Lebih Banyak?',
+          lebih_sedikit: '🐣 Mana yang Lebih Sedikit?',
+          soal_cerita: '📖 Soal Cerita Kelas 1 SD',
+          tantangan: '🏆 Tantangan Berhitung Acak'
+        };
+        document.getElementById('quizModeTitle').textContent = modeTitles[mode] || '🎮 Petualangan Angka';
+
+        this.showScreen('screenQuiz');
+        this.renderCurrentQuestion();
+      },
+
+      restartCurrentGame() {
+        this.startGame(this.state.currentMode);
+      },
+
+      renderCurrentQuestion() {
+        const q = this.state.questions[this.state.currentIndex];
+        const total = this.state.questions.length;
+        this.state.hasFailedCurrentQuestion = false;
+        this.state.questionAnswered = false;
+        this.state.hintActive = false;
+
+        // Update HUD Atas
+        document.getElementById('quizProgressText').textContent = `Soal ${this.state.currentIndex + 1} dari ${total}`;
+        document.getElementById('quizScoreDisplay').textContent = this.state.score;
+        const pct = Math.round(((this.state.currentIndex + 1) / total) * 100);
+        document.getElementById('quizProgressBar').style.width = `${pct}%`;
+
+        // Sembunyikan banner feedback sebelumnya
+        const fb = document.getElementById('feedbackBanner');
+        fb.classList.add('hidden');
+        document.getElementById('btnNextQuestion').classList.add('hidden');
+
+        // Tampilkan teks pertanyaan
+        document.getElementById('questionPromptText').textContent = q.prompt;
+
+        // Render Ilustrasi Visual Sesuai Jenis Soal
+        this.renderQuestionVisuals(q);
+
+        // Render Pilihan Jawaban Besar
+        this.renderAnswerButtons(q);
+
+        // Bacakan soal secara otomatis
+        setTimeout(() => {
+          VoiceID.speak(q.speech);
+        }, 250);
+      },
+
+      renderQuestionVisuals(q) {
+        const container = document.getElementById('questionVisualContainer');
+        container.innerHTML = '';
+
+        // 1. Kuis Hitung Benda
+        if (q.type === 'kuis_angka') {
+          const box = this.createCountableGroupBox(q.itemA, q.countA, 'Kelompok Benda', 'sky', false);
+          container.appendChild(box);
+          return;
+        }
+
+        // 2. Penjumlahan (atau Soal Cerita Penjumlahan)
+        if (q.type === 'penjumlahan' || (q.type === 'soal_cerita' && q.storyType === 'add')) {
+          const row = document.createElement('div');
+          row.className = 'w-full flex flex-col lg:flex-row items-center justify-center gap-3 sm:gap-5';
+
+          const boxA = this.createCountableGroupBox(q.itemA, q.countA, `${q.countA} ${q.itemA.name}`, 'sky', false, 1);
+          const plusSign = document.createElement('div');
+          plusSign.className = 'font-display font-bold text-4xl sm:text-6xl text-emerald-600 bg-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow border-4 border-emerald-200 shrink-0';
+          plusSign.textContent = '+';
+          const boxB = this.createCountableGroupBox(q.itemA, q.countB, `${q.countB} ${q.itemA.name}`, 'emerald', false, q.countA + 1);
+
+          row.appendChild(boxA);
+          row.appendChild(plusSign);
+          row.appendChild(boxB);
+          container.appendChild(row);
+
+          // Baris Persamaan Angka Besar (Contoh: 5 + 3 = ?)
+          const eqBar = document.createElement('div');
+          eqBar.className = 'mt-2 bg-amber-50 border-4 border-amber-300 rounded-3xl px-6 py-2.5 font-display font-bold equation-clamp text-slate-800 shadow-sm';
+          eqBar.innerHTML = `<span class="text-sky-600">${q.countA}</span> + <span class="text-emerald-600">${q.countB}</span> = <span id="equationResultSlot" class="text-orange-500">?</span>`;
+          container.appendChild(eqBar);
+          return;
+        }
+
+        // 3. Pengurangan (atau Soal Cerita Pengurangan) dengan Animasi Benda Menghilang/Dicoret
+        if (q.type === 'pengurangan' || (q.type === 'soal_cerita' && q.storyType === 'sub')) {
+          const wrap = document.createElement('div');
+          wrap.className = 'w-full flex flex-col items-center gap-3';
+
+          const remainCount = q.countA - q.countB;
+          const groupBox = document.createElement('div');
+          groupBox.className = 'w-full max-w-3xl bg-orange-50/90 border-4 border-orange-300 rounded-3xl p-4 sm:p-5 flex flex-col items-center gap-3';
+
+          const headerBar = document.createElement('div');
+          headerBar.className = 'w-full flex flex-wrap items-center justify-between gap-2';
+          headerBar.innerHTML = `
+            <span class="font-display font-bold text-base sm:text-lg text-orange-900">
+              Mulanya ada <b>${q.countA}</b>, dikurangi <b>${q.countB}</b>:
+            </span>
+            <button type="button" onclick="App.replaySubtractionAnimation()" class="btn-3d btn-white px-3 py-1 text-xs sm:text-sm !min-h-[40px] gap-1">
+              🔄 Putar Ulang Animasi
+            </button>
+          `;
+          groupBox.appendChild(headerBar);
+
+          const itemsGrid = document.createElement('div');
+          itemsGrid.id = 'subtractionItemsGrid';
+          itemsGrid.className = 'flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 py-2';
+
+          for (let i = 1; i <= q.countA; i++) {
+            const isSubtracted = i > remainCount;
+            const itemBtn = document.createElement('button');
+            itemBtn.type = 'button';
+            itemBtn.className = `countable-item ${isSubtracted ? 'subtracted-item' : ''}`;
+            if (isSubtracted) {
+              itemBtn.style.animationDelay = `${(i - remainCount) * 180}ms`;
+            }
+            itemBtn.innerHTML = `
+              <span class="text-3xl sm:text-4xl md:text-5xl leading-none">${q.itemA.emoji}</span>
+              <span class="hint-badge hidden mt-1 text-xs font-display font-bold px-2 py-0.5 rounded-full ${isSubtracted ? 'bg-rose-200 text-rose-800' : 'bg-emerald-400 text-emerald-950'}">
+                ${isSubtracted ? 'Hilang' : i}
+              </span>
+            `;
+            itemBtn.onclick = () => {
+              if (!isSubtracted) {
+                itemBtn.classList.add('counted-active');
+                SoundFX.countNote(i);
+                VoiceID.speak(NUMBER_WORDS_ID[i]);
+              } else {
+                SoundFX.tryAgain();
+              }
+            };
+            itemsGrid.appendChild(itemBtn);
+          }
+
+          groupBox.appendChild(itemsGrid);
+          wrap.appendChild(groupBox);
+
+          const eqBar = document.createElement('div');
+          eqBar.className = 'bg-amber-50 border-4 border-amber-300 rounded-3xl px-6 py-2.5 font-display font-bold equation-clamp text-slate-800 shadow-sm';
+          eqBar.innerHTML = `<span class="text-orange-600">${q.countA}</span> – <span class="text-rose-600">${q.countB}</span> = <span id="equationResultSlot" class="text-emerald-600">?</span>`;
+          wrap.appendChild(eqBar);
+
+          container.appendChild(wrap);
+          return;
+        }
+
+        // 4. Perbandingan Kelompok A vs Kelompok B (Lebih Banyak / Lebih Sedikit / Soal Cerita Compare)
+        if (q.type === 'lebih_banyak' || q.type === 'lebih_sedikit' || (q.type === 'soal_cerita' && q.storyType === 'compare')) {
+          const grid = document.createElement('div');
+          grid.className = 'w-full grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl';
+
+          const labelA = q.type === 'soal_cerita' ? `Kupu-kupu 🦋` : 'Kelompok A';
+          const labelB = q.type === 'soal_cerita' ? `Lebah 🐝` : 'Kelompok B';
+
+          const boxA = this.createCountableGroupBox(q.itemA, q.countA, labelA, 'purple', true, 1);
+          const boxB = this.createCountableGroupBox(q.itemB || q.itemA, q.countB, labelB, 'pink', true, 1);
+
+          grid.appendChild(boxA);
+          grid.appendChild(boxB);
+          container.appendChild(grid);
+        }
+      },
+
+      createCountableGroupBox(item, count, title, themeColor = 'sky', showCountOnHintOnly = true, startNumber = 1) {
+        const themes = {
+          sky: 'bg-sky-50/90 border-sky-300 text-sky-900',
+          emerald: 'bg-emerald-50/90 border-emerald-300 text-emerald-900',
+          purple: 'bg-purple-50/90 border-purple-300 text-purple-900',
+          pink: 'bg-pink-50/90 border-pink-300 text-pink-900'
+        };
+        const cls = themes[themeColor] || themes.sky;
+
+        const box = document.createElement('div');
+        box.className = `flex-1 border-4 rounded-3xl p-4 sm:p-5 flex flex-col items-center justify-between gap-3 shadow-sm ${cls}`;
+
+        const header = document.createElement('div');
+        header.className = 'flex items-center justify-between w-full px-1';
+        header.innerHTML = `
+          <span class="font-display font-bold text-lg sm:text-xl">${title}</span>
+          <span class="hint-total-badge ${showCountOnHintOnly ? 'hidden' : ''} bg-white px-3 py-0.5 rounded-full font-display font-bold text-base border-2 border-current">
+            Jumlah: ${count}
+          </span>
+        `;
+        box.appendChild(header);
+
+        const itemsWrap = document.createElement('div');
+        itemsWrap.className = 'flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 my-auto py-1';
+
+        let localTapCounter = 0;
+        for (let i = 1; i <= count; i++) {
+          const displayNum = startNumber + i - 1;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'countable-item';
+          btn.innerHTML = `
+            <span class="text-3xl sm:text-4xl leading-none">${item.emoji}</span>
+            <span class="hint-badge hidden mt-1 text-xs font-display font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950">
+              ${displayNum}
+            </span>
+          `;
+          btn.onclick = () => {
+            localTapCounter++;
+            btn.classList.add('counted-active');
+            const badge = btn.querySelector('.hint-badge');
+            if (badge) {
+              badge.classList.remove('hidden');
+              badge.textContent = displayNum;
+            }
+            SoundFX.countNote(displayNum);
+            VoiceID.speak(NUMBER_WORDS_ID[displayNum] || String(displayNum));
+          };
+          itemsWrap.appendChild(btn);
+        }
+
+        box.appendChild(itemsWrap);
+        return box;
+      },
+
+      replaySubtractionAnimation() {
+        SoundFX.click();
+        const grid = document.getElementById('subtractionItemsGrid');
+        if (!grid) return;
+        const subtracted = grid.querySelectorAll('.subtracted-item');
+        subtracted.forEach(el => {
+          el.classList.remove('subtracted-item');
+          void el.offsetWidth;
+          el.classList.add('subtracted-item');
+        });
+      },
+
+      renderAnswerButtons(q) {
+        const grid = document.getElementById('answerChoicesGrid');
+        grid.innerHTML = '';
+
+        const isTwoChoices = q.choices.length === 2;
+        grid.className = isTwoChoices
+          ? 'grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto w-full pt-2'
+          : 'grid grid-cols-3 gap-3 sm:gap-5 max-w-3xl mx-auto w-full pt-2';
+
+        const btnColors = ['btn-blue', 'btn-purple', 'btn-orange', 'btn-pink'];
+
+        q.choices.forEach((choice, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          const colorCls = btnColors[idx % btnColors.length];
+          btn.className = `btn-3d ${colorCls} py-4 sm:py-5 px-4 ${isTwoChoices ? 'text-2xl sm:text-4xl' : 'answer-btn-clamp'} font-bold`;
+          btn.textContent = choice;
+          btn.onclick = () => this.submitAnswer(choice, btn);
+          grid.appendChild(btn);
+        });
+      },
+
+      submitAnswer(selectedValue, btnElement) {
+        if (this.state.questionAnswered) return;
+        const q = this.state.questions[this.state.currentIndex];
+        const fb = document.getElementById('feedbackBanner');
+        const fbEmoji = document.getElementById('feedbackEmoji');
+        const fbTitle = document.getElementById('feedbackTitle');
+        const fbSub = document.getElementById('feedbackSubtitle');
+        const btnNext = document.getElementById('btnNextQuestion');
+
+        if (selectedValue === q.correctAnswer) {
+          // JAWABAN BENAR!
+          this.state.questionAnswered = true;
+          this.state.score += 10;
+          if (!this.state.hasFailedCurrentQuestion) {
+            this.state.firstTryCorrectCount += 1;
+          }
+
+          document.getElementById('quizScoreDisplay').textContent = this.state.score;
+          const eqSlot = document.getElementById('equationResultSlot');
+          if (eqSlot) eqSlot.textContent = q.correctAnswer;
+
+          // Ubah warna tombol yang benar menjadi hijau kemenangan
+          btnElement.className = `btn-3d btn-green py-4 sm:py-5 px-4 ${q.choices.length === 2 ? 'text-2xl sm:text-4xl' : 'answer-btn-clamp'} font-bold`;
+
+          SoundFX.correct();
+          Confetti.burst(65);
+
+          fb.className = 'rounded-3xl p-4 sm:p-5 border-4 bg-emerald-100 border-emerald-400 text-emerald-950 text-center animate-pop';
+          fbEmoji.textContent = '🌟';
+          fbTitle.textContent = 'HEBAT! JAWABAN KAMU BENAR!';
+          fbSub.textContent = `Jawabannya adalah ${q.correctAnswer}. Kamu dapat +10 Poin!`;
+          btnNext.classList.remove('hidden');
+
+          VoiceID.speak(`Hebat! Jawaban kamu benar! Jawabannya adalah ${q.correctAnswer}.`);
+        } else {
+          // JAWABAN BELUM TEPAT: Jangan menyalahkan anak, beri petunjuk visual & izinkan mencoba lagi!
+          this.state.hasFailedCurrentQuestion = true;
+          btnElement.disabled = true;
+          btnElement.classList.add('animate-shake');
+
+          SoundFX.tryAgain();
+
+          fb.className = 'rounded-3xl p-4 sm:p-5 border-4 bg-amber-100 border-amber-400 text-amber-950 text-center animate-pop';
+          fbEmoji.textContent = '💪';
+          fbTitle.textContent = 'YUK, COBA LAGI!';
+          fbSub.textContent = 'Perhatikan angka petunjuk di bawah gambar, lalu pilih jawaban yang tepat ya!';
+
+          // Aktifkan Petunjuk Angka Visual secara otomatis di bawah setiap benda
+          this.activateVisualHint();
+          VoiceID.speak('Yuk, coba lagi! Hitung gambarnya pelan-pelan ya.');
+        }
+      },
+
+      activateVisualHint() {
+        this.state.hintActive = true;
+        const container = document.getElementById('questionVisualContainer');
+        container.querySelectorAll('.hint-badge').forEach(b => b.classList.remove('hidden'));
+        container.querySelectorAll('.hint-total-badge').forEach(b => b.classList.remove('hidden'));
+      },
+
+      speakCurrentQuestion() {
+        SoundFX.click();
+        const q = this.state.questions[this.state.currentIndex];
+        if (q) VoiceID.speak(q.speech);
+      },
+
+      nextQuestion() {
+        SoundFX.click();
+        if (this.state.currentIndex + 1 < this.state.questions.length) {
+          this.state.currentIndex += 1;
+          if (this.state.relayMode) {
+            document.getElementById('relayStudentTurnBadge').textContent =
+              `Soal ke-${this.state.currentIndex + 1} dari ${this.state.questions.length}`;
+            this.openModal('modalRelayTurn');
+            VoiceID.speak('Giliran teman berikutnya! Silakan maju ke papan layar dan sentuh tombol siap!');
+          } else {
+            this.renderCurrentQuestion();
+          }
+        } else {
+          this.finishGameSession();
+        }
+      },
+
+      confirmRelayReady() {
+        this.closeModal('modalRelayTurn');
+        this.renderCurrentQuestion();
+      },
+
+      finishGameSession() {
+        SoundFX.winFanfare();
+        Confetti.burst(130);
+
+        const totalQ = this.state.questions.length;
+        const maxPossibleScore = totalQ * 10;
+        const score = this.state.score;
+        const firstTry = this.state.firstTryCorrectCount;
+        const retried = totalQ - firstTry;
+
+        this.saveHighScore(score);
+
+        const playerName = this.state.playerName ? `, ${this.state.playerName}` : '';
+        document.getElementById('resultHeadline').textContent = `🌟 LUAR BIASA${playerName.toUpperCase()}!`;
+        document.getElementById('resultTotalScore').textContent = score;
+        document.getElementById('resultCorrectCount').textContent = `${totalQ} / ${totalQ}`;
+        document.getElementById('resultFirstTryCount').textContent = `${firstTry} Soal`;
+        document.getElementById('resultRetryNote').textContent =
+          retried === 0 ? 'Sempurna tanpa salah!' : `${retried} soal dibantu petunjuk`;
+
+        let motivation = `Kamu berhasil menyelesaikan semua ${totalQ} soal dan meraih ${score} poin! Teruslah semangat belajar berhitung ya!`;
+        if (firstTry === totalQ) {
+          motivation = `SEMPURNA! Kamu menjawab seluruh ${totalQ} soal dengan benar pada percobaan pertama! Kamu juara berhitung kelas 1!`;
+        }
+        document.getElementById('resultPlayerMotivation').textContent = motivation;
+
+        this.showScreen('screenResult');
+        setTimeout(() => {
+          VoiceID.speak(`Luar biasa! Kamu mendapatkan ${score} poin! ${motivation}`);
+        }, 400);
+      },
+
+      // ================= GENERATOR PAKET FILE PWA & GITHUB PAGES =================
+      downloadProjectFile(fileType) {
+        SoundFX.click();
+        let filename = '';
+        let content = '';
+        let mime = 'text/plain;charset=utf-8';
+
+        if (fileType === 'manifest.json') {
+          filename = 'manifest.json';
+          mime = 'application/json;charset=utf-8';
+          content = JSON.stringify({
+            name: 'PETUALANGAN ANGKA 1-20 | Game Berhitung Kelas 1 SD',
+            short_name: 'Petualangan Angka',
+            description: 'Belajar Berhitung Sambil Bermain untuk Anak Kelas 1 SD',
+            start_url: './index.html',
+            display: 'standalone',
+            orientation: 'any',
+            background_color: '#38bdf8',
+            theme_color: '#38bdf8',
+            icons: [
+              {
+                src: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%2338bdf8%22/><text y=%22.88em%22 x=%2212%22 font-size=%2272%22>🎮</text></svg>',
+                sizes: '192x192 512x512',
+                type: 'image/svg+xml'
+              }
+            ]
+          }, null, 2);
+        } else if (fileType === 'sw.js') {
+          filename = 'sw.js';
+          mime = 'application/javascript;charset=utf-8';
+          content = `const CACHE_NAME = 'petualangan-angka-v1';\nconst ASSETS = ['./', './index.html', './manifest.json'];\n\nself.addEventListener('install', e => {\n  e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS)));\n});\n\nself.addEventListener('fetch', e => {\n  e.respondWith(caches.match(e.request).then(res => res || fetch(e.request)));\n});\n`;
+        } else {
+          filename = 'index.html';
+          mime = 'text/html;charset=utf-8';
+          content = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+        }
+
+        const blob = new Blob([content], { type: mime });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+    };
+
+    // Jalankan Aplikasi saat halaman selesai dimuat
+    window.onload = function () {
+      App.init();
+    };
+  </script>
+
+</body></html>
